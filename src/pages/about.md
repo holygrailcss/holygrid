@@ -21,7 +21,6 @@ autor2: nombre333
 autorwork2: full stack333
 autordescription2: Como programador y entusiasta de Internet, Manuel Ruiz es el contacto adecuado para la implementación de sitios web, publicidad en motores de búsqueda y optimización.333
 
-permalink: /{{global.about}}/
 eleventyComputed:
   metaTitle: "Nuestro blog - Centre estètic Basté"
   metaDescription: "Descripción del sitio"
