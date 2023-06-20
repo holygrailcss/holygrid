@@ -1,0 +1,44 @@
+<article id="{{proyecto.id}}" class="mbr-64 " >
+  <div class="row sm:text-center   ">
+
+
+
+    <div class="col-xs-12  col-sm-6  pb-40">
+      <div class="rat-1-1">
+               <div class="rat-content">
+     <img  class="rellax video-cover"  data-rellax-percentage="0.5" data-rellax-speed="1"
+         src="{{ global.imageDir }}_servicios/{{servicios.data.image}} " alt="">       
+                   </div>
+             </div>
+   </div>
+
+
+    <div class="col-xs-12 col-sm-6 pl-40  sm:order-last  ">
+      <div data-aos="fade-left"  >
+          <div class="fluid-3-b numbers">
+          {{servicios.data.prename}}
+        </div>
+      </div>
+      <div class="mb-16 ">
+        <a href="{{ servicios.url }}">
+          <div class=" mb-16">
+            <p data-aos="fade-up" data-aos-once="true"  class="fluid-4-b">{{servicios.data.title}}
+            </p>
+          </div>
+                    <div class=" mb-16">
+            <p data-aos="fade-up" data-aos-once="true"  class="fluid-9-b">{{servicios.data.subtitle}}
+            </p>
+          </div>
+          <div class=" mbr-64">
+            <p data-aos="fade-up" data-aos-once="true"  class="fluid-9-r">{{servicios.data.descripcion}}
+            </p>
+          </div>
+        </a>
+        <div class="mb-32">
+          <a data-aos="fade-up" data-aos-once="true"  data-aos-delay="600" class="link-line"  href="{{ servicios.url }}">Ver más </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</article>

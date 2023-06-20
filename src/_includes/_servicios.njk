@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: servicios
+eleventyComputed:
+  metaTitle: "Tratamientos de medicina estética y dental - Centre estètic Basté"
+  metaDescription: "Descripción del sitio"
+  metaKeywords: "palabra1,palabra2,palabra3"
+  metaRobots: "index, follow"
+---
+
+<article class="main-article  ">
+
+<div class="section  ">
+  <div class=" ">{% include 'components/hero.njk' %}</div>
+
+    <div class="bg-white front-section">
+      <div class="container-3 pt-64 pb-64  ">
+        <ul role="list" class="list-clear flow">
+
+
+
+      {% for servicios in collections.servicios %}
+        {% include 'servicios-loop.njk' %}
+      {% endfor %}
+
+        </ul>
+      
+        </div>
+    </div>
+
+
+</div>
+
+
+{% include "components/banner.njk" %}
+
+
+</article>

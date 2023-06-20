@@ -1,0 +1,74 @@
+---
+layout: base.njk
+title: contacta
+permalink: /contacta/
+---
+
+{% include 'components/hero.njk' %}
+
+<section class="hero  front-section bg-light ">
+  <div class="container-5 pt-64 pb-24 ">
+    <div class="row">
+      <div class="col-xs-6">
+        <h3 class="fluid-3-b pl-64 pb-32">{{title}}</h3>
+      </div>
+    </div>
+    <div class="row mbr-64 ">
+      <div class=" col-xs-12 col-md-5 "> 
+        <img src="{{ global.imageDir }}{{global.contact_img}} " alt=""> </div>
+      <div class="col-md-1"></div>
+      <div class="col-xs-12 col-md-6 mb-24 sm:text-center">
+        <ul class="list-clear">
+          <li class="c-gray fluid-7-b">{{global.title}} </li>
+          <li class=""> {{global.direccion}} </li>
+          <li class=""> {{global.codigopostal}},{{global.ciudad}}  </li>
+          <li class="pb-32"> {{global.provincia}} </li>
+          <li class="pb-32"> <a href="tel:{{global.telefono}}">{{global.telefono}} </a>  </li>
+          <li class="">
+            <a class="flipH" href="mailto:{{ global.email }} "> {{ global.email | reverseWords | safe }}
+            </a>
+          </li>
+          <li> <a class="flipH" href="{{global.link}} "> {{global.link | reverseWords | safe }} </a> </li>
+        </ul>
+      </div>
+    </div>
+</section>
+<section class="bg-light pt-64 pb-64">
+  <div class="container-5">
+    <div class="row">
+      <div class="col-xs-4 ">
+        <div class="box p-16 bg-light-grey height-md">
+          <div class="text-18-b">¿Dónde estamos? </div>
+          <div class="text-16-r mb-24">{{global.direccion}}</div> 
+          <div class="text-16-r">    <a target="_blank" class="btn btn--small btn-primary" href="{{global.googlemaps_link}}"> Ver mapa </a>  </div> 
+        </div>
+      </div>
+      <div class="col-xs-4  ">
+          <div class="box p-16 bg-light-grey height-md">      <div class="text-18-b">Via email </div>
+        <div class="text-16-r"><a href="mailto:{{global.email}} ">{{global.email}} </a> </div> </div>
+      </div>
+      <div class="col-xs-4  ">
+          <div class="box p-16 bg-light-grey height-md">    
+            <div class="text-18-b">Teléfono</div> 
+        <div class="text-16-r"><a href="tel:{{global.telefono}}">{{global.telefono}} </a> </div> 
+        <div class="text-18-b mt-24">Whatsapp</div> 
+        <div class="text-16-r"><a href="https://wa.me/{{global.whatsapp}}">{{global.whatsapp}} </a>   </div>  </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid">
+  <div class="row bleed-0">
+    <div class="col-xs-12">
+          <iframe
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/view?key=AIzaSyC3D1bMAdlEmq3RCC8W2_mt3W1699_xdB0&center=-33.8569,151.2152&zoom=18&maptype=satellite"
+  allowfullscreen>
+</iframe>
+    </div>
+  </div>
+</div>
+{% include "components/banner.njk" %}

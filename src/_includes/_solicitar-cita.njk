@@ -1,0 +1,72 @@
+---
+layout: base.njk
+title: contacta
+permalink: /solicitar-cita/
+
+---
+
+
+{% set btn_whtasapp = "on" %}
+{% include 'components/hero.njk' %}
+
+{% include "components/banner.njk" %}
+
+<section class="hero  height-full-2 front-section ptr-120 pbr-120 bg-light">
+
+
+  <div class="container-2">
+
+<div class="row">
+  <div class="col-xs-12 text-center">
+ 
+
+    <h3 class="fluid-4-b pl-64 pb-64">   O si lo prefieres ven a visitarnos</h3>
+
+    <hr class="mb-64">
+  </div>
+</div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="fluid-4-b pl-64 pb-32">{{global.title}}</h3>
+      </div>
+    </div>
+    <div class="row mbr-64 ">
+      <div class=" col-xs-12 col-md-6 "> <img src="{{global.contact_img}} " alt=""> </div>
+      <div class="col-xs-12 col-md-6 mb-24 sm:text-center">
+        <ul class="list-clear">
+          <li class="c-gray text-16-b">{{global.title}} </li>
+          <li class=""> {{global.calle}} </li>
+          <li class=""> {{global.codigo}} </li>
+          <li class="pb-32"> {{global.ciudad1}} </li>
+          <li class="pb-32"> {{global.telf}} </li>
+             <li class="">
+            <a class="flipH" href="mailto:{{global.email1}} "> {{ global.email | reverseWords | safe }}
+            </a>
+          </li>
+          <li> <a class="flipH" href="{{global.link}} "> {{global.link | reverseWords | safe }} </a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="fluid-4-b pl-64 pb-32">Titular</h3>
+      </div>
+    </div>
+    <div class="row mbr-64 ">
+
+
+
+
+      <div class=" col-xs-12 col-md-6 "> <img src="{{imagen2}} " alt=""> </div>
+
+    </div>
+</section>
+<div class="container-fluid">
+  <div class="row bleed-0">
+    <div class="col-xs-12">
+      <iframe src="{{global.contacta_map}}" width="100%" height="450" style="border:0;" allowfullscreen=""
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>

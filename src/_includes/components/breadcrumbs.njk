@@ -1,0 +1,17 @@
+{# Debe tener un {% set parent = "blog" %}  #}
+
+<ul class="list-inline">
+  <li> <a href="/"> Home </a> </li>
+  <span >→</span>
+  {% if parent %}
+    <li> <a class="ttc"  href="/{{ parent }}"> {{ parent }}</a> </li>
+    <span >→</span>
+  {% endif %}
+
+  {% if page.fileSlug %}
+<li> <a class="ttc" href="{{ page.url }}">{{ page.fileSlug | replace('/', '') | replace('-', ' ') }} </a> </li>
+  {% endif %}
+
+
+
+</ul>

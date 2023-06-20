@@ -1,0 +1,40 @@
+//listado de marcas en imagenes en svg
+//.row.scroll-nat.text-center>.col-xs-2.brand-partner*6{logo-$} 
+.brand-partner {
+    cursor: pointer;
+    -webkit-filter: saturate(0);
+    filter: saturate(0);
+    opacity: .5;
+    text-align: center;
+    transition: all .2s ease
+}
+
+.brand-partner:hover {
+    -webkit-filter: saturate(1);
+    filter: saturate(1);
+    opacity: 1
+}
+
+@media(max-width: 768px) {
+    .scroll-nat {
+        -webkit-overflow-scrolling:touch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow: auto;
+        padding-bottom: 20px
+    }
+
+    .scroll-nat [class*=col-] {
+        flex: 0 0 40vw;
+        max-width: 40vw
+    }
+
+    .scroll-nat-2 [class*=col-] {
+        flex: 0 0 60vw;
+        max-width: 60vw
+    }
+}
+
+

@@ -1,0 +1,7 @@
+
+{
+	"layout": "_serviciosinner.njk",
+	"author": "{{global.empresa}}",
+	"tags": ["servicios"],
+	"categoryName": "{{global.services}} "
+}

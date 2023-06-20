@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+
+
+
+{% include 'components/hero.njk' %}
+
+<section class="container-fluid bg-light ">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3 class="fluid-8-b"><a href="/blog/garantia-toldosmarfil/"> Nuestra garantia </a></h3>
+    </div>
+  </div>
+</section>
+
+<div class="section bg-light ">
+  <div class="container-fluid ">
+    <ul role="list" class="list-clear blog-section">
+      {% for post in collections.post | reverse %}
+        {% include 'blog-loop.njk' %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+{
+  "author": "manuel ruiz",
+  "authorweb": "digitalstrategy.es",
+  "authorinstagram": "manuel ruiz",
+
+  "title": "design systems",
+  "lang": "es-es",
+  "footer": "",
+  "url": "https://toldosmarfil.com",
+  "empresa": "design systems",
+
+  "imageDir": "/assets/static/",
+
+  "tag_manager": " ",
+
+  "about": "Sobre-toldos-marfil",
+  "services": "Sistemas",
+  "blog": "Blog",
+
+
+  "brands": "somfy,sauleda,gaviota,siplan,llaza,mitjavila",
+
+  "galeria": "gal-1,gal-2,gal-3,gal-4,gal-5,gal-6,gal-7,gal-8",
+
+  "contact_img":"_contacta/tienda.jpg",
+
+
+  "search_console":"search_console",
+  "empresa_copyright":" © 2023 empresa_copyright",
+  "empresa_legal_titular": "Jose Maria Ruiz Rodriguez  S.L.",
+  "empresa_legal": "Empresa_legal_largo",
+  "empresa_corto":  "Empresa_corto",
+  "website": "www.toldosmarfil.com",
+  "telefono":"+34936654451",
+  "empresa_dni": "B64736267",
+  "email":"toldosmarfil@gmail.com",
+  "link":"www.toldosmarfil.com",
+  "whatsapp": "+34635956679",
+  "codigopostal": "08860",
+  "direccion": " Carrer d'Arcadi Balaguer, 77",
+  "ciudad": " Castelldefels",
+  "provincia": "Barcelona",
+  "actividad": "  Toldos / Instalación / Servicios",
+
+  "c_primary": "#292929",
+  "c_secondary": "#292929",
+  "bg_dark": "#161616",
+  "c_bg_dark": "#f7f6f5",
+  "bg_light": "#efefef",
+  "c_bg_light": "#292929",
+  "btn_radius": "0",
+
+
+  "seo_title": "seo_title",
+  "seo_description":" seo_description",
+
+  "googlemaps_api": "",
+  "googlemaps_link": "https://goo.gl/maps/WneJY5QXJzhzfFVL8",
+  "googlemaps_iframe":"https://www.google.com/maps/place/Centre+M%C3%A8dic+Bast%C3%A9/@41.3428709,2.0405011,17z/data=!3m1!4b1!4m6!3m5!1s0x12a49d9ee9d98c09:0x86e81b158e8d23ca!8m2!3d41.3428709!4d2.0405011!16s%2Fg%2F11v0gh3kc2?hl=es-419&entry=ttu",
+  
+  "social_linkedin":" https://www.linkedin.com/",
+  "social_youtube": "https://www.youtube.com/",
+  "social_instagram" : "https://www.instagram.com/"
+
+
+}

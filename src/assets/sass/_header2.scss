@@ -1,0 +1,77 @@
+$header-mobile: 60px;
+$header-desktop: 200px;
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  z-index: 100;
+  height: $header-mobile;
+  transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  @media (min-width: $break-md) {
+    padding-bottom: 0;
+    height: 120px;
+  }
+}
+
+
+
+header.interior {
+  a {
+    color: #212121;
+  }
+  svg path {
+    fill: #212121;
+  }
+}
+
+
+
+.logo {
+  width: 100%;
+  max-width: 90px;
+  svg {
+    width: 100%;
+  }
+  @media (min-width: $break-md) {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
+.scrolled {
+  header {
+    background-color: $c-white;
+    height: 90px;
+    @media (min-width: $break-md) {
+      height: 120px;
+    }
+    a {
+      color: $c-black;
+    }
+    svg path {
+      fill: $c-black;
+    }
+    .height-md {
+      min-height: 150px;
+    }
+  }
+
+  .header-top {
+    height: 200px;
+  }
+  .menu {
+    .btn-secondary {
+      color: #292929;
+      background-color: transparent;
+      border: 2px solid #292929;
+    }
+  }
+}

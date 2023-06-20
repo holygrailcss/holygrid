@@ -1,0 +1,8 @@
+
+{
+	"layout": "_bloginner.njk",
+	"author": "Manuel Ruiz",
+	"tags": ["blog"],
+	"tag": "post",
+	"categoryName": "Blog"
+}

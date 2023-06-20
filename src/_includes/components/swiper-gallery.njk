@@ -1,0 +1,96 @@
+<section class="pt-64 pb-64  bg-light ">
+  <div class="swiper-header  ">
+    <div class="container-0">
+    <div class="row w-100">
+      <div class="col-xs-7 col-sm-6">
+        <h3 class="fluid-4-b mb-24">Design systems</h3>
+      </div>
+      <div class="col-xs-5 col-sm-6">
+        <div class="swiper-arrows-img">
+          <button class="swiper-prev" aria-label="Anterior slide">
+            <div> ← </div>
+          </button>
+          <button class="swiper-next" aria-label="Siguiente slide">
+            <div>→ </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="ov-hidden popular">
+    <!-- Slider main container -->
+    <div class="swiper-container-img">
+      <!-- Additional required wrapper -->
+      <ul class="swiper-wrapper my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <!-- Slides -->
+
+
+
+    {% for galeria in global.galeria.split(',') %} 
+     <li class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+
+          <a class="slide-link" title="click to zoom-in" href="{{ global.imageDir }}galeria/zoom/{{ galeria }}.jpg" itemprop="contentUrl" data-size="1200x900">
+                 <div class="rat-1-1">
+                <div class="rat-content">
+            <img src="{{ global.imageDir }}galeria/{{ galeria }}.jpg" itemprop="thumbnail" alt="{{ galeria }}" />
+                </div>    </div>
+          </a>
+     
+        </li>
+    {% endfor %}
+
+
+
+      </ul>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <!--  Controls are self-explanatory. Order can be changed. -->
+          <div class="pswp__counter"></div>
+          <button class="btn btn-primary pswp__button--close" title="Close (Esc)">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="24px" height="24px" viewBox="0 0 24 24">
+              <g stroke-width="1" transform="translate(0.5, 0.5)">
+                <line fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="19"
+                  y1="5" x2="5" y2="19" stroke-linejoin="miter">
+                </line>
+                <line fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="square" stroke-miterlimit="10" x1="19"
+                  y1="19" x2="5" y2="5" stroke-linejoin="miter">
+                </line>
+              </g>
+            </svg>
+          </button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="btn btn-primary pswp__button--arrow--left" title="Previous (arrow left)">
+          ← </button>
+        <button class="btn btn-primary pswp__button--arrow--right" title="Next (arrow right)">
+          → </button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

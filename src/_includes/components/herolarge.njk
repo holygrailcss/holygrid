@@ -1,0 +1,92 @@
+    <div class="video-bg">
+        <video poster="" autoplay="" muted="" loop="">
+          <source src="/assets/static/main.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      
+<div class="container">
+  <div class="row section-x height-xl align-middle interior">
+
+
+    <div class="col-xs-12 col-sm-5 front-text mdmax:mb-42">
+      <div class="has-light  ">
+        <div class="vertical-wrap-2 ">
+          <div class="vertical-inner  ">
+            <h2 class="fluid-8-r  mb-8"> {{ subtitle }}    </h2>
+          </div>
+        </div>
+        <div class="vertical-wrap ">
+          <div class="vertical-inner ">
+            <h1 class="fluid-2-b pb-40"> {{ title }} </h1>
+          </div>
+        </div>
+        {% if btn_whtasapp == 'on' %}
+      <div class="   main-full  ">
+
+        <a  aria-label="link whatsapp" href="https://wa.me/{{global.whatsapp}}">
+  <button class="btn btn-social btn-wechat btn--small text-14-b">
+  
+    <svg id="bubble-whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+    <path d="M519 454c4 2 7 10-1 31-6 16-33 29-49 29-96 0-189-113-189-167 0-26 9-39 18-48 8-9 14-10 18-10h12c4 0 9 0 13 10l19
+    44c5 11-9 25-15 31-3 3-6 7-2 13 25 39 41 51 81 71 6 3 10 1 13-2l19-24c5-6 9-4 13-2zM401 200c-110 0-199 90-199 199
+    0 68 35 113 35 113l-20 74 76-20s42 32 108 32c110 0 199-89 199-199 0-111-89-199-199-199zm0-40c133 0 239 108 239 239
+    0 132-108 239-239 239-67 0-114-29-114-29l-127 33 34-124s-32-49-32-119c0-131 108-239 239-239z"> </path>
+  </svg>
+  
+  Solicita una visita via whatsapp</button>
+</a>
+
+      </div>
+
+      {% endif %}
+
+        <div class="vertical-wrap ">
+          <div class="vertical-inner ">
+            <span class="text-14-r  pb-40"> {{ fecha }} </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-7 mdmax:mb-42  ">
+      <div class="rat-16-9">
+        <div class="rat-content">
+          {% if imagemini %}
+          <img class="video-cover" width="100%" height="100%" src="{{ global.imageDir }}{{ imagemini }}" alt="{{ imageAlt }}">
+          {% else %}
+          <img class="video-cover" width="100%" height="100%" src="{{ global.imageDir }}{{ image }}" alt="{{ imageAlt }}">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+
+  
+</div>
+
+{% if duracion %}
+<div class="container-2 pb-32">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12  content-center is-flex">
+      <div class="mr-32">
+        <div class="duration text-center"> <span>DURACIÓN</span> {{ duracion }} </div>
+      </div>
+      <div class="fluid-32-balign-middle">{{ descripcion }} </div>
+    </div>
+
+  </div>
+</div>
+{% else %}
+<div class=" mdmax:mb-42  pb-64"></div>
+{% endif %}
+
+
+
+
