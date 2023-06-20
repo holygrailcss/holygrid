@@ -1,6 +1,6 @@
 ---
 subtitle: Descubre los beneficios de un Design System para tu sitio web
-title: Beneficios de un Design System | Mejora la coherencia y eficiencia de tu web
+title: parrilla 2
 date: 2023-06-19
 fecha: 19 de junio de 2023
 tags: ["Estructuras modulares", "web design", "SEO"]

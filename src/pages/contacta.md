@@ -1,5 +1,5 @@
 ---
-layout: _contacta
+
 permalink: /contacta/
 
 title: Contacta con nosotros

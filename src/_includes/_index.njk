@@ -72,7 +72,9 @@ Creamos, implementamos y diseñamos Estructuras modulares.
     </div>
   </div>
 </section>
-{% include 'components/swiper-gallery.njk' %} 
+
+
+{% include 'parrillas/parrilla-1.njk' %}
 
 
 
@@ -82,10 +84,10 @@ Creamos, implementamos y diseñamos Estructuras modulares.
       <div class="container-full">
         <div class="row">
           <div class="col-xs-12">
-            <ul role="list" class="list-clear flow">
+            <ul role="list" class="list-clear flow row">
               {% for servicios in collections.servicios %}
                 {% if  loop.index < 4 %}  
-                        {% include 'servicios-loop-h.njk' %}
+                        {% include 'servicios-loop.njk' %}
                 {% endif %}
               {% endfor %}
             </ul>
@@ -93,7 +95,7 @@ Creamos, implementamos y diseñamos Estructuras modulares.
         </div>
       </div>
     </section>
-    {% include "components/brands.njk" %}
+
 <section class="front-section bg-white pt-64 pb-64">
   <div class="container-full">
     <div class="row">
@@ -110,5 +112,5 @@ Creamos, implementamos y diseñamos Estructuras modulares.
     </div>
   </div>
 </section>
-{% include "components/banner.njk" %}
+
   </div>
