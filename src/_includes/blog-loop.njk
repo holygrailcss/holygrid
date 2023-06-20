@@ -1,23 +1,23 @@
 <li>
       <article class="mb-24">
-          <a class="w-100" href="{{ post.url }}">
+          <a class="w-100" href="{{ blog.url }}">
             <div class="rat-1-1 w-100">
               <div class="rat-content">
-                <img class="video-cover" width="100%" height="100%" src="{{ global.imageDir }}{{ post.data.image }}" alt="{{ post.data.imageAlt }}"
+                <img class="video-cover" width="100%" height="100%" src="{{ blog.data.image }}" alt="{{ blog.data.imageAlt }}"
                   class="h1">
               </div>
             </div>
                 </a>
           <div class="article-text mt-24">
-              <h3 class="fluid-8-b"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-              <p class="mb-8 p1 c-dark-grey">{{ post.data.date | postDate }}</span></p>
-              {% for tag in post.data.tags %}
+              <h3 class="fluid-8-b"><a href="{{ blog.url }}">{{ blog.data.title }}</a></h3>
+              <p class="mb-8 p1 c-dark-grey">{{ blog.data.date | postDate }}</span></p>
+              {% for tag in blog.data.tags %}
               <div class=" tag-info ">
                 {{ tag }}
               </div>
               {% endfor %}
-              <p class="mb-24">{{ post.data.description }}</p>
-              <a href="{{ post.url }}" class="btn link-line"> Leer más</a>
+              <p class="mb-24">{{ blog.data.description }}</p>
+              <a href="{{ blog.url }}" class="btn link-line"> Leer más</a>
           </div>
       </article>
 </li>

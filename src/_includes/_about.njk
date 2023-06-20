@@ -6,11 +6,11 @@ layout: base.njk
     <source src="/assets/static/main.mp4" type="video/mp4" />
   </video>
 </div>
-<div class="container-fluid">{% include 'components/hero.njk' %}</div>
+<div class="container-full">{% include 'components/hero.njk' %}</div>
 <section class="front-section bg-light">
-  <div class="container-12  height-xl align-middle">
+  <div class="container-full  height-xl align-middle">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-8">
         <div class="fluid-6-b c-primary">
           {{ presentacion }}
         </div>
@@ -21,9 +21,9 @@ layout: base.njk
 
 
 
-{% for i in range(3) %}
+{% for persona in global.personas %}
   <section class="front-section bg-dark has-light">
-    <div class="container-fluid pb-64 p-body front-section ptr-120">
+    <div class="container-full pb-64 p-body front-section ptr-120">
       <div class="row">
         <div class="col-xs-12 col-md-6">
           <div class="rat-16-9">
@@ -31,8 +31,8 @@ layout: base.njk
               <img
                 width="100%"
                 height="100%"
-                src="{{ global.imageDir }}_about/{{ autorimg }}"
-                alt=""
+                src="{{ persona.imagen }}"
+                alt="{{ persona.nombre }}"
               />
             </div>
           </div>
@@ -40,13 +40,13 @@ layout: base.njk
         <div class="col-xs-12 col-md-1"></div>
         <div class="col-xs-12 col-md-5 mdmax:mb-42">
           <div class="fluid-6-b mb-24">
-            {{ autor + i }}
+            {{ persona.nombre }}
           </div>
           <div class="fluid-8-b mb-24">
-            {{ autorwork }}
+            {{ persona.posicion }}
           </div>
           <div class="fluid-8-b">
-            {{ autordescription }}
+            {{ persona.descripcion }}
           </div>
         </div>
       </div>

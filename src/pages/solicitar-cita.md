@@ -1,15 +1,15 @@
 ---
 layout: _solicitar-cita
-title: Solicita una cita
 permalink: /solicitar-una-cita/
+
+title: Solicita una cita
 subtitle: Totalmente sin compromiso
-image: /assets/static/contacta-0.webp
-author: Kevin Powell 
+author: man 
 date: 2021-05-01
 tags: ["page"]
-imagen1: /assets/static/contactamedic.webp
+image: /assets/static/images/7.jpg
 imageAlt: Contacta
-descripcion: Contacta con Centre mèdic i estètic Basté
+descripcion: descripcion
 
 
 

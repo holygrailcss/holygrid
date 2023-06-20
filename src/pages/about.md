@@ -1,40 +1,48 @@
 ---
 layout: _about.njk
-permalink: /{{global.about}}/
-title: 
-subtitle: Flipped Mountain is a creative studio of independent freelancers specializing in branding, web design, programming, photography and social media. Individually, but collectively, we work closely with our clients, always keeping the big picture in mind.
-image: ""
-presentacion: "Experiencia, Calidad, Innovación Tu Solución Confiable para la protección solar"
+permalink: /about/
 
-autorimg: nombre111
-autor: nombre111
-autorwork: full stack111
-autordescription: Como programador y entusiasta de Internet, Manuel Ruiz es el contacto adecuado para la implementación de sitios web, publicidad en motores de búsqueda y optimización.111
+subtitle: Evangelizadores
+title: Quienes Somos
+date: 2023-06-19
+tags: ["Estructuras modulares", "diseño", "figma"]
+image: /assets/static/images/7.jpg
+imageAlt: Ilustración de un diseño de sistema
 
-autorimg1: nombre222
-autor1: nombre222
-autorwork1: full stack222
-autordescription1: Como programador y entusiasta de Internet, Manuel Ruiz es el contacto adecuado para la implementación de sitios web, publicidad en motores de búsqueda y optimización.222
-
-autorimg2: nombre333
-autor2: nombre333
-autorwork2: full stack333
-autordescription2: Como programador y entusiasta de Internet, Manuel Ruiz es el contacto adecuado para la implementación de sitios web, publicidad en motores de búsqueda y optimización.333
-
+presentacion: Crea un Design System efectivo para tu proyecto Crea un Design System efectivo para tu proyecto
 eleventyComputed:
-  metaTitle: "Nuestro blog - Centre estètic Basté"
-  metaDescription: "Descripción del sitio"
-  metaKeywords: "palabra1,palabra2,palabra3"
+  metaTitle: Crea un Design System efectivo para tu proyecto | Design-Systems.es
+  metaDescription: Descubre cómo crear un Design System paso a paso. Aumenta la coherencia y eficiencia en tu proceso de diseño. 🚀 ¡Comienza ahora!
+  metaKeywords: "diseño, figma, Estructuras modulares"
   metaRobots: "index, follow"
 ---
-   
 
+# Cómo realizar un Design System efectivo
 
+¡Bienvenidos a Design-Systems.es, tu fuente de conocimiento sobre diseño y sistemas de diseño! En este artículo, descubrirás todo lo que necesitas saber sobre cómo realizar un Design System de manera efectiva. Si estás buscando aumentar la coherencia y la eficiencia en tus proyectos de diseño, ¡has llegado al lugar correcto!
 
-design systems es una empresa con amplia experiencia en el campo de la fabricación, venta e intalación de toldos .
-<br>
- <b>Más de 35 años de experiencia</b>
+## ¿Qué es un Design System?
 
-Una empresa que mantiene un servicio de calidad, consolidada en el sector, en constante renovación y adaptándonos a los tiempos actuales, incorporando los últimos avances tecnológicos en el campo de la motorizacion de sistemas de proteccion solar. Le dedicamos trabajo y espero en la calidad de la instalacion. La instalación solo se puede realizar por profesionales cualificados, ya que de otra forma el material adquirido no cubrirá las funciones deseadas .
+Un Design System es una serie de principios, pautas, componentes y recursos que definen y unifican la apariencia y el comportamiento de un producto o marca. Sirve como una guía integral para el diseño, permitiendo a los equipos trabajar de manera más eficiente y consistente.
 
-Una buena instalación es garantía de un buen funcionamiento. 
+## Beneficios de implementar un Design System
+
+La implementación de un Design System conlleva una serie de beneficios significativos para tu proceso de diseño. Algunos de ellos son:
+
+1. **Consistencia visual:** Un Design System garantiza una apariencia coherente en todo tu producto, lo que mejora la experiencia del usuario y refuerza la identidad de marca.
+
+2. **Eficiencia en el diseño:** Al tener un conjunto de componentes y pautas establecidos, los diseñadores pueden crear y actualizar rápidamente nuevas interfaces, evitando la duplicación de esfuerzos.
+
+3. **Colaboración mejorada:** Un Design System facilita la colaboración entre diseñadores, desarrolladores y otros miembros del equipo, ya que todos trabajan en la misma plataforma y hablan el mismo lenguaje de diseño.
+
+## Pasos para crear un Design System
+
+1. **Investigación y planificación:** Comienza por comprender las necesidades y objetivos de tu producto o marca. Investiga las mejores prácticas de diseño y recopila ejemplos de Estructuras modulares existentes para inspirarte.
+
+2. **Definición de principios y directrices:** Establece los principios de diseño que guiarán tu Design System. Define las pautas de estilo, como la tipografía, los colores y los espacios, y asegúrate de documentarlos de manera clara.
+
+3. **Creación de componentes reutilizables:** Identifica los componentes comunes en tu producto y diseña versiones reutilizables de ellos. Estos componentes pueden incluir botones, tarjetas, barras de navegación, entre otros.
+
+4. **Documentación y comunicación:** Documenta y comparte tu Design System de manera accesible para todo el equipo. Utiliza herramientas como Figma para crear una biblioteca de componentes y brindar instrucciones claras sobre cómo utilizarlos.
+
+5. **Iteración y mejora continua:** Un Design System nunca está terminado. A medida que evolucionan tus

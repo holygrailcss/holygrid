@@ -1,10 +1,10 @@
 ---
 layout: _legales
 title: El primero de todos
-author: Kevin Powell
+author: man
 date: 2021-05-01
 tags: ["legal", "aaa"]
-image: /assets/static/_blog/article-1.webp
+image: /assets/static/images/5.jpg
 imageAlt: politicas de privacidad
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
 ---

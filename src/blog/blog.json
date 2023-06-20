@@ -3,6 +3,6 @@
 	"layout": "_bloginner.njk",
 	"author": "Manuel Ruiz",
 	"tags": ["blog"],
-	"tag": "post",
+	"tag": "blog",
 	"categoryName": "Blog"
 }

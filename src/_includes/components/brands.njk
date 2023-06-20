@@ -1,5 +1,5 @@
 <section class="pb-64 pt-64 bg-light front-section">
-  <div class="container-fluid">
+  <div class="container-full">
 <div class="row mb-64">
   <div class="col-xs-12">
     <h3 class="fluid-6-b mb-24">Trabajamos con las primeras marcas</h3>
@@ -9,7 +9,7 @@
 {% for brand in global.brands.split(',') %} 
   {% set delay = loop.index * 100 %}
   <div class="col-xs-2 brand-partner">
-    <img data-aos="fade-up" width="100%" height="100%" data-aos-delay="{{ delay }}" src="{{ global.imageDir }}brands/{{ brand }}.jpg" alt="{{ brand }}">
+    <img data-aos="fade-up" width="100%" height="100%" data-aos-delay="{{ delay }}" src="{{ global.imageDir }}images/brands/{{ brand }}.jpg" alt="{{ brand }}">
   </div>
 {% endfor %}
     </div>

@@ -12,7 +12,7 @@
     <meta name="robots" content="{{ metaRobots }}" />
     <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}" />
     <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
-    <link rel="icon" type="image/webp" href="{{ global.url }}/assets/static/about-0.webp" />
+    <link rel="icon" type="image/webp" href="{{ global.url }}/assets/static/images/1.jpg" />
 
     <style>
         :root {
@@ -34,7 +34,7 @@
     <meta property="og:site_name" content="{{ global.empresa }}" />
     <meta
       property="og:image"
-      content="{{ global.url }}/assets/static/about-0.webp"
+      content="{{ global.url }}/assets/static/images/2.jpg"
     />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="website" />
@@ -64,7 +64,7 @@
 
     <!-- End Google Tag Manager -->
   </head>
-<body class="contain {% if page.url == '/' or page.url == '/sobre-toldos-marfil/' %}home{% endif %}" >
+<body class="contain {% if page.url == '/' or page.url == '/about/' %}home{% endif %}" >
 
 {% set breadcrumbs = [] %}
 

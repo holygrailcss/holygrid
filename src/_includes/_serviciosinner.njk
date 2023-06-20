@@ -10,7 +10,7 @@ layout: base.njk
 
 {% include 'components/hero.njk' %}
 
-        <div class="container-fluid pt-32 bg-white">
+        <div class="container-full pt-32 bg-white">
           <div class="container-2">
             <div class="innermarkdown">
               {{ content | toc | safe }}  
@@ -20,7 +20,7 @@ layout: base.njk
         </div>
 
 
-  <div class="container-fluid l-top bg-white">
+  <div class="container-full l-top bg-white">
     <div class="col-xs-12">
       {% if next or previous%}
       <div class="pagination">
