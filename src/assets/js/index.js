@@ -387,3 +387,20 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM(".my-gallery");
+
+
+$(document).ready(function () {
+
+  $(".resize-code").on("click", function () {
+		$(this.parentNode.parentNode.parentNode.parentNode).toggleClass("opencode-button");
+		e.preventDefault();
+	});
+	$(".resize-rules").on("click", function () {
+		console.log("esto no funciona");
+		$(this.parentNode.parentNode).toggleClass("openRules");
+	});
+	$(".btn-anim").click(function () {
+		$(this).toggleClass("is-loading");
+	});
+
+});

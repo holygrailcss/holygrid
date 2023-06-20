@@ -1,6 +1,6 @@
 ---
-
-permalink: /contacta/
+layout: _parrillas-collection.njk
+permalink: /parrillas-collection/
 
 title: Contacta con nosotros
 subtitle: Ven a visitarnos
