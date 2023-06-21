@@ -1,0 +1,87 @@
+@import '../../../../../../../../../../assets/styles/abstract/_all.scss';
+@import '../../../../../../../../../../assets/styles/abstract/_categoryGrid.scss';
+
+$grid-cols--3S: 3;
+$margin-grid-cols--3S: 20px;
+
+.grid-product-wrap--3S {
+    @include grid-product-view-bleed;
+
+    margin-top: $sm-grid-top-margin;
+    margin-bottom: $sm-grid-bottom-margin;
+
+    @media (min-width: $break-sm) {
+        margin-top: $grid-top-margin;
+        margin-bottom: $grid-bottom-margin;
+    }
+
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+
+    .card9-wrap-details {
+        height: auto;
+        min-height: 126px;
+    }
+
+    .grid-product-list--3S {
+        margin-left: -$xs-grid-wrap-pad;
+        margin-right: -$xs-grid-wrap-pad;
+        margin-bottom: #{$margin-grid-cols--3S};
+        width: calc(100% + 14px);
+
+        @media (min-width: $break-md) {
+            margin-right: #{$margin-grid-cols--3S};
+            margin-left: 0;
+            width: calc(100% / #{$grid-cols--3S} - 14px);
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.is-rtl {
+    .grid-product-wrap--3S {
+        @include grid-product-view-bleed-rtl;
+
+        margin-top: $sm-grid-top-margin;
+        margin-bottom: $sm-grid-bottom-margin;
+    
+        @media (min-width: $break-sm) {
+            margin-top: $grid-top-margin;
+            margin-bottom: $grid-bottom-margin;
+        }
+    
+        display: flex;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+
+        .card9-wrap-details {
+            height: auto;
+            min-height: 126px;
+        }
+
+        .grid-product-list--3S {
+            margin-right: -$xs-grid-wrap-pad;
+            margin-left: -$xs-grid-wrap-pad;
+            margin-bottom: #{$margin-grid-cols--3S};
+            width: calc(100% + 14px);
+
+            @media (min-width: $break-md) {
+                margin-left: #{$margin-grid-cols--3S};
+                margin-right: 0;
+                width: calc(100% / #{$grid-cols--3S} - 14px);
+
+                &:nth-child(3n) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

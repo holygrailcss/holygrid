@@ -1,0 +1,134 @@
+@import "../../../../../../../../../../assets/styles/abstract/_all.scss";
+@import "../../../../../../../../../../assets/styles/abstract/_categoryGrid.scss";
+
+$grid-cols--2CBG2: 2;
+
+$sm-grid-2CBG2-view5-gutter: 16px;
+$sm-grid-2CBG2-top-margin: 50px;
+$sm-grid-2CBG2-top-padding: 50px;
+
+$grid-cols--2CBG2-gutter: 170px;
+$grid-2CBG2-top-margin: 200px;
+$grid-2CBG2-top-padding: 200px;
+
+$xl-grid-cols--2CBG2-gutter: 230px;
+$xl-grid-2CBG2-max-width: 2500px;
+$xl-grid-2CBG2-top-margin: 260px;
+$xl-grid-2CBG2-top-padding: 260px;
+
+.grid-2CBG2-wrap {
+    @include grid-product-view-bleed;
+}
+
+.is-rtl .grid-2CBG2-wrap {
+    @include grid-product-view-bleed-rtl;
+}
+
+.grid-product-wrap--2CBG2 {
+    padding-top: $sm-grid-2CBG2-top-padding;
+    padding-bottom: $sm-grid-2CBG2-top-padding;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 0;
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    .sk-load2:before {
+        background-color: transparent;
+    }
+
+    .grid-product-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    @media (min-width: $break-md) {
+        padding-top: $grid-2CBG2-top-padding;
+        padding-bottom: $grid-2CBG2-top-padding;
+    }
+
+    @media (min-width: $break-xl) {
+        padding-top: $xl-grid-2CBG2-top-padding;
+        padding-bottom: $xl-grid-2CBG2-top-padding;
+        margin: 0 auto;
+        max-width: $xl-grid-2CBG2-max-width;
+    }
+
+    .grid-product-list--2CBG2 {
+        @media (max-width: #{$break-md - 1}) {
+            margin-right: #{$sm-grid-2CBG2-view5-gutter};
+            width: calc((100% + #{$sm-grid-2CBG2-view5-gutter} * 3) / 2 - (#{$sm-grid-2CBG2-view5-gutter} * 2));
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: $break-md) {
+            margin-right: 0;
+            margin-left: #{$grid-cols--2CBG2-gutter};
+
+            &:nth-child(#{$grid-cols--2CBG2}n) {
+                margin-right: #{$grid-cols--2CBG2-gutter};
+            }
+
+            width: calc(
+                (100% / #{$grid-cols--2CBG2}) -
+                    (#{$grid-cols--2CBG2-gutter} * (#{$grid-cols--2CBG2 + 1} / #{$grid-cols--2CBG2}))
+            );
+        }
+
+        @media (min-width: $break-xl) {
+            margin-right: 0;
+            margin-left: #{$xl-grid-cols--2CBG2-gutter};
+
+            &:nth-child(#{$grid-cols--2CBG2}n) {
+                margin-right: #{$xl-grid-cols--2CBG2-gutter};
+            }
+
+            width: calc(
+                (100% / #{$grid-cols--2CBG2}) -
+                    (#{$xl-grid-cols--2CBG2-gutter} * (#{$grid-cols--2CBG2 + 1} / #{$grid-cols--2CBG2}))
+            );
+        }
+    }
+
+    :host(.card9-wrap-details) {
+        padding: 0;
+    }
+
+    .card9 {
+        product-view-details {
+            .card9-wrap-details {
+                background-color: transparent; //TODO holygrail
+            }
+        }
+    }
+
+    product-view.p-view {
+        background-color: transparent;
+    }
+}
+
+.is-rtl {
+    .grid-product-wrap--2CBG2 {
+        .grid-product-list--2CBG2 {
+            @media (max-width: #{$break-md - 1}) {
+                &:nth-child(2n) {
+                    margin-left: 0;
+                }
+            }
+
+            @media (min-width: $break-md) {
+                &:nth-child(#{$grid-cols--2CBG2}n) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

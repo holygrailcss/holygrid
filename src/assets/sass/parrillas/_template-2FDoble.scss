@@ -1,0 +1,44 @@
+@import '../../../../../../../../../../assets/styles/abstract/_all.scss';
+@import '../../../../../../../../../../assets/styles/abstract/_categoryGrid.scss';
+@import '../../../../../../../../../../app/shared/product/components/product-skeleton/product-skeleton.component.scss';
+
+$product-details-padding: 16px;
+$product-details-padding-mobile: 24px;
+
+.grid-product-wrap--2FDoble {
+    @include grid-product-view-full-bleed;
+
+    .grid-product-list--2FDoble {
+        width: 100%;
+
+        @media (min-width: $break-sm) {
+            width: 50%;
+        }
+    }
+
+    .card9-contents {
+        padding-left: $product-details-padding;
+    }
+
+    @media (max-width: #{$break-sm}) {
+        .card9-contents {
+            padding-left: $product-details-padding-mobile;
+        }
+    }
+}
+
+.is-rtl {
+    .grid-product-wrap--2FDoble {
+        @include grid-product-view-full-bleed-rtl;
+    }
+
+    .card9-contents {
+        padding-right: $product-details-padding;
+    }
+
+    @media (max-width: #{$break-sm}) {
+        .card9-contents {
+            padding-right: $product-details-padding-mobile;
+        }
+    }
+}

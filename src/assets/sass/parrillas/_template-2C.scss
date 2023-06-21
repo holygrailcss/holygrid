@@ -1,0 +1,102 @@
+@import '../../../../../../../../../../assets/styles/abstract/_all.scss';
+
+$lg-grid-view2-gutter-2C: 64px;
+$sm-grid-view1-t2c-gutter: 4px;
+$product-details-padding-2C: 8px;
+
+.grid-product-wrap--2C {    
+    margin-top: $sm-grid-top-margin;
+    margin-bottom: $sm-grid-bottom-margin;
+
+    
+    margin-left: -16px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    
+    @media (min-width: $break-sm) {
+        width: 100%;
+        justify-content: center;
+        margin-top: $grid-top-margin;
+        margin-bottom: $grid-bottom-margin;
+        margin-left: 0;
+    }
+
+    .grid-product-list--2C {
+        width: calc(50% - (#{$sm-grid-view1-t2c-gutter}));
+        margin-right: $sm-grid-view1-t2c-gutter;
+
+        @media (min-width: $break-sm) {
+            width: calc(45% - (#{$sm-grid-view1-gutter}));
+            margin-right: $grid-view1-gutter;
+        }
+
+        @media (min-width: $break-lg) {
+            width: calc(33% - (#{$lg-grid-view2-gutter-2C}));
+        }
+    }
+
+    .grid-product-list--2C:last-child {
+        margin-right: 0;
+    }
+
+    .sk-load2 {
+        position: relative;
+
+        &:before {
+            display: block;
+            content: '';
+            width: 100%;
+            padding-top: calc(133.25% + 126px);
+
+            @media (min-width: $break-md) {
+                padding-top: calc(133.25% + 144px);
+            }
+        }
+
+        &::marker {
+            display: none;
+            content: '';
+        }
+    }
+
+    .card9-contents {
+        padding-left: $product-details-padding-2C;
+    }
+}
+
+.is-rtl {
+    .grid-product-wrap--2C {
+        width: 100%;
+
+        .grid-product-list--2C {
+            width: calc(50% + (#{$sm-grid-view1-t2c-gutter * 3}));
+            margin-left: $sm-grid-view1-gutter;
+            margin-right: -16px;
+
+            @media (min-width: $break-sm) {
+                width: calc(45% - (#{$sm-grid-view1-gutter}));
+                margin-left: $grid-view1-gutter;
+                margin-right: $grid-view1-gutter;
+            }
+
+            @media (min-width: $break-lg) {
+                width: calc(33% - (#{$lg-grid-view2-gutter-2C}));
+                margin-right: $lg-grid-view2-gutter-2C;
+            }
+        }
+
+        .grid-product-list--2C:last-child {
+            margin-left: -16px;
+
+            @media (min-width: $break-sm) {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
+
+        .card9-contents {
+            padding-right: $product-details-padding-2C;
+        }
+    }
+}

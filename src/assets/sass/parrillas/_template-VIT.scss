@@ -1,0 +1,142 @@
+@import "../../../../../../../../../../assets/styles/abstract/_all.scss";
+
+.grid-product-wrap--VIT {
+	margin: 0 48px;
+
+	@media (min-width: $break-md) {
+		width: calc(100% - 80px);
+		margin: auto;
+	}
+
+	@media (min-width: $break-lg) {
+		width: calc(80%);
+		margin: auto;
+	}
+
+	.grid-product-list--VIT {
+		width: calc(100% - 16px);
+		margin: 0px auto 40px;
+
+		@media (min-width: $break-sm) {
+			margin: auto;
+			width: 100%;
+		}
+	}
+
+	.rat-3-4:before {
+		padding-top: 66%;
+	}
+
+	.sk-load8 {
+		position: relative;
+
+		&:before {
+			display: block;
+			content: "";
+			width: 100%;
+			padding-top: calc(66.66667% + 280px);
+			background-color: $c-white;
+
+			@media (min-width: 768px) and (max-width: 1439px) {
+				padding-top: calc(66.66667% + 144px);
+			}
+		}
+
+		&::marker {
+			display: none;
+			content: "";
+		}
+	}
+
+	.limited-card-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		flex-direction: column;
+
+		@media (min-width: $break-md) {
+			gap: 50px;
+		}
+
+		.limited-before-card9,
+		.limited-after-card9 {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+		.limited-before-card9 {
+			justify-content: center;
+			font-family: $font-family-a-b;
+		}
+
+		.limited-after-card9 {
+			justify-content: center;
+		}
+
+		.card9 {
+			width: 100%;
+			display: flex;
+			flex-grow: 1;
+			align-items: center;
+			justify-content: center;
+
+			.js-card9-inner {
+				width: 100%;
+			}
+		}
+
+		@media (min-width: $break-sm) {
+			flex-direction: row;
+
+			.limited-before-card9,
+			.limited-after-card9 {
+				width: calc((100% / 12) * 4);
+				text-align: left;
+				min-width: 140px;
+			}
+
+			.limited-before-card9 {
+				white-space: nowrap;
+				justify-content: flex-end;
+			}
+
+			.limited-after-card9 {
+				justify-content: flex-start;
+			}
+		}
+
+		@media (min-width: $break-md) {
+			flex-direction: row;
+
+			.limited-before-card9,
+			.limited-after-card9 {
+				width: calc((100% / 12) * 4);
+				text-align: left;
+				min-width: 200px;
+			}
+		}
+	}
+}
+
+.is-rtl {
+	.grid-product-wrap--VIT .limited-card-wrap {
+		@media (min-width: $break-md) {
+			.limited-before-card9,
+			.limited-after-card9 {
+				text-align: right;
+			}
+
+			.limited-before-card9 {
+				justify-content: flex-start;
+			}
+
+			.limited-after-card9 {
+				justify-content: flex-end;
+			}
+		}
+	}
+}

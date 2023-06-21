@@ -1,0 +1,62 @@
+@import '../../../../../../../../../assets/styles/abstract/_all.scss';
+
+$grid-cols--5A: 3;
+
+.grid-product-wrap--5A {
+    margin-top: $sm-grid-top-margin;
+    margin-bottom: $sm-grid-bottom-margin;
+
+    @media (min-width: $break-sm) {
+        margin-top: $grid-top-margin;
+        margin-bottom: $grid-bottom-margin;
+    }
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+
+    .grid-product-list--5A {
+        @media (max-width: #{$break-sm - 1} ) {
+            width: 100%;
+        }
+        .otherProduct-5A {
+            width: 50%;
+            float: left;
+        }
+        @media (min-width: $break-sm) {
+            margin-left: calc(100% / 12);
+            margin-bottom: #{$sm-grid-view1-gutter};
+            width: calc((100% / #{$grid-cols--5A}) - 8px);
+        }
+    }
+
+    .grid-product-list--5A:last-child {
+        @media (min-width: $break-sm) {
+            margin-right: calc(100% / 12);
+            margin-left: auto;
+        }
+    }
+}
+
+.is-rtl {
+    .grid-product-wrap--5A {
+        .grid-product-list--5A {
+            .otherProduct-5A {
+                float: right;
+            }
+            @media (min-width: $break-sm) {
+                margin-right: calc(100% / 12);
+                margin-left: 0;
+            }
+        }
+
+        .grid-product-list--5A:last-child {
+            @media (min-width: $break-sm) {
+                margin-left: calc(100% / 12);
+                margin-right: auto;
+            }
+        }
+    }
+}
