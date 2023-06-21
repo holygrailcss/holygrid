@@ -1,0 +1,70 @@
+$white: #ffffff !default;
+$black: #000000 !default;
+$gray-10: #e3e3e3 !default;
+$default-md: #292929;
+
+//padding Grid Catalog ////////////////////////////
+$xs-grid-wrap-pad: 8px;
+$md-grid-wrap-pad: 32px;
+$xs-grid-wrap-pad-double: 16px;
+$md-grid-wrap-pad-double: 64px;
+
+//padding Grid Catalog full bleed////////////////////////////
+$xs-grid-wrap-pad-bleed: 16px;
+$md-grid-wrap-pad-bleed: 40px;
+$xs-grid-wrap-pad-double-bleed: 32px;
+$md-grid-wrap-pad-double-bleed: 80px;
+
+//global ////////////////////////////
+$grid-pad-global: 16px;
+$grid-top-margin: 0px;
+$grid-bottom-margin: 0px;
+
+$sm-grid-pad-global: 32px;
+$sm-grid-top-margin: 0px;
+$sm-grid-bottom-margin: 0px;
+
+//grid view1 ////////////////////////////
+$sm-grid-view1-cols: 2;
+$sm-grid-view1-mbottom: 8px;
+$sm-grid-view1-gutter: 8px;
+
+$grid-view1-cols: 2;
+$grid-view1-gutter: 16px;
+$grid-view1-mbottom: 4px;
+
+//grid view2  ////////////////////////////
+$sm-grid-view2-cols: 4;
+$sm-grid-view2-gutter: 8px;
+$sm-grid-view2-mbottom: 8px;
+
+//grid view2
+$grid-view2-cols: 2;
+$grid-view2-gutter: 8px;
+$grid-view2-mbottom: 4px;
+
+//grid view3  ////////////////////////////
+$grid-view3-cols: 4;
+$grid-view3-gutter: 4px;
+$grid-view3-mbottom: 4px;
+//grid view3  desktop
+$sm-grid-view3-cols: 12;
+$sm-grid-view3-gutter: 4px;
+$sm-grid-view3-mbottom: 4px;
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

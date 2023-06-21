@@ -1,0 +1,94 @@
+$container-5: 800px;
+
+$padding-mobile: 16px;
+
+$headers:/* name:mobile,768,992,1280,line-height,font */ (
+
+    sub-l:(56px, 56px, 96px, 96px, 1.1, "bold3"),
+    sub-m:(42px, 42px, 64px, 64px, 1.1, "bold3"),
+    sub-s:(32px, 32px, 56px ,56px, 1.1, "medium3"),
+
+
+    head-l:(56px, 56px, 96px, 96px, 1.1, "bold2"),
+    head-m:(42px, 42px, 64px, 64px, 1.1, "bold2"),
+    head-s:(32px, 32px, 56px ,56px, 1.1, "bold2"),
+
+    tit-l: (24px, 24px, 42px, 42px, 1.2, "bold2"),
+    tit-m: (20px, 20px, 32px, 32px, 1.2, "bold2"),
+    tit-s: (16px, 16px, 20px,20px, 1.2, "bold"),
+    tit-xs:(14px, 14px, 14px,14px, 1.2, "bold"),
+
+    p-18-2b: ( 18px, 18px, 18px, 18px, 1.3, "bold2"),
+    p-18-b: ( 18px, 18px, 18px, 18px, 1.3, "bold"),
+    p-14: ( 14px, 14px, 14px, 14px, 1.3, "regular"),
+    p-14-b: ( 14px, 14px, 14px, 14px, 1.3, "bold"),
+    p-l: (16px, 16px, 18px ,18px, 1.3, "regular"),
+    p-m: (14px, 14px, 16px ,16px, 1.3, "regular"),
+    p-m-b: (14px, 14px, 16px ,16px, 1.3, "bold"), //NUEVO
+    p-s: (12px, 12px, 13px ,13px, 1.3, "regular"),
+    p-s-b: (12px, 12px, 13px ,13px, 1.3, "bold"),
+
+    p-xs:(11px, 11px, 12px ,12px, 1.3, "regular"),
+    p-xs-b:(11px, 11px, 12px ,12px, 1.3, "bold"), // NUEVO
+    p-xxs-b:(9px, 9px, 9px ,9px, 1.3, "bold"),
+
+
+    //TODO: Limited
+    h10: ( 16px, 16px, 24px, 24px, 1.4, "bold" ),
+    h11: (16px, 16px, 24px, 24px, 1.4, "bold2")
+);
+
+/* TYPES FIJOS */
+
+$headersFixers: (
+    /*name :  fontsize, lineheight */ 12: (12px, 1.5),
+    14: (14px, 1.5),
+    16: (16px, 1.5),
+    18: (18px, 1.5),
+    20: (20px, 1.2),
+    24: (24px, 1.2),
+    32: (32px, 1.2),
+    40: (40px, 1.2)
+);
+
+$font-family-a-r: 'dutti-daily-regular', Helvetica, arial, sans-serif;
+$font-family-a-m: 'dutti-daily-light', Helvetica, arial, sans-serif;
+$font-family-a-b:'dutti-daily-bold', Helvetica, arial, sans-serif;
+
+$font-family-b-r: 'dutti-extended-regular', Helvetica, arial, sans-serif;
+$font-family-b-m: 'dutti-extended-bold', arial-black, sans-serif;
+$font-family-b-b: 'dutti-extended-extrabold', arial-black, sans-serif;
+
+$font-family-c-r: 'massimo-daily-regular', 'ms-serif',serif;
+$font-family-c-m: 'massimo-daily-light', 'ms-serif',serif;
+$font-family-c-b: 'massimo-daily-bold', 'ms-serif',serif;
+
+$font-weight-light: 100;
+$font-weight-regular: 500;
+$font-weight-medium: 500;
+$font-weight-bold: 900;
+
+$font-family-form-placeholder: 'dutti-daily-regular', Helvetica, arial, sans-serif;
+$font-family-form: 'dutti-daily-regular', Helvetica, arial, sans-serif;
+
+
+$btn-radius: 0;
+
+// massimodutti color MD 2022
+$c-white: #FFFFFF;
+$c-black: #000000;
+
+$c-dark-grey: #8E8E8E;
+$c-middle-grey: #E3E3E3;
+$c-light-grey: #F0F0F0;
+
+$c-primary: #292929;
+$c-error: #B40016;
+$c-info: #1A32A4;
+
+$c-success: #76AE4A;
+$c-warning: #ffc700;
+$c-feel: #fb9962;
+$c-feel-dark: #C94C07;
+$c-special:#b99d6b; //gold
+// fin massimodutti color MD 2022

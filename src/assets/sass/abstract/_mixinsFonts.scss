@@ -1,0 +1,22 @@
+
+// Monospace//
+@mixin text-monospace { // crear fuente monospace
+    font-family: $font-family-a-r;
+}
+@mixin text-monospace-bold {
+    font-family: $font-family-a-b;
+}
+@mixin font-i {
+    font-family: $font-family-a-r;
+    font-style: italic;
+}
+
+@mixin font-medium-i {
+     font-family:$font-family-a-r;
+     font-style: italic;
+}
+
+@mixin font-2-bold-i {
+      font-family: $font-family-a-b;
+      font-style: italic;
+}
