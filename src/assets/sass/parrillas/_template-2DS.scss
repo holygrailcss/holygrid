@@ -1,6 +1,6 @@
-@import "abstract/_all.scss";
-@import "abstract/_categoryGrid.scss";
-@import "../../../../../../../../../../app/shared/product/components/product-skeleton/product-skeleton.component.scss";
+@import '../abstract/_all.scss';
+@import "../abstract/_categoryGrid.scss";
+// cambio @import "../../../../../../../../../../app/shared/product/components/product-skeleton/product-skeleton.component.scss";
 
 $break-sm--2DS: 767px;
 $product-details-padding--2DS: 16px;
