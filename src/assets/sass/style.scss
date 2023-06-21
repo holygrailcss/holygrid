@@ -212,13 +212,7 @@ main {
 .p-relative {
   position: relative;
 }
-.link-line {
-  letter-spacing: 4px;
-  font-size: 11px;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  cursor: pointer;
-}
+
 .front-text {
   position: relative;
   z-index: 10;
@@ -446,11 +440,7 @@ main {
     display: none;
   }
 }
-.link-line {
-  padding-left: 0;
-  padding-right: 0;
-  border-radius: 0;
-}
+
 .header-img {
   position: relative;
 }
@@ -545,4 +535,12 @@ ul.list-clear li {
 
 .container-full{
   max-width: 1600px;
+}
+
+.product-tag {
+  font-family: "dutti-daily-bold";
+  font-size: 14px;
+  color: #292929;
+  letter-spacing: 0;
+  line-height: 16px;
 }

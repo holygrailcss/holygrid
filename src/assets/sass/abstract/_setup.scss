@@ -1,407 +1,94 @@
-@font-face {
-  font-family: "dutti-daily-light";
-  src: url("../fonts/dutti-daily/dutti-daily-light.woff2") format("woff2"),
-    url("../fonts/dutti-daily/dutti-daily-light.woff") format("woff");
-}
-@font-face {
-  font-family: "dutti-daily-regular";
-  src: url("../fonts/dutti-daily/dutti-daily-regular.woff2") format("woff2"),
-    url("../fonts/dutti-daily/dutti-daily-regular.woff") format("woff");
-}
+$container-5: 800px;
 
-@font-face {
-  font-family: "dutti-daily-medium";
-  src: url("../fonts/dutti-daily/dutti-daily-medium.woff2") format("woff2"),
-    url("../fonts/dutti-daily/dutti-daily-medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "dutti-daily-bold";
-  src: url("../fonts/dutti-daily/dutti-daily-bold.woff2") format("woff2"),
-    url("../fonts/dutti-daily/dutti-daily-bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "dutti-extended-regular";
-  src: url("../fonts/dutti-daily/dutti-extended-regular.woff2") format("woff2"),
-    url("../fonts/dutti-daily/dutti-extended-regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "dutti-extended-bold";
-  src: url("../fonts/dutti-daily/dutti-extended-bold.woff2") format("woff2"),
-    url("../fonts/dutti-daily/dutti-extended-bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "dutti-extended-extrabold";
-  src: url("../fonts/dutti-daily/dutti-extended-extrabold.woff2")
-      format("woff2"),
-    url("../fonts/dutti-daily/dutti-extended-extrabold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "massimo-daily-light";
-  src: url("../fonts/dutti-daily/massimo-daily-light.woff2") format("woff2"),
-    url("../fonts/dutti-daily/massimo-daily-light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "massimo-daily-regular";
-  src: url("../fonts/dutti-daily/massimo-daily-regular.woff2") format("woff2"),
-    url("../fonts/dutti-daily/massimo-daily-regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "massimo-daily-bold";
-  src: url("../fonts/dutti-daily/massimo-daily-bold.woff2") format("woff2"),
-    url("../fonts/dutti-daily/massimo-daily-bold.woff") format("woff");
-}
+$padding-mobile: 16px;
 
 $headers:/* name:mobile,768,992,1280,line-height,font */ (
-  sub-l: (
-    56px,
-    56px,
-    96px,
-    96px,
-    1.1,
-    "bold3",
-  ),
-  sub-m: (
-    42px,
-    42px,
-    64px,
-    64px,
-    1.1,
-    "bold3",
-  ),
-  sub-s: (
-    32px,
-    32px,
-    56px,
-    56px,
-    1.1,
-    "medium3",
-  ),
-  head-l: (
-    56px,
-    56px,
-    96px,
-    96px,
-    1.1,
-    "bold",
-  ),
-  head-m: (
-    42px,
-    42px,
-    64px,
-    64px,
-    1.1,
-    "bold",
-  ),
-  head-s: (
-    32px,
-    32px,
-    56px,
-    56px,
-    1.1,
-    "bold",
-  ),
-  tit-l: (
-    24px,
-    24px,
-    42px,
-    42px,
-    1.2,
-    "bold",
-  ),
-  tit-m: (
-    20px,
-    20px,
-    32px,
-    32px,
-    1.2,
-    "bold",
-  ),
-  tit-s: (
-    16px,
-    16px,
-    20px,
-    20px,
-    1.2,
-    "bold",
-  ),
-  tit-xs: (
-    14px,
-    14px,
-    14px,
-    14px,
-    1.2,
-    "bold",
-  ),
-  p-18-2b: (
-    18px,
-    18px,
-    18px,
-    18px,
-    1.3,
-    "bold",
-  ),
-  p-18-b: (
-    18px,
-    18px,
-    18px,
-    18px,
-    1.3,
-    "bold",
-  ),
-  p-lm: (
-    16px,
-    16px,
-    18px,
-    18px,
-    1.3,
-    "medium",
-  ),
-  p-l: (
-    16px,
-    16px,
-    18px,
-    18px,
-    1.3,
-    "regular",
-  ),
-  p-m: (
-    14px,
-    14px,
-    16px,
-    16px,
-    1.3,
-    "regular",
-  ),
-  p-m-b: (
-    14px,
-    14px,
-    16px,
-    16px,
-    1.3,
-    "bold",
-  ),
-  //NUEVO
-  p-s:
-    (
-      12px,
-      12px,
-      13px,
-      13px,
-      1.3,
-      "regular",
-    ),
-  p-s-b: (
-    12px,
-    12px,
-    13px,
-    13px,
-    1.3,
-    "bold",
-  ),
-  p-xs: (
-    11px,
-    11px,
-    12px,
-    12px,
-    1.3,
-    "regular",
-  ),
-  p-xs-b: (
-    11px,
-    11px,
-    12px,
-    12px,
-    1.3,
-    "bold",
-  ),
-  // NUEVO
-  p-xxs-b:
-    (
-      9px,
-      9px,
-      9px,
-      9px,
-      1.3,
-      "bold",
-    ),
-  //TODO: Limited
-  h10:
-    (
-      16px,
-      16px,
-      24px,
-      24px,
-      1.4,
-      "bold",
-    ),
-  h11: (
-    16px,
-    16px,
-    24px,
-    24px,
-    1.4,
-    "bold2",
-  ),
-);
-$headersFluids: (
-  /*name :  fontsize, lineheight */ 12: (12px, 12px, 0.9),
-  14: (14px, 14px, 0.9),
-  16: (16px, 16px, 2),
-  18: (18px, 18px, 2),
-  20: (20px, 40px, 1),
-  50: (30px, 50px, 1),
-  100: (50px, 200px, 1),
-  150: (50px, 120px, 0.9)
+
+    sub-l:(56px, 56px, 96px, 96px, 1.1, "bold3"),
+    sub-m:(42px, 42px, 64px, 64px, 1.1, "bold3"),
+    sub-s:(32px, 32px, 56px ,56px, 1.1, "medium3"),
+
+
+    head-l:(56px, 56px, 96px, 96px, 1.1, "bold2"),
+    head-m:(42px, 42px, 64px, 64px, 1.1, "bold2"),
+    head-s:(32px, 32px, 56px ,56px, 1.1, "bold2"),
+
+    tit-l: (24px, 24px, 42px, 42px, 1.2, "bold2"),
+    tit-m: (20px, 20px, 32px, 32px, 1.2, "bold2"),
+    tit-s: (16px, 16px, 20px,20px, 1.2, "bold"),
+    tit-xs:(14px, 14px, 14px,14px, 1.2, "bold"),
+
+    p-18-2b: ( 18px, 18px, 18px, 18px, 1.3, "bold2"),
+    p-18-b: ( 18px, 18px, 18px, 18px, 1.3, "bold"),
+    p-14: ( 14px, 14px, 14px, 14px, 1.3, "regular"),
+    p-14-b: ( 14px, 14px, 14px, 14px, 1.3, "bold"),
+    p-l: (16px, 16px, 18px ,18px, 1.3, "regular"),
+    p-m: (14px, 14px, 16px ,16px, 1.3, "regular"),
+    p-m-b: (14px, 14px, 16px ,16px, 1.3, "bold"), //NUEVO
+    p-s: (12px, 12px, 13px ,13px, 1.3, "regular"),
+    p-s-b: (12px, 12px, 13px ,13px, 1.3, "bold"),
+
+    p-xs:(11px, 11px, 12px ,12px, 1.3, "regular"),
+    p-xs-b:(11px, 11px, 12px ,12px, 1.3, "bold"), // NUEVO
+    p-xxs-b:(9px, 9px, 9px ,9px, 1.3, "bold"),
+
+
+    //TODO: Limited
+    h10: ( 16px, 16px, 24px, 24px, 1.4, "bold" ),
+    h11: (16px, 16px, 24px, 24px, 1.4, "bold2")
 );
 
-$mb: "margin-bottom";
-$margin-bottom: /* name : margen bottom*/ (
-  mb-8: (
-    8px,
-    8px,
-    8px,
-    8px,
-  ),
-  mb-16: (
-    16px,
-    16px,
-    16px,
-    16px,
-  ),
-  mb-24: (
-    24px,
-    24px,
-    24px,
-    24px,
-  ),
-  mb-32: (
-    32px,
-    32px,
-    32px,
-    32px,
-  ),
-  mb-40: (
-    40px,
-    40px,
-    40px,
-    40px,
-  ),
-  mb-48: (
-    48px,
-    48px,
-    48px,
-    48px,
-  ),
-  mb-64: (
-    64px,
-    64px,
-    64px,
-    64px,
-  ),
-  mb-82: (
-    82px,
-    82px,
-    82px,
-    82px,
-  ),
-  mb-100: (
-    100px,
-    100px,
-    100px,
-    100px,
-  ),
-  mbr-50-100: (
-    50px,
-    50px,
-    100px,
-    100px,
-  ),
-  mbr-24: (
-    16px,
-    24px,
-    24px,
-    24px,
-  ),
-  mbr-32: (
-    24px,
-    32px,
-    32px,
-    32px,
-  ),
-  mbr-64: (
-    32px,
-    64px,
-    64px,
-    64px,
-  ),
-  mbr-128: (
-    64px,
-    128px,
-    128px,
-    128px,
-  ),
-  //todo giftcard
-  mbr-20-40:
-    (
-      20px,
-      40px,
-      40px,
-      40px,
-    ),
-) !default;
+/* TYPES FIJOS */
 
-$font-family-a-l: "dutti-daily-medium", Helvetica, "Arial ", "Lucida Grande",
-  sans-serif;
+$headersFixers: (
+    /*name :  fontsize, lineheight */ 12: (12px, 1.5),
+    14: (14px, 1.5),
+    16: (16px, 1.5),
+    18: (18px, 1.5),
+    20: (20px, 1.2),
+    24: (24px, 1.2),
+    32: (32px, 1.2),
+    40: (40px, 1.2)
+);
 
-$font-family-a-r: "dutti-daily-regular", Helvetica, "Arial ", "Lucida Grande",
-  sans-serif;
-$font-family-a-m: "dutti-daily-light", Helvetica, "Arial ", "Lucida Grande",
-  sans-serif;
-$font-family-a-b: "dutti-daily-bold", Helvetica, "Arial ", "Lucida Grande",
-  sans-serif;
+$font-family-a-r: 'dutti-daily-regular', Helvetica, arial, sans-serif;
+$font-family-a-m: 'dutti-daily-light', Helvetica, arial, sans-serif;
+$font-family-a-b:'dutti-daily-bold', Helvetica, arial, sans-serif;
 
-$font-family-b-r: "dutti-extended-regular", Helvetica, Arial, sans-serif;
-$font-family-b-m: "dutti-extended-bold", Helvetica, "Arial", sans-serif;
-$font-family-b-b: "dutti-extended-extrabold", Helvetica, "arial black",
-  sans-serif;
+$font-family-b-r: 'dutti-extended-regular', Helvetica, arial, sans-serif;
+$font-family-b-m: 'dutti-extended-bold', arial-black, sans-serif;
+$font-family-b-b: 'dutti-extended-extrabold', arial-black, sans-serif;
 
-$font-family-c-r: "massimo-daily-regular", "ms-serif", serif;
-$font-family-c-m: "massimo-daily-light", "ms-serif", serif;
-$font-family-c-b: "massimo-daily-bold", "ms-serif", serif;
+$font-family-c-r: 'massimo-daily-regular', 'ms-serif',serif;
+$font-family-c-m: 'massimo-daily-light', 'ms-serif',serif;
+$font-family-c-b: 'massimo-daily-bold', 'ms-serif',serif;
 
-$font-weight-light: inherit;
-$font-weight-regular: inherit;
-$font-weight-medium: inherit;
-$font-weight-bold: inherit;
+$font-weight-light: 100;
+$font-weight-regular: 500;
+$font-weight-medium: 500;
+$font-weight-bold: 900;
 
-$font-family-form-placeholder: "dutti-daily-regular", Helvetica, "Arial ",
-  "Lucida Grande", sans-serif;
-$font-family-form: "dutti-daily-regular", Helvetica, "Arial ", "Lucida Grande",
-  sans-serif;
+$font-family-form-placeholder: 'dutti-daily-regular', Helvetica, arial, sans-serif;
+$font-family-form: 'dutti-daily-regular', Helvetica, arial, sans-serif;
 
-$btn-radius: 0px;
+
+$btn-radius: 0;
 
 // massimodutti color MD 2022
-$c-white: #ffffff;
+$c-white: #FFFFFF;
 $c-black: #000000;
 
-$c-dark-grey: #8e8e8e;
-$c-middle-grey: #e3e3e3;
-$c-light-grey: #f0f0f0;
+$c-dark-grey: #8E8E8E;
+$c-middle-grey: #E3E3E3;
+$c-light-grey: #F0F0F0;
 
 $c-primary: #292929;
-$c-error: #b40016;
-$c-sale: #b40016;
-$c-info: #1a32a4;
+$c-error: #B40016;
+$c-info: #1A32A4;
 
-$c-success: #76ae4a;
+$c-success: #76AE4A;
 $c-warning: #ffc700;
 $c-feel: #fb9962;
+$c-feel-dark: #C94C07;
+$c-special:#b99d6b; //gold
 // fin massimodutti color MD 2022
