@@ -54,6 +54,7 @@
   font-family: "massimo-daily-bold";
   src: url("../fonts/dutti-daily/massimo-daily-bold.woff2") format("woff2"), url("../fonts/dutti-daily/massimo-daily-bold.woff") format("woff");
 }
+/* @import "abstract/0debug";  si queremos debugar la maqueta */
 *,
 *::before,
 *::after {
@@ -359,9 +360,8 @@ img {
   text-align: center;
 }
 
-.align-items-center {
-  display: flex;
-  align-items: center;
+.d-inline {
+  display: inline-block;
 }
 
 .align-center {
@@ -509,12 +509,6 @@ img {
 @media (min-width: 1280px) {
   .lg\:min-text-right {
     text-align: right;
-  }
-}
-
-@media (min-width: 768px) {
-  .sm\:min-content-end {
-    justify-content: flex-end;
   }
 }
 
@@ -1461,7 +1455,6 @@ svg-icon.ico-success path {
   justify-content: center;
   align-items: center;
   background-color: #e3e3e3;
-  flex: 0 0 40px;
 }
 .ico-ball .ico-count {
   width: 16px;
@@ -5473,12 +5466,6 @@ hr {
 }
 
 @media (max-width: 767px) {
-  .smmax\:mb-24 {
-    margin-bottom: 24px;
-  }
-}
-
-@media (max-width: 767px) {
   .smmax\:mb-42 {
     margin-bottom: 42px;
   }
@@ -5787,26 +5774,6 @@ strong {
   flex-grow: 0;
 }
 
-.d-inline {
-  display: inline-block;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.flex-auto {
-  flex: 1 1 auto;
-}
-
-.flex-initial {
-  flex: 0 1 auto;
-}
-
-.flex-none {
-  flex: none;
-}
-
 @keyframes underline {
   0% {
     width: 0;
@@ -6107,6 +6074,7 @@ strong {
   background-color: transparent;
 }
 .btn[disabled], .btn:disabled, .btn.disabled {
+  cursor: default;
   pointer-events: none;
   filter: grayscale(1);
   background-color: #e3e3e3;
@@ -6570,6 +6538,11 @@ strong {
   color: #ffffff;
 }
 
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
 .btn-blue {
   background-color: #1a32a4;
   color: #ffffff;
@@ -6641,20 +6614,12 @@ strong {
   align-items: center;
   border-radius: 0px;
   margin-top: -3px;
-  margin-right: 12px;
+  margin-right: 16px;
   top: 0;
   left: 1px;
 }
 .btn-social svg-icon div {
   display: flex;
-}
-.btn-social:disabled, .btn-social[disabled], .btn-social.disabled {
-  background-color: #f0f0f0;
-  border-color: transparent;
-  opacity: 1;
-}
-.btn-social:disabled svg path, .btn-social[disabled] svg path, .btn-social.disabled svg path {
-  fill: #8e8e8e;
 }
 
 .btn-google, .has-light .btn-google {
@@ -6703,17 +6668,6 @@ strong {
   border: 1px solid #8e8e8e;
 }
 
-.btn-apple-secondary, .has-light .btn-apple-secondary {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
-}
-.btn-apple-secondary:focus, .btn-apple-secondary.focus, .btn-apple-secondary:hover, .btn-apple-secondary.hover, .btn-apple-secondary:visited, .btn-apple-secondary:active, .btn-apple-secondary.active, .has-light .btn-apple-secondary:focus, .has-light .btn-apple-secondary.focus, .has-light .btn-apple-secondary:hover, .has-light .btn-apple-secondary.hover, .has-light .btn-apple-secondary:visited, .has-light .btn-apple-secondary:active, .has-light .btn-apple-secondary.active {
-  opacity: 1;
-  background-color: #ffffff;
-  border: 1px solid #8e8e8e;
-}
-
 .btn-naver, .has-light .btn-naver {
   background-color: #03cf5d;
   color: #ffffff;
@@ -6738,11 +6692,6 @@ strong {
   border: 1px solid #2dc100;
 }
 
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
 .btns {
   align-items: center;
   display: flex;
@@ -6761,7 +6710,7 @@ strong {
   position: relative;
   display: flex;
 }
-.btn-group > :not(:first-child, :last-child) {
+.btn-group > :not(:first-child):not(:last-child) {
   border-radius: 0;
   margin-left: -1px;
 }
@@ -7003,6 +6952,16 @@ strong {
   background-color: #f0f0f0;
   color: #8e8e8e;
   cursor: default;
+}
+.has-light .btn-underline {
+  color: #ffffff;
+}
+.has-light .btn-underline::after {
+  background-color: #ffffff;
+}
+.has-light .btn-underline:hover, .has-light .btn-underline.hover, .has-light .btn-underline:focus, .has-light .btn-underline.focus {
+  background-color: transparent;
+  color: #ffffff;
 }
 .has-light .btn-google svg path {
   fill: initial;
@@ -7442,16 +7401,16 @@ strong {
 
 .is-error .checkbox-item [type=checkbox]:checked + label::before,
 .is-error .checkbox-item [type=checkbox]:not(:checked) + label::before {
-  border: 1px solid #b40016 !important;
+  border: 1px solid #b40016;
 }
 .is-error .checkbox-item a {
-  color: #b40016 !important;
+  color: #b40016;
 }
 .is-error .checkbox-item svg g {
-  fill: #b40016 !important;
+  fill: #b40016;
 }
 .is-error .checkbox-item svg g polyline {
-  stroke: #b40016 !important;
+  stroke: #b40016;
 }
 
 .has-light .checkbox-item .ico-check::after {
@@ -7658,7 +7617,7 @@ label {
 .input-gray {
   padding-left: 40px;
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 0;
+  border-radius: 8px;
   border: none;
 }
 
@@ -7757,14 +7716,12 @@ label {
 
 .is-error .input,
 .is-error label,
+.is-error textarea::placeholder,
 .is-error .help {
   color: #b40016 !important;
 }
 .is-error .input {
   border: 1px solid #b40016;
-}
-.is-error .input-prefix :nth-child(1)::placeholder {
-  color: #b40016;
 }
 .is-error svg g {
   stroke: #b40016 !important;
@@ -7773,16 +7730,11 @@ label {
   fill: #b40016 !important;
 }
 
-.ok-input .input,
-.ok-input label,
-.ok-input .help {
-  color: #76ae4a !important;
+.ok-input label {
+  color: #76ae4a;
 }
 .ok-input .input {
   border: 1px solid #76ae4a;
-  color: #76ae4a;
-}
-.ok-input .input-prefix :nth-child(1)::placeholder {
   color: #76ae4a;
 }
 .ok-input .input-line {
@@ -7955,7 +7907,7 @@ input::input-placeholder {
 .select:not(.is-multiple) {
   height: 48px;
 }
-.select:not(.is-multiple, .is-loading)::after {
+.select:not(.is-multiple):not(.is-loading)::after {
   border-color: #292929;
 }
 .select select::-ms-expand {
@@ -7975,7 +7927,7 @@ input::input-placeholder {
 .select select[multiple] option {
   padding: 0 40px;
 }
-.select:not(.is-multiple, .is-loading):hover::after {
+.select:not(.is-multiple):not(.is-loading):hover::after {
   border-color: #292929;
 }
 .select.select-label select {
@@ -8032,7 +7984,7 @@ input::input-placeholder {
   display: none;
 }
 .select.select-secondary-rd select {
-  border-radius: 0;
+  border-radius: 8px;
   border: 1px solid #292929;
   padding: 6px 2px 4px;
   min-width: 100px;
@@ -8085,7 +8037,7 @@ input::input-placeholder {
   left: 0;
 }
 .select.select-size select {
-  border-radius: 0;
+  border-radius: 8px;
   padding-left: 16px;
   background: none;
   padding-right: 40px;
@@ -8156,21 +8108,6 @@ input::input-placeholder {
 .form-input-prefix .form-input-label-2 {
   display: inline-block;
   width: calc(100% - 60px);
-}
-
-.form-prefix {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.form-prefix > :not(.select):nth-child(1) {
-  flex: 0 0 75px;
-}
-.form-prefix > :nth-child(2) {
-  flex: 5 0 130px;
-}
-.form-prefix > :nth-child(3) {
-  flex: 1 0 auto;
 }
 
 .select-line {
@@ -8283,7 +8220,7 @@ input::input-placeholder {
   margin-bottom: 0;
   line-height: 1.1;
   color: #8e8e8e;
-  border-radius: 0;
+  border-radius: 8px;
   transition: all 0.1s ease-in-out;
   pointer-events: none;
 }
@@ -8810,9 +8747,6 @@ button.link-line {
 .link-line.c-feel {
   background-image: linear-gradient(transparent calc(100% - 1px), #fb9962 10px);
 }
-.link-line.is-error, .link-line.c-error {
-  background-image: linear-gradient(transparent calc(100% - 1px), #b40016 10px);
-}
 
 .is-error .link-line {
   background-image: linear-gradient(transparent calc(100% - 1px), #b40016 10px);
@@ -8839,17 +8773,26 @@ button.link-line {
   border: 0;
   transform: none;
   cursor: pointer;
-  background-position-x: 20px;
+  background: initial;
 }
 .link-svg-pre svg-icon {
   position: absolute;
   left: 0;
-  top: 2px;
+  bottom: 4px;
   width: 16px;
   height: 16px;
 }
 .link-svg-pre:hover {
   opacity: 0.6;
+}
+.link-svg-pre::after {
+  content: "";
+  background-color: #292929;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 20px);
+  left: 20px;
+  height: 1px;
 }
 
 .link-svg-post {
@@ -8861,17 +8804,26 @@ button.link-line {
   border: 0;
   transform: none;
   cursor: pointer;
-  background-position: calc(100% - 20px);
+  background: initial;
 }
 .link-svg-post svg-icon {
   position: absolute;
   right: 0;
-  top: 2px;
+  bottom: 4px;
   width: 16px;
   height: 16px;
 }
 .link-svg-post:hover {
   opacity: 0.6;
+}
+.link-svg-post::after {
+  content: "";
+  background-color: #292929;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 20px);
+  left: 0;
+  height: 1px;
 }
 
 button.link-line.link-svg-pre {
@@ -8946,9 +8898,17 @@ button.link-line.link-svg-post {
 }
 .has-light .link-svg-post {
   color: white;
+  background-image: none;
+}
+.has-light .link-svg-post::after {
+  background-color: #fff;
 }
 .has-light .link-svg-pre {
   color: white;
+  background-image: none;
+}
+.has-light .link-svg-pre::after {
+  background-color: #fff;
 }
 
 @keyframes underline {
@@ -9191,13 +9151,6 @@ ul.list-mini > li::after {
   background: #f0f0f0;
 }
 
-ul.list-disc.has-light > li.is-missing::after, ul.list-mini.has-light > li.is-missing::after {
-  background-color: #ffffff;
-}
-ul.list-disc.has-light > li::after, ul.list-mini.has-light > li::after {
-  background-color: #ffffff;
-}
-
 @keyframes underline {
   0% {
     width: 0;
@@ -9235,7 +9188,7 @@ ul.list-disc.has-light > li::after, ul.list-mini.has-light > li::after {
 .progressbar {
   width: 100%;
   height: 8px;
-  border-radius: 0;
+  border-radius: 8px;
   background-color: #e3e3e3;
   display: flex;
   align-items: flex-start;
@@ -9243,11 +9196,10 @@ ul.list-disc.has-light > li::after, ul.list-mini.has-light > li::after {
   overflow: hidden;
 }
 .progressbar .progressbar-status {
-  min-width: 8px;
+  width: 8px;
   height: 8px;
-  border-radius: 0;
+  border-radius: 8px;
   background-color: #292929;
-  transition: all 0.2s ease;
 }
 
 @keyframes underline {
@@ -10050,8 +10002,8 @@ ul.list-clear li.list-box:last-child {
   transform: translateY(-50%);
   width: 12px;
 }
-.color-wrap button:hover::before,
-.color-wrap button .is-active {
+.color-wrap button .color-selector:hover::before,
+.color-wrap button .color-selector .is-active {
   transform: scale(1);
 }
 .color-wrap button .color-square {
@@ -11596,7 +11548,7 @@ ul.list-clear li.list-box:last-child {
   padding-right: 16px;
   padding-left: 16px;
 }
-.is-rtl .select:not(.is-multiple, .is-loading)::after {
+.is-rtl .select:not(.is-multiple):not(.is-loading)::after {
   right: inherit;
   left: 20px;
 }
@@ -11607,7 +11559,7 @@ ul.list-clear li.list-box:last-child {
   left: inherit;
   right: 16px;
 }
-.is-rtl .select:not(.is-multiple, .is-loading).select-box::after {
+.is-rtl .select:not(.is-multiple):not(.is-loading).select-box::after {
   left: 8px;
 }
 .is-rtl .pr-8 {
@@ -11736,8 +11688,6 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .btn-social svg-icon {
   right: 1px;
   left: auto;
-  margin-right: 0;
-  margin-left: 16px;
 }
 .is-rtl .btn-social.btn-google {
   padding-right: 60px;
@@ -11751,7 +11701,6 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .checkbox-item [type=checkbox]:checked {
   left: 0;
   right: -9999px;
-  position: absolute;
 }
 .is-rtl .checkbox-item [type=checkbox]:not(:checked) + label::before,
 .is-rtl .checkbox-item [type=checkbox]:checked + label::before {
@@ -11780,6 +11729,14 @@ ul.list-clear li.list-box:last-child {
   padding-right: 0;
   padding-left: 0;
 }
+.is-rtl .checkbox-item [type=checkbox]:not(:checked),
+.is-rtl .checkbox-item [type=checkbox]:checked {
+  position: absolute;
+}
+.is-rtl .checkbox-radio [type=radio]:not(:checked),
+.is-rtl .checkbox-radio [type=radio]:checked {
+  position: absolute;
+}
 .is-rtl .check-bleed.checkbox-radio [type=radio]:checked + label .ico-radio, .is-rtl .check-bleed.checkbox-radio [type=radio]:not(:checked) + label .ico-radio {
   left: 0;
   right: 17px;
@@ -11805,7 +11762,6 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .checkbox-radio [type=radio]:checked {
   left: 0;
   right: -9999px;
-  position: absolute;
 }
 .is-rtl .checkbox-item-text span {
   margin-left: 0;
@@ -11864,6 +11820,10 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .form-input-label.has-ico-post .validation-error-messages svg-icon {
   position: relative;
 }
+.is-rtl .form-input-label-2 .info-text {
+  left: 0;
+  right: initial;
+}
 .is-rtl .form-input-prefix .input-prefix {
   margin-right: 0;
   margin-left: 8px;
@@ -11886,10 +11846,6 @@ ul.list-clear li.list-box:last-child {
 }
 .is-rtl .form-input-label-2.has-ico-pre .validation-error-messages svg-icon {
   position: relative;
-}
-.is-rtl .form-input-label-2 .info-text {
-  left: 0;
-  right: initial;
 }
 .is-rtl .has-ico-post.btn, .is-rtl .has-ico-post > input, .is-rtl .has-ico-post > label {
   padding-right: 13px;
