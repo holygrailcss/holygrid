@@ -12989,10 +12989,79 @@ header.interior svg path {
   left: 34px;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 .charged {
   width: 100%;
   position: relative;
   height: 100%;
+}
+
+.product-view-info .name {
+  display: inline-block;
+  padding: 8px 0;
+  position: relative;
+  vertical-align: middle;
+}
+.product-view-info .name a {
+  position: absolute;
+  top: -1px;
+}
+
+.sk-load2 {
+  position: relative;
+}
+
+.sk-load2:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: calc(133.25% + 126px);
+  background-color: #fff;
+}
+
+.charged .card9-wrap {
+  position: relative;
+  animation-iteration-count: 1;
+  animation: fadein 1s forwards ease;
+}
+
+@media (min-width: 992px) {
+  .card9 .card9-wrap-details {
+    padding: 0;
+    min-height: 144px;
+  }
+}
+.product-size-selector__button {
+  background-color: transparent;
+  min-width: 40px;
+  padding: 8px;
+  border: 0;
+}
+
+.product-size-selector__button:hover {
+  background-color: #8e8e8e;
+  color: #fff;
+  cursor: pointer;
 }
 
 .bubble-whatsapp {
