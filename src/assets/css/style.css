@@ -12984,12 +12984,6 @@ header.interior svg path {
   animation: fadein 1s forwards ease;
 }
 
-@media (min-width: 992px) {
-  .card9 .card9-wrap-details {
-    padding: 0;
-    min-height: 144px;
-  }
-}
 .product-size-selector__button {
   background-color: transparent;
   min-width: 40px;
@@ -13007,6 +13001,9 @@ header.interior svg path {
   .card9 .card9-wrap-details {
     padding: 0;
     min-height: 144px;
+  }
+  .sk-load2::before {
+    padding-top: calc(133.25% + 144px);
   }
 }
 .bubble-whatsapp {
