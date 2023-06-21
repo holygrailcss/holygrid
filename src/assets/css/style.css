@@ -13064,6 +13064,12 @@ header.interior svg path {
   cursor: pointer;
 }
 
+@media (min-width: 992px) {
+  .card9 .card9-wrap-details {
+    padding: 0;
+    min-height: 144px;
+  }
+}
 .bubble-whatsapp {
   width: 50px;
   height: 50px;
