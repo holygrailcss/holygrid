@@ -558,3 +558,15 @@ ul.list-clear li {
 ul {
   position: relative;
 }
+
+.body-fake {
+  padding: 16px;
+}
+
+@media (min-width: 992px)
+{
+  .body-fake {
+    padding: 40px;
+}
+
+}
