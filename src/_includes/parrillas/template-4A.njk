@@ -1,15 +1,30 @@
-<ul class="grid-product-wrap--4A">
-  <h1 class="template-name" id="4A">4A</h1>
-  <li class="grid-product-list grid-product-list--4A sk-load2">
-    {% include 'components/producto.njk' %}
-  </li>
-  <li class="grid-product-list grid-product-list--4A sk-load2">
-    {% include 'components/producto.njk' %}
-  </li>
-  <li class="grid-product-list grid-product-list--4A sk-load2">
-    {% include 'components/producto.njk' %}
-  </li>
-  <li class="grid-product-list grid-product-list--4A sk-load2">
-    {% include 'components/producto.njk' %}
-  </li>
-</ul>
+
+{% import "macros/_product.njk" as product %}
+
+<div class="template-name" id="4A">4A</div>
+<li class="grid-product grid-product-view template-4A">
+<studio-multi-product-template
+    ><ul class="grid-product-wrap--4A">
+      <li class="grid-product-list grid-product-list--4A sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--4A sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--4A sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--4A sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--4A sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--4A sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+
+    </ul>
+    </studio-multi-product-template
+  >
+</li>
