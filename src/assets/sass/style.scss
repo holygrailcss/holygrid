@@ -15,13 +15,49 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./_resize.scss";
 @import "./_dummyproduct.scss";
 @import "./_bubble-whatsapp.scss";
+.body-fake {
+  padding: 16px;
+  list-style: none;
+}
+@media (min-width: 992px) {
+  .body-fake {
+    padding: 40px;
+  }
+}
+.grid-product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  list-style: none;
+}
+.grid-product-view .grid-product-list {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.grid-product-view {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  width: 100%;
+}
+.grid-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  vertical-align: bottom;
+}
 
+.grid-product__section {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
 @import "parrillas/_all.scss";
-
-
 //@import "parrillas/*";
-
-
 $primary-color: var(--primary-color);
 $c-primary: var(--c-primary);
 $c-secondary: var(--c-secondary);
@@ -34,7 +70,7 @@ body {
   color: $primary-color;
   scroll-behavior: smooth;
 }
-p{
+p {
   font-size: inherit;
 }
 strong {
@@ -215,7 +251,6 @@ main {
 .p-relative {
   position: relative;
 }
-
 .front-text {
   position: relative;
   z-index: 10;
@@ -338,7 +373,6 @@ main {
   li {
     flex-basis: 25%;
     padding: 16px;
-
   }
 }
 .blog-intro {
@@ -443,7 +477,6 @@ main {
     display: none;
   }
 }
-
 .header-img {
   position: relative;
 }
@@ -475,7 +508,6 @@ main {
 }
 @media (min-width: $break-sm) {
   .container-0 {
-
     width: 90%;
     max-width: 768px;
   }
@@ -503,43 +535,32 @@ ul.list-clear li {
   list-style: none;
   margin: 8px 0;
 }
-
-
-
 .rat-responsive {
   position: relative;
   overflow: hidden;
-    .rat-content {
+  .rat-content {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+  }
 }
-}
-
 .rat-responsive::before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 56.25%;
-
   @media (min-width: $break-lg) {
-    padding-top: 133%
+    padding-top: 133%;
   }
-
-
 }
-
-
-.ttc{
+.ttc {
   text-transform: capitalize;
 }
-
-.container-full{
+.container-full {
   max-width: 1600px;
 }
-
 .product-tag {
   font-family: "dutti-daily-bold";
   font-size: 14px;
@@ -547,26 +568,12 @@ ul.list-clear li {
   letter-spacing: 0;
   line-height: 16px;
 }
-
 .template-name {
   position: absolute;
   top: 20px;
   left: 20px;
   z-index: 10;
 }
-
 ul {
   position: relative;
-}
-
-.body-fake {
-  padding: 16px;
-}
-
-@media (min-width: 992px)
-{
-  .body-fake {
-    padding: 40px;
-}
-
 }
