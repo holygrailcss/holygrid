@@ -1,6 +1,56 @@
-<ul class="grid-product-wrap--1LE">
-    <h1 class="template-name" id="1LE">1LE</h1>
-  <li class="grid-product-list grid-product-list--1LE sk-load2">
-    {% include 'components/producto.njk' %}
-  </li>
-</ul>
+{% import "macros/_product.njk" as product %}
+
+<li class="grid-product grid-product-view template-1LE">
+  <div class="template-name" id="1LE">1LE</div>
+  <studio-multi-product-template>
+    <ul class="grid-product-wrap--1LE">
+      <li class="grid-product-list grid-product-list--1LE sk-load6">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--1LE sk-load6">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--1LE sk-load6">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--1LE sk-load6">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--1LE sk-load6">
+        <product-view-limited class="p-view">
+          <div class="charged">
+            <div class="card9-wrap" id="21004435">
+              <div class="card9">
+                <div class="js-card9-inner rat-3-4">
+                  <div class="rat-content">
+                    <div class="relative" style="height: 100%;">
+                      <product-view-media _nghost-mdfrontw-c164="">
+                        <div _ngcontent-mdfrontw-c164="" class="product-view-wrap">
+                          <picture _ngcontent-mdfrontw-c164="">
+                            <a _ngcontent-mdfrontw-c164="" class="card9-link" href="/es/chaqueta-corta-botones-dorados-l06013561">
+                              <div _ngcontent-mdfrontw-c164="" product-img="" imgfallback="" class="img-poster"><img height="auto" rel="preload" class="card9-image" id="" src="https://axineccstwcsalb1.central.inditex.grp/3/photos//2023/V/0/1/p/6013/561/250/6013561250_2_5_16.jpg?t=1686565353359&amp;impolicy=massimodutti-itxmediumhigh&amp;imwidth=500&amp;imformat=chrome" alt="Chaqueta corta botones dorados" width="405.24"></div>
+                            </a>
+                          </picture>
+                        </div>
+                      </product-view-media>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <product-skeleton _nghost-mdfrontw-c169="">
+              <div _ngcontent-mdfrontw-c169="" id="21004435">
+                <div _ngcontent-mdfrontw-c169="" style="width: 100%; height: 100%; position: absolute;"></div>
+              </div>
+              <div _ngcontent-mdfrontw-c169="" class="sk-wrap-2-3">
+                <div _ngcontent-mdfrontw-c169="" class="rat-2-3 bg-light">
+                  <div _ngcontent-mdfrontw-c169="" class="content"></div>
+                </div>
+              </div>
+            </product-skeleton>
+          </div>
+        </product-view-limited>
+      </li>
+    </ul>
+  </studio-multi-product-template>
+</li>

@@ -1,9 +1,15 @@
-<ul class="grid-product-wrap--2C">
-  <h1 class="template-name" id="2C">2C</h1>
-  <li class="grid-product-list grid-product-list--2C sk-load2">
-    {% include 'components/producto.njk' %}
-  </li>
-  <li class="grid-product-list grid-product-list--2C sk-load2">
-    {% include 'components/producto.njk' %}
-  </li>
-</ul>
+{% import "macros/_product.njk" as product %}
+
+<li class="grid-product grid-product-view template-2C">
+  <div class="template-name" id="2C">2C</div>
+  <studio-multi-product-template>
+    <ul class="grid-product-wrap--2C grid-product__section">
+      <li class="grid-product-list grid-product-list--2C sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--2C sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+    </ul>
+  </studio-multi-product-template>
+</li>

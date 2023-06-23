@@ -1,6 +1,12 @@
-<ul class="grid-product-wrap--1G">
-  <h1 class="template-name" id="1G">1G</h1>
-  <li class="grid-product-list grid-product-list--1G sk-load5">
-    {% include 'components/producto.njk' %}
-  </li>
-</ul>
+{% import "macros/_product.njk" as product %}
+
+<li class="grid-product grid-product-view template-1G">
+  <div class="template-name" id="1G">1G</div>
+  <studio-single-product-template>
+    <ul class="grid-product-wrap--1G">
+      <li class="grid-product-list grid-product-list--1G sk-load5">
+        {% call product.ratio('3-2') %} {% endcall %}
+      </li>
+    </ul>
+  </studio-single-product-template>
+</li>
