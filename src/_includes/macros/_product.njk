@@ -1,11 +1,8 @@
-{% macro ratio(ratio='') %}
+{% macro ratio(ratio='',text='') %}
   <product-view class="p-view">
     <div class="charged">
       <div class="card9-wrap" id="19854077">
         <div class="card9">
-
-
-
                 {% if ratio == '3-2' %}
                       <div class="js-card9-inner rat-3-2">
                 {% elif ratio == '3-4' %}
@@ -13,10 +10,6 @@
         	{% else %}
                       <div class="js-card9-inner rat-3-4">
                 {% endif %}
-
-
-
-
             <div class="rat-content">
               <div class="relative" style="height: 100%">
                 <product-view-media 4="">
@@ -29,7 +22,10 @@
                         </div>
                       </a></picture>
                   </div>
-                </product-view-media><product-view-addtocart class="card9-add text-center" 6="">
+                </product-view-media>
+                          {% if text == 'no-text' %}
+        	{% else %}
+                <product-view-addtocart class="card9-add text-center" 6="">
                   <div class="tit-xs mb-8 quickly-add-cart">AÑADIR TALLA</div>
                   <product-size-selector class="is-flex content-center"="">
                     <ul class="btn-group product-size-selector">
@@ -45,10 +41,13 @@
                     </ul>
                   </product-size-selector>
                 </product-view-addtocart>
+    {% endif %}
               </div>
             </div>
           </div>
-          <product-view-details class="card9-view-details">
+             {% if text == 'no-text' %}
+        	{% else %}
+                                  <product-view-details class="card9-view-details">
             <div class="card9-wrap-details">
               <div class="card9-contents pt-16">
                 <div class="p-s ttu name-width-product has-ellipsis">
@@ -118,6 +117,7 @@
               </div>
             </div>
           </product-view-details>
+                {% endif %}
         </div>
       </div>
     </div>

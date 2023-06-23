@@ -571,10 +571,105 @@ ul.list-clear li {
 }
 .template-name {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
   z-index: 10;
+  padding: 0 8px;
+  background-color: #a1bfa0;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
 }
 .grid-product, ul {
   position: relative;
+}
+
+
+
+
+.grid{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+  .grid1{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+
+    left: 0;
+    background-color: magenta;
+  }
+  .grid2{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+ 
+    background-color: magenta;
+  }
+
+
+
+
+  .grid3{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+
+    left: 16px;
+    background-color: rgb(0, 229, 255);
+  }
+  .grid4{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+ 
+    background-color: rgb(0, 229, 255);
+  }
+
+
+  @media (min-width: $break-md) {
+    .grid3{
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+  
+      left: 40px;
+      background-color: rgb(0, 229, 255);
+    }
+    .grid4{
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: 40px;
+   
+      background-color: rgb(0, 229, 255);
+    }
+  
+
+
+
+  }
+
+
+
 }

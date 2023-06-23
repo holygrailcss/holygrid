@@ -7,17 +7,15 @@ $grid-cols-mobile--1LE: 2;
 .grid-product-wrap--1LE {
     @include grid-product-view-bleed;
 
+    margin-top: 0; 
     display: flex;
     align-items: baseline;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
-    margin-top: $sm-grid-top-margin;
-    margin-bottom: $sm-grid-bottom-margin;
 
-    @media (min-width: $break-sm) {
-        margin-top: $grid-top-margin;
-        margin-bottom: $grid-bottom-margin;
+    @media (min-width: $break-md) {
+ 
     }
 
     .grid-product-list--1LE {
@@ -27,6 +25,7 @@ $grid-cols-mobile--1LE: 2;
 
         margin-left: 0px;
         margin-right: 24px;
+        margin-bottom: 32px;
         width: calc(100% / #{$grid-cols-mobile--1LE} - (24px / #{$grid-cols-mobile--1LE}));
 
         @media (min-width: $break-sm) {
@@ -39,7 +38,12 @@ $grid-cols-mobile--1LE: 2;
             }
 
             margin-right: 50px;
+            margin-bottom: 42px;
             width: calc(100% / #{$grid-cols--1LE} - 34px);
+        }
+
+        @media (min-width: $break-md) {
+            margin-bottom: 72px;
         }
     }
 }
