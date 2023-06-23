@@ -13077,6 +13077,7 @@ header.interior svg path {
 }
 
 .grid-product {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
