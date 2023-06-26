@@ -673,3 +673,22 @@ ul.list-clear li {
 
 
 }
+
+.select-zone{
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  margin-top: 2px;
+  font-size: 12px;
+
+  z-index: 100;
+
+
+
+  a{
+    padding: 2px 8px;
+    background-color: #eaeaea;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+}

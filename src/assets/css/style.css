@@ -17543,3 +17543,18 @@ ul.list-clear li {
     background-color: rgb(0, 229, 255);
   }
 }
+
+.select-zone {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  margin-top: 2px;
+  font-size: 12px;
+  z-index: 100;
+}
+.select-zone a {
+  padding: 2px 8px;
+  background-color: #eaeaea;
+  border-radius: 4px;
+  margin-right: 10px;
+}
