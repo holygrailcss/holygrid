@@ -54,6 +54,12 @@ $separator-height--limitedSeparator: 12.5%;
 	}
 }
 
+.limited-separator-data-content {
+    position: absolute;
+    top: 0;
+    padding: 24px 40px;
+}
+
 .is-rtl .grid-product-wrap--limitedSeparator {
 	@include grid-product-view-bleed-rtl;
 }

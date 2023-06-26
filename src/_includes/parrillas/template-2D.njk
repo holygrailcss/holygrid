@@ -1,10 +1,27 @@
 {% import "macros/_product.njk" as product %}
-
 <ul class="grid-product-wrap--2D">
   <h1 class="template-name" id="2D">2D</h1>
-      {% call product.ratio('3-4','') %} {% endcall %}
+  {% call product.ratio('3-4','') %} {% endcall %}
   </li>
   <li class="grid-product-list grid-product-list--2D sk-load2">
-      {% call product.ratio('3-4','') %} {% endcall %}
+    {% call product.ratio('3-4','') %} {% endcall %}
   </li>
 </ul>
+
+
+
+<li class="grid-product grid-product-view template-2D">
+  <studio-double-product-template>
+    <ul class="grid-product-wrap--2D grid-product__section">
+      <li class="grid-product-list grid-product-list--2D-1 sk-load2">
+
+
+        {% call product.ratio('3-4','') %} {% endcall %}
+
+      </li>
+      <li class="grid-product-list grid-product-list--2D sk-load2">
+
+        {% call product.ratio('3-4','') %} {% endcall %}
+      </li>
+    </ul>
+  </studio-double-product-template></li>
