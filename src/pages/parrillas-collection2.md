@@ -1,6 +1,6 @@
 ---
 layout: _parrillas-collection.njk
-permalink: /parrillas-collection/
+permalink: /parrillas-collection2/
 
 title: Parrillas
 subtitle: Parrillas colección
