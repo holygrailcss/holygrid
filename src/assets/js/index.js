@@ -406,7 +406,7 @@ $(document).ready(function () {
 });
 
 
-$("button.rtl").on("click", function() {
+$("a.rtl").on("click", function() {
   console.log("rtlChange activo");
 
   let element = document.querySelector("body");
