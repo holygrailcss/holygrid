@@ -421,6 +421,19 @@ $("a.rtl").on("click", function() {
   }
 });
 
+
+$(".over1").on("click", function () {
+  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over1");
+  e.preventDefault();
+});
+$(".over2").on("click", function () {
+  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over2");
+  e.preventDefault();
+});
+
+
+
+
 $(".to-top").on("click", function() {
   $(window).scrollTop(0);
 });

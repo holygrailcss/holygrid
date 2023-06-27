@@ -1,5 +1,5 @@
 @import "../abstract/_all.scss";
-@import "../abstract/_categoryGrid.scss";
+@import "../abstract/_gridNEW.scss";
 $_1A-cols: 3;
 // .grid-product-wrap--1A {
 //     @include grid-product-view-bleed;
@@ -23,6 +23,9 @@ $_1A-cols: 3;
 
 
 .grid-product-wrap--1A {
+
+  
+  @include space-0-40;
   display: flex;
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */

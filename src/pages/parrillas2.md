@@ -1,5 +1,5 @@
 ---
-layout: _parrillas.njk
+layout: _parrillas2.njk
 permalink: /parrillas2/
 
 title: Parrillas
