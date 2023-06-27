@@ -17548,9 +17548,9 @@ ul.list-clear li {
   margin: 4px;
   margin-top: 0;
 }
-
-button.rtl {
+.select-zone a.rtl {
   display: block;
+  width: fit-content;
   background-color: wheat;
   z-index: 10;
   padding: 2px 8px;

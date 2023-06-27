@@ -587,8 +587,6 @@ ul.list-clear li {
 }
 
 
-
-
 .grid{
   position: fixed;
   top: 0;
@@ -605,7 +603,6 @@ ul.list-clear li {
     height: 100%;
     top: 0;
     bottom: 0;
-
     left: 0;
     background-color: magenta;
   }
@@ -620,16 +617,12 @@ ul.list-clear li {
     background-color: magenta;
   }
 
-
-
-
   .grid3{
     position: absolute;
     width: 1px;
     height: 100%;
     top: 0;
     bottom: 0;
-
     left: 16px;
     background-color: rgb(0, 229, 255);
   }
@@ -640,7 +633,6 @@ ul.list-clear li {
     top: 0;
     bottom: 0;
     right: 16px;
- 
     background-color: rgb(0, 229, 255);
   }
 
@@ -652,7 +644,6 @@ ul.list-clear li {
       height: 100%;
       top: 0;
       bottom: 0;
-  
       left: 40px;
       background-color: rgb(0, 229, 255);
     }
@@ -663,17 +654,9 @@ ul.list-clear li {
       top: 0;
       bottom: 0;
       right: 40px;
-   
       background-color: rgb(0, 229, 255);
     }
-  
-
-
-
   }
-
-
-
 }
 
 .select-zone{
@@ -682,11 +665,7 @@ ul.list-clear li {
   padding: 10px;
   margin-top: 2px;
   font-size: 12px;
-
   z-index: 100;
-
-
-
   a{
     display: inline-block;
     padding: 2px 8px;
@@ -694,15 +673,16 @@ ul.list-clear li {
     border-radius: 4px;
     margin: 4px;
     margin-top: 0;
+    &.rtl {
+      display: block;
+      width: fit-content;
+      background-color: wheat;
+      z-index: 10;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin: 4px;
+      margin-top: 0;
+    }
   }
 }
 
-button.rtl {
-  display: block;
-  background-color: wheat;
-  z-index: 10;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin: 4px;
-  margin-top: 0;
-}
