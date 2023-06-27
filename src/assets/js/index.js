@@ -420,3 +420,7 @@ $("a.rtl").on("click", function() {
       document.querySelector("html").setAttribute("dir", "rtl");
   }
 });
+
+$(".to-top").on("click", function() {
+  $(window).scrollTop(0);
+});

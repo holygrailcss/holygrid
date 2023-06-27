@@ -17558,3 +17558,25 @@ ul.list-clear li {
   margin: 4px;
   margin-top: 0;
 }
+
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.to-top::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  transform: rotate(45deg);
+}
