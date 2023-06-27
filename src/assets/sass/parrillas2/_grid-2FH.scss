@@ -1,0 +1,40 @@
+@import '../abstract/_all.scss';
+@import '../abstract/_categoryGrid.scss';
+//@import '../../../../../../../../../../app/shared/product/components/product-skeleton/product-skeleton.component.scss';
+
+$product-details-padding: 16px;
+$product-details-padding-mobile: 24px;
+
+.grid-2FH-wrap {
+    @include grid-product-view-full-bleed;
+}
+
+.grid-2FH-wrap {
+    .card9-contents {
+        padding-left: $product-details-padding;
+    }
+
+    @media (max-width: #{$break-sm}) {
+        .card9-contents {
+            padding-left: $product-details-padding-mobile;
+        }
+    }
+}
+
+.is-rtl {
+    .grid-2FH-wrap {
+        @include grid-product-view-full-bleed-rtl;
+    }
+
+    .grid-2FH-wrap {
+        .card9-contents {
+            padding-right: $product-details-padding;
+        }
+
+        @media (max-width: #{$break-sm}) {
+            .card9-contents {
+                padding-right: $product-details-padding-mobile;
+            }
+        }
+    }
+}

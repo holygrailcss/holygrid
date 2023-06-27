@@ -1,0 +1,43 @@
+@import '../abstract/_all.scss';
+
+$separator-50-height: 50%;
+
+.grid-product-wrap--separator50 {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+
+	.grid-product-list--separator50 {
+		height: 100%;
+		width: 100%;
+	}
+
+	.relative {
+		height: auto !important;
+	}
+
+	.img-poster {
+		padding-top: $separator-50-height;
+
+		.card9-image {
+			width: 100%;
+			height: auto;
+			margin: auto;
+			position: absolute;
+			top: -100%;
+			right: -100%;
+			bottom: -100%;
+			left: -100%;
+		}
+	}
+
+	.sk-load5:before {
+		padding-top: $separator-50-height;
+	}
+
+	.charging,
+	.charged {
+		overflow: hidden;
+		height: 100%;
+	}
+}

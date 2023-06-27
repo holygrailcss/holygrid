@@ -1,0 +1,65 @@
+@import '../abstract/_all.scss';
+@import "../abstract/_categoryGrid.scss";
+
+$separator-height--limitedSeparator: 12.5%;
+
+.grid-product-wrap--limitedSeparator {
+	@include grid-product-view-bleed;
+
+	height: 100%;
+	max-height: 120px;
+
+	.grid-product-list--limitedSeparator {
+		height: 100%;
+		width: 100%;
+	}
+
+	.relative {
+		height: auto !important;
+	}
+
+	.img-poster {
+		padding-top: 60px;
+
+		@media (min-width: $break-sm) {
+			padding-top: $separator-height--limitedSeparator;
+			max-width: 120px;
+		}
+
+		.card9-image {
+			width: 100%;
+			height: auto;
+			margin: auto;
+			position: absolute;
+			top: -100%;
+			right: -100%;
+			bottom: -100%;
+			left: -100%;
+		}
+	}
+
+	.sk-load5:before {
+		padding-top: 60px;
+
+		@media (min-width: $break-sm) {
+			padding-top: $separator-height--limitedSeparator;
+			max-width: 120px;
+		}
+	}
+
+	.charging,
+	.charged {
+		overflow: hidden;
+		height: 100%;
+	}
+}
+
+.limited-separator-data-content {
+    position: absolute;
+    top: 0;
+    padding: 24px 40px;
+}
+
+.is-rtl .grid-product-wrap--limitedSeparator {
+	@include grid-product-view-bleed-rtl;
+}

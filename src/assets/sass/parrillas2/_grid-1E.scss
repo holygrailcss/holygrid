@@ -1,0 +1,91 @@
+@import '../abstract/_all.scss';
+
+$grid-cols--1E: 2;
+
+.grid-product-wrap--1E {
+    margin-top: $sm-grid-top-margin;
+    margin-bottom: $sm-grid-bottom-margin;
+    width: 100%;
+    margin-bottom: 50px;
+
+    @media (min-width: $break-sm) {
+        margin-top: $grid-top-margin;
+        margin-bottom: $grid-bottom-margin;
+        width: calc((100% + (#{$grid-view1-gutter})) / 1.5 - #{$grid-view1-gutter});
+    }
+
+    .grid-product-list--1E {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        @media (min-width: $break-sm) {
+            flex-wrap: nowrap;
+        }
+    }
+    .grid-product-txt--1E {
+        right: -100%;
+        width: 100%;
+        padding-bottom: $grid-view1-gutter * 2;
+        position: absolute;
+        padding-left: $grid-view1-gutter * 2;
+
+        @media (min-width: $break-sm) {
+            padding-left: $sm-grid-view1-gutter * 2;
+        }
+    }
+}
+
+::ng-deep.grid-product-wrap--1E {
+    &.card9-right,
+    &.card9-left,
+    &.card9-bottom {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card9 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .js-card9-inner {
+        display: flex;
+        width: 65%;
+        margin-bottom: 0;
+        overflow: inherit;
+    }
+    .card9-view-details {
+        width: 40%;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-content: flex-end;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+    .card9-wrap-details {
+        position: relative;
+        padding: 0 8px;
+        min-height: 0;
+    }
+    .card9-contents {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0;
+    }
+    @media (max-width: #{$break-sm - 1} ) {
+        .card9-wrap {
+            margin-left: 0;
+        }
+        .card9-wrap-details {
+            margin-left: 0;
+            padding-right: 8px;
+        }
+        .card9-view-details {
+            width: 50%;
+        }
+    }
+}

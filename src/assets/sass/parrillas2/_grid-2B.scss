@@ -1,0 +1,32 @@
+@import '../abstract/_all.scss';
+
+$grid-cols--2B: 4;
+
+.grid-product-wrap--2B {
+    margin-top: $sm-grid-top-margin;
+    margin-bottom: $sm-grid-bottom-margin;
+
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-end;
+    
+    @media (min-width: $break-sm) {
+        margin-top: $grid-top-margin;
+        margin-bottom: $grid-bottom-margin;
+    }
+    
+    .grid-product-list--2B {
+        width: calc(45% - (#{$grid-view1-gutter}));
+        margin-right: $sm-grid-view1-gutter;
+
+        @media (min-width: $break-sm) {
+            margin-right: $grid-view1-gutter;
+
+            width: calc(((100% / #{$grid-cols--2B}) + 4px) - #{$grid-view1-gutter});
+        }
+    }
+
+    .grid-product-list--2B:last-child {
+        margin-right: 0;
+    }
+}

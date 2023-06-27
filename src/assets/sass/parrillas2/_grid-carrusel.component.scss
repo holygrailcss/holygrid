@@ -1,0 +1,100 @@
+//@import "../../../../../../../../../assets/styles/abstract/_all.scss";
+@import '../abstract/_all.scss';
+
+.swiper-container {
+    width: auto;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-swiper-wrap {
+    @media (max-width: #{$break-sm - 1}) {
+        width: 100%;
+    }
+
+    @media (max-width: 1279px) {
+        &.mobile-center-monoprod {
+            justify-content: flex-start;
+        }
+    }
+
+    ::ng-deep .card9-wrap-details {
+        position: relative;
+    }
+}
+
+.mobile-center-monoprod {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: #{$break-sm - 1}) {
+        justify-content: flex-start;
+    }
+}
+
+.swiper-nat {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    position: relative;
+
+    @media (min-width: $break-sm) {
+        position: relative;
+    }
+
+    .swiper-thumbs {
+        width: 38vw;
+
+        .p-view {
+            position: relative;
+        }
+
+        @media (min-width: $break-sm) {
+            width: 20vw;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media (max-width: #{$break-sm - 1}) {
+            width: 38vw;
+            margin-right: 8px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .p-view {
+        @media (max-width: 1279px) {
+            position: relative !important;
+        }
+    }
+}
+
+.swiper-nat::-webkit-scrollbar {
+    display: none;
+}
