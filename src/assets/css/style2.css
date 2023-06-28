@@ -13827,94 +13827,26 @@ header.interior svg path {
 }
 /* TYPES FIJOS */
 .grid-product-wrap--2C {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: -16px;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
+  display: grid;
+  grid-template-columns: 0 1fr 0;
+  gap: 0;
+}
+.grid-product-wrap--2C .card9-wrap-details {
+  padding-left: 16px;
+}
+@media (min-width: 992px) {
+  .grid-product-wrap--2C .card9-wrap-details {
+    padding-left: 0;
+  }
 }
 @media (min-width: 768px) {
   .grid-product-wrap--2C {
-    width: 100%;
-    justify-content: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0;
+    gap: 16px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
   }
 }
-.grid-product-wrap--2C .grid-product-list--2C {
-  width: calc(50% - (4px));
-  margin-right: 4px;
-}
-@media (min-width: 768px) {
-  .grid-product-wrap--2C .grid-product-list--2C {
-    width: calc(45% - (8px));
-    margin-right: 16px;
-  }
-}
-@media (min-width: 1280px) {
-  .grid-product-wrap--2C .grid-product-list--2C {
-    width: calc(33% - (64px));
-  }
-}
-.grid-product-wrap--2C .grid-product-list--2C:last-child {
-  margin-right: 0;
-}
-.grid-product-wrap--2C .sk-load2 {
-  position: relative;
-}
-.grid-product-wrap--2C .sk-load2:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: calc(133.25% + 126px);
-}
-@media (min-width: 992px) {
-  .grid-product-wrap--2C .sk-load2:before {
-    padding-top: calc(133.25% + 144px);
-  }
-}
-.grid-product-wrap--2C .sk-load2::marker {
-  display: none;
-  content: "";
-}
-.grid-product-wrap--2C .card9-contents {
-  padding-left: 8px;
-}
-
-.is-rtl .grid-product-wrap--2C {
-  width: 100%;
-}
-.is-rtl .grid-product-wrap--2C .grid-product-list--2C {
-  width: calc(50% + (12px));
-  margin-left: 8px;
-  margin-right: -16px;
-}
-@media (min-width: 768px) {
-  .is-rtl .grid-product-wrap--2C .grid-product-list--2C {
-    width: calc(45% - (8px));
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-}
-@media (min-width: 1280px) {
-  .is-rtl .grid-product-wrap--2C .grid-product-list--2C {
-    width: calc(33% - (64px));
-    margin-right: 64px;
-  }
-}
-.is-rtl .grid-product-wrap--2C .grid-product-list--2C:last-child {
-  margin-left: -16px;
-}
-@media (min-width: 768px) {
-  .is-rtl .grid-product-wrap--2C .grid-product-list--2C:last-child {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-.is-rtl .grid-product-wrap--2C .card9-contents {
-  padding-right: 8px;
+.grid-product-wrap--2C .grid-product-list--2C:first-child {
+  grid-column: 2;
 }
 
 @keyframes fadein {
