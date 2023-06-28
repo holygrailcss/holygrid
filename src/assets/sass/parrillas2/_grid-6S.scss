@@ -1,7 +1,7 @@
 @import "../abstract/_all.scss";
-$grid-cols--6S: 4;
-$grid-cols-mobile--6S: 2;
-$grid-cols-first--6S: 2;
+$grid-cols--6S: 6;
+$grid-cols-mobile--6S: 3;
+$grid-cols-first--6S: 3;
 $margin-grid-cols--6S: 25px;
 // .grid-product-wrap--6S {
 //     margin-top: $sm-grid-top-margin;
@@ -96,16 +96,21 @@ $margin-grid-cols--6S: 25px;
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
   @media (min-width: #{$break-sm} ) {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    .card9-wrap-details {
-      background-color: #fff;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .card9-wrap-details {
+    background-color: #fff;
+  }
+  & > .grid-product-list {
+    @media (min-width: #{$break-sm} ) {
+      grid-column: span 3;
     }
-    & > *:first-child {
-        grid-column:  span 2;
+    &:first-child {
+      grid-column: span 2;
       @media (min-width: #{$break-sm} ) {
-        grid-column: 1 / span 2;
+        grid-column: span 6;
       }
     }
   }
