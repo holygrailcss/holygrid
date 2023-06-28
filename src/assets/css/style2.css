@@ -13095,7 +13095,6 @@ header.interior svg path {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
   z-index: 1000;
   pointer-events: none;
   display: none;
@@ -13103,14 +13102,11 @@ header.interior svg path {
   margin-right: 40px;
   margin-left: 40px;
   opacity: 0.1;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 16px;
 }
 .overlay .overlayclip {
   background-color: red;
-  width: 10%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .overlaybleed {
@@ -13123,24 +13119,20 @@ header.interior svg path {
   z-index: 1000;
   pointer-events: none;
   display: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 16px;
   opacity: 0.1;
 }
 .overlaybleed .overlayclip {
   background-color: red;
-  width: 10%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .open-over1 .overlaybleed {
-  display: flex;
+  display: grid;
 }
 
 .open-over2 .overlay {
-  display: flex;
+  display: grid;
 }
 
 .select-zone {
@@ -13277,6 +13269,14 @@ header.interior svg path {
   grid-template-columns: 0 1fr 0;
   gap: 0;
 }
+.grid-product-wrap--1A .card9-wrap-details {
+  padding-left: 16px;
+}
+@media (min-width: 992px) {
+  .grid-product-wrap--1A .card9-wrap-details {
+    padding-left: 0;
+  }
+}
 @media (min-width: 768px) {
   .grid-product-wrap--1A {
     gap: 16px;
@@ -13284,15 +13284,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--1A .grid-product-list--1A {
-  grid-column: 2;
-}
-.grid-product-wrap--1A .grid-product-list--1A .card9-wrap-details {
-  padding-left: 16px;
-}
-@media (min-width: 992px) {
-  .grid-product-wrap--1A .grid-product-list--1A .card9-wrap-details {
-    padding-left: 0;
-  }
+  grid-area: 1/2/1/3;
 }
 
 @keyframes fadein {
@@ -13433,6 +13425,9 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--1F {
+  display: grid;
+  grid-template-columns: 1fr 0;
+  gap: 0;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -13443,9 +13438,14 @@ header.interior svg path {
   }
 }
 @media (min-width: 768px) {
-  .grid-product-wrap--1F .grid-product-list--1F {
-    width: calc(66.6666666667% - 4px);
+  .grid-product-wrap--1F {
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
+}
+.grid-product-wrap--1F .grid-product-list--1F {
+  grid-area: 1/1/2/9;
 }
 
 @keyframes fadein {

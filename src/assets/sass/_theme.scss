@@ -79,7 +79,7 @@
   
     left: 0;
     right: 0;
-    height: 100%;
+
     z-index: 1000;
     pointer-events: none;
     display: none;
@@ -87,15 +87,15 @@
     margin-right: 40px;
     margin-left: 40px;
     opacity: .1;
+
+
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+
+    gap:  16px; 
   
     .overlayclip{
       background-color: red;
-  
-      width: 10%;
-      height: 100%;
-      top: 0;
-      bottom: 0;
-      left: 0;
   
     }
   
@@ -112,19 +112,18 @@
     height: 100%;
     z-index: 1000;
     pointer-events: none;
-    display: none;
-    gap: 16px;
-  
+    display: none; 
+
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+
+    gap:  16px; 
     opacity: .1;
   
     .overlayclip{
       background-color: red;
   
-      width: 10%;
-      height: 100%;
-      top: 0;
-      bottom: 0;
-      left: 0;
+
   
     }
   
@@ -132,14 +131,14 @@
   
   .open-over1{
     .overlaybleed{
-      display: flex;
+      display: grid;
     }
   
   }
   
   .open-over2{
     .overlay{
-      display: flex;
+      display: grid;
     }
   }
   

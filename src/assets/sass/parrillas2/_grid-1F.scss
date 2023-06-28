@@ -3,20 +3,41 @@
 
 
 
+// .grid-product-wrap--1F {
+
+// 	@include space-pmobile-pdesktop;
+
+// 	.grid-product-list--1F {
+
+
+
+// 		@media (min-width: $break-sm) {
+// 			width: calc((((100% / 12) * 8)) - 4px);
+// 		}
+// 	}
+
+
+
+
+// }
+
+
 .grid-product-wrap--1F {
+	display: grid;
+	grid-template-columns:  1fr 0;
+	gap: 0;
+	@include space-pmobile-pdesktop;
 
-	@include space-16-40;
-
-	.grid-product-list--1F {
 
 
-
-		@media (min-width: $break-sm) {
-			width: calc((((100% / 12) * 8)) - 4px);
-		}
+	@media (min-width: $break-sm) {
+	  gap: 16px;
+	  grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+	  grid-template-rows: auto;
 	}
+	.grid-product-list--1F {
+     grid-area: 1 / 1 / 2 / 9; }
+  
 
-
-
-
-}
+  }
+  

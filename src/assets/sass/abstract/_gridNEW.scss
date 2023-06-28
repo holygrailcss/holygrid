@@ -2,7 +2,7 @@
 
 
 
-@mixin space-0-40 {
+@mixin space-0-pdesktop {
   padding-left: 0;
   padding-right: 0;
   @media (min-width: $break-md) {
@@ -21,7 +21,7 @@
     padding-right: 0;
   }
 }
-@mixin space-16-40 {
+@mixin space-pmobile-pdesktop{ 
   padding-left: 16px;
   padding-right: 16px;
   @media (min-width: $break-md) {
@@ -31,7 +31,9 @@
 }
 
 
-@mixin details-16-0 {
+
+
+@mixin details-pmobile-0 {
 .card9-wrap-details {
     padding-left: 16px;
     @media (min-width: $break-md) {
@@ -41,7 +43,7 @@
 }
 
 
-@mixin details-16-40 {
+@mixin details-pmobile-pdesktop {
     .card9-wrap-details {
         padding-left: 16px;
         @media (min-width: $break-md) {
