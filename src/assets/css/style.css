@@ -13275,6 +13275,22 @@ header.interior svg path {
   padding-top: 100px;
 }
 
+.fin {
+  position: relative;
+}
+.fin::after {
+  position: absolute;
+  top: -2px;
+  left: -5px;
+  content: "";
+  background-color: rgb(180, 56, 180);
+  border-radius: 12px;
+  padding: 4px;
+  font-size: 10px;
+  width: 5px;
+  height: 5px;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
