@@ -89,5 +89,66 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" rel="stylesheet" />
 
 
+      <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+      <script>
+    var height;
+    interact(".resize")
+      .resizable({
+        // resize from all edges and corners
+        edges: {
+          left: true,
+          right: true,
+          bottom: false,
+          top: false,
+        },
+        modifiers: [
+          // keep the edges inside the parent
+          interact.modifiers.restrictEdges({
+            outer: "parent",
+          }),
+          // minimum size
+          interact.modifiers.restrictSize({
+            min: { width: 320, height: 500 },
+            max: { width: 1500, height: 500 },
+          }),
+        ],
+        inertia: true,
+      })
+      .on("resizemove", function (event) {
+        var target = event.target;
+        event.target.classList.add("resize-overlay");
+        var x = parseFloat(target.getAttribute("data-x")) || 0;
+        var y = parseFloat(target.getAttribute("data-y")) || 0;
+        // update the element's style
+        target.style.width = event.rect.width + "px";
+        target.style.webkitTransform = target.style.transform =
+          "translate(" + x + "px," + y + "px)";
+        target.setAttribute("data-x", x);
+        target.setAttribute("data-y", y);
+        target.querySelector(".resize-resolution").textContent =
+          Math.round(event.rect.width) +
+          "\u00D7" +
+          Math.round(event.rect.height);
+        if (event.rect.width < 320) {
+          target.querySelector(".resize-media").textContent = "XS";
+        } else if (event.rect.width < 768) {
+          target.querySelector(".resize-media").textContent = "SM";
+        } else if (event.rect.width < 992) {
+          target.querySelector(".resize-media").textContent = "MD";
+        } else if (event.rect.width < 1280) {
+          target.querySelector(".resize-media").textContent = "LG";
+        } else if (event.rect.width < 1500) {
+          target.querySelector(".resize-media").textContent = "XL";
+         } else   {
+          target.querySelector(".resize-media").textContent = "XL";
+        }
+      })
+      .on("resizeend", function (event) {
+        event.target.classList.remove("resize-overlay");
+      });
+  </script>
+
+
   </body>
 </html>
