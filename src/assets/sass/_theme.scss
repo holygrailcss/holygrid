@@ -76,23 +76,16 @@
     position: fixed;
     top: 0;
     bottom: 0;
-  
     left: 0;
     right: 0;
-
     z-index: 1000;
     pointer-events: none;
     display: none;
     gap: 16px;
-    margin-right: 16px;
-    margin-left: 16px;
     opacity: .1;
-
-
-
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-
     gap:  16px; 
+    @include space-0-pdesktop;
   
     .overlayclip{
       background-color: red;
@@ -128,8 +121,16 @@
     }
   
   }
+  .open-over3 {
+    .overlaybleed {
+      gap: 0;
+      .overlayclip {
+        border: 1px solid green;
+      }
+    }
+  }
   
-  .open-over1{
+  .open-over1, .open-over3 {
     .overlaybleed{
       display: grid;
     }
@@ -163,7 +164,7 @@
         background-color: wheat;
 
       }
-      &.over1,&.over2 {
+      &.over1,&.over2,&.over3 {
 
 
         background-color: rgb(255, 128, 128);

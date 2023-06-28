@@ -1,24 +1,23 @@
-@import '../abstract/_all.scss';
+@import "../abstract/_all.scss";
 
 $lg-grid-view2-gutter-2C: 64px;
 $sm-grid-view1-t2c-gutter: 4px;
 $product-details-padding-2C: 8px;
 
-
 .grid-product-wrap--2C {
-    display: grid;
-    grid-template-columns: 0 1fr 0;
-    gap: 0;
-  
-    @include details-pmobile-0;
-    @media (min-width: $break-sm) {
-      gap: 16px;
-      grid-template-columns: 1fr 2fr 2fr 1fr;
-    }
-    .grid-product-list--2C:first-child {
-  
-        grid-column: 2;
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 8px;
+  @include details-pmobile-0;
+  @media (min-width: $break-sm) {
+    gap: 16px;
+    grid-template-columns: repeat(12, 1fr);
+    .grid-product-list--2C {
+      grid-column: span 4;
+      &:first-child {
+        grid-column: 3 / span 4;
+      }
     }
   }
-  
+}

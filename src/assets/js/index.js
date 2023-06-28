@@ -422,12 +422,16 @@ $("a.rtl").on("click", function() {
 });
 
 
-$(".over1").on("click", function () {
-  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over1").removeClass("open-over2");
+$(".over1").on("click", function (e) {
+  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over1").removeClass("open-over2 open-over3");
   e.preventDefault();
 });
-$(".over2").on("click", function () {
-  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over2").removeClass("open-over1");
+$(".over2").on("click", function (e) {
+  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over2").removeClass("open-over1 open-over3");
+  e.preventDefault();
+});
+$(".over3").on("click", function (e) {
+  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over3").removeClass("open-over2 open-over1");
   e.preventDefault();
 });
 
