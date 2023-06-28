@@ -50,9 +50,7 @@ header.interior {
   header {
     background-color:  #ffffff47;
     height: 90px;
-    @media (min-width: $break-md) {
-      height: 120px;
-    }
+
     a {
       color: $c-black;
     }
