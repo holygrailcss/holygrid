@@ -9,12 +9,7 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  .card9-wrap-details {
-    padding-left: 16px;
-    @media (min-width: $break-md) {
-      padding-left: 0;
-    }
-  }
+
 }
 
 
@@ -34,3 +29,23 @@
     padding-right: 40px;
   }
 }
+
+
+@mixin details-16-0 {
+.card9-wrap-details {
+    padding-left: 16px;
+    @media (min-width: $break-md) {
+      padding-left: 0;
+    }
+  }
+}
+
+
+@mixin details-16-40 {
+    .card9-wrap-details {
+        padding-left: 16px;
+        @media (min-width: $break-md) {
+          padding-left: 40px;
+        }
+      }
+    }

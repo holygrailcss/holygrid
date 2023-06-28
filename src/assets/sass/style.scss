@@ -18,7 +18,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./theme.scss";
 
 
-@import "parrillas2/_all.scss";
+@import "parrillas/_all.scss";
 
 
 //@import "parrillas/*";
@@ -106,5 +106,7 @@ a {
 .grid-product, ul {
   position: relative;
 }
+
+
 
 
