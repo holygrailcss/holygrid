@@ -423,11 +423,11 @@ $("a.rtl").on("click", function() {
 
 
 $(".over1").on("click", function () {
-  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over1");
+  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over1").removeClass("open-over2");
   e.preventDefault();
 });
 $(".over2").on("click", function () {
-  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over2");
+  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over2").removeClass("open-over1");
   e.preventDefault();
 });
 

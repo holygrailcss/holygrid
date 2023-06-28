@@ -356,6 +356,11 @@ img {
   width: 100%;
 }
 
+.has-tooltip {
+  position: relative;
+  width: fit-content;
+}
+
 @media (max-width: 767px) {
   .xs\:text-center {
     text-align: center;
@@ -9505,18 +9510,23 @@ ul.list-disc.has-light > li::after, ul.list-mini.has-light > li::after {
   }
 }
 .tooltip-sm {
-  right: 8px;
+  bottom: 0;
+  transform: translateY(100%) translateY(10px);
+  right: -8px;
   background-color: #FFFFFF;
   border: 1px solid #e3e3e3;
   position: absolute;
-  width: 100%;
-  max-width: 327px;
+  width: max-content;
+  max-width: 240px;
   z-index: 10;
+  padding: 8px;
+  padding-right: 24px;
+  color: #292929;
 }
 .tooltip-sm::after {
-  top: -6px;
-  right: 18px;
   content: "";
+  top: -6px;
+  right: 10px;
   position: absolute;
   border-top: 1px solid #e3e3e3;
   border-left: 1px solid #e3e3e3;
@@ -9524,6 +9534,29 @@ ul.list-disc.has-light > li::after, ul.list-mini.has-light > li::after {
   height: 10px;
   background: #FFFFFF;
   transform: rotate(45deg);
+}
+.tooltip-sm.tooltip-br, .tooltip-sm.tooltip-tr {
+  left: -8px;
+  right: auto;
+}
+.tooltip-sm.tooltip-br::after, .tooltip-sm.tooltip-tr::after {
+  right: auto;
+  left: 10px;
+}
+.tooltip-sm.tooltip-tl, .tooltip-sm.tooltip-tr {
+  top: 0;
+  bottom: auto;
+  transform: translateY(-100%) translateY(-10px);
+}
+.tooltip-sm.tooltip-tl::after, .tooltip-sm.tooltip-tr::after {
+  top: auto;
+  bottom: -6px;
+  transform: rotate(225deg);
+}
+.tooltip-sm .close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
 }
 
 .store-state {
@@ -9539,6 +9572,29 @@ ul.list-disc.has-light > li::after, ul.list-mini.has-light > li::after {
   left: 0;
   width: 8px;
   height: 8px;
+}
+
+.is-rtl .tooltip-sm {
+  left: -8px;
+  right: auto;
+  padding-left: 24px;
+  padding-right: 16px;
+}
+.is-rtl .tooltip-sm::after {
+  right: auto;
+  left: 10px;
+}
+.is-rtl .tooltip-sm.tooltip-tl, .is-rtl .tooltip-sm.tooltip-bl {
+  right: -8px;
+  left: auto;
+}
+.is-rtl .tooltip-sm.tooltip-tl::after, .is-rtl .tooltip-sm.tooltip-bl::after {
+  left: auto;
+  right: 10px;
+}
+.is-rtl .tooltip-sm .close {
+  right: auto;
+  left: 8px;
 }
 
 @keyframes underline {
@@ -13143,8 +13199,8 @@ header.interior svg path {
   pointer-events: none;
   display: none;
   gap: 16px;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 16px;
+  margin-left: 16px;
   opacity: 0.1;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 16px;
