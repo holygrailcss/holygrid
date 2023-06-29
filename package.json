@@ -33,7 +33,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "eleventy-plugin-embed-everything": "^1.16.0",
-    "holygrailcss": "^2.0.45",
+    "holygrailcss": "^2.1.34",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.6",
     "markdown-it-highlightjs": "^4.0.1",
