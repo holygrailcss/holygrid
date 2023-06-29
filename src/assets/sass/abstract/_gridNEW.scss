@@ -46,8 +46,8 @@
 @mixin details-pmobile-pdesktop {
     .card9-wrap-details {
         padding-left: 16px;
-        @media (min-width: $break-md) {
-          padding-left: 40px;
-        }
+        // @media (min-width: $break-md) {
+        //   padding-left: 40px;
+        // }
       }
     }
