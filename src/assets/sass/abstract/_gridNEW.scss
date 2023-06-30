@@ -21,7 +21,7 @@
     padding-right: 0;
   }
 }
-@mixin space-pmobile-pdesktop{ 
+@mixin space-pmobile-pdesktop { 
   padding-left: 16px;
   padding-right: 16px;
   @media (min-width: $break-md) {
@@ -44,10 +44,10 @@
 
 
 @mixin details-pmobile-pdesktop {
-    .card9-wrap-details {
-        padding-left: 16px;
-        // @media (min-width: $break-md) {
-        //   padding-left: 40px;
-        // }
-      }
+  .card9-wrap-details {
+    padding-left: 16px;
+    @media (min-width: $break-md) {
+      padding-left: 40px;
     }
+  }
+}
