@@ -1,4 +1,5 @@
 @import './abstract/_all.scss';
+@import "./abstract/_gridNEW.scss";
 
 .grid{
     position: fixed;
@@ -86,7 +87,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     gap:  16px; 
     @include space-0-pdesktop;
-  
+
+    
     .overlayclip{
       background-color: red;
   
