@@ -18,93 +18,1070 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./theme.scss";
 
 
-@import "parrillas2/_all.scss";
-
-
-//@import "parrillas/*";
-$primary-color: var(--primary-color);
-$c-primary: var(--c-primary);
-$c-secondary: var(--c-secondary);
-$bg-dark: var(--bg-dark);
-$c-bg-dark: var(--c-bg-dark);
-$bg-light: var(--bg-light);
-$c-bg-light: var(--c-bg-light);
-
+@import "parrillas/_all.scss";
 
 
 body {
-  overflow-x: hidden;
-  color: $primary-color;
-  scroll-behavior: smooth;
+    padding-top: var(--offset-body, 0px) !important;
+    color: $c-primary;
 }
-p {
-  font-size: inherit;
+
+
+.store-state {
+    width: max-content;
+    position: relative;
+    padding-left: 16px;
+
+    div {
+        position: absolute;
+        border-radius: 50%;
+        overflow: hidden;
+        top: 2px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+    }
 }
-strong {
-  color: $primary;
+
+
+.multi-img{
+    width: 100%;
+    &>div{
+        width: 50%;
+        float: left;
+    }
 }
-.bold {
-  @include font-bold;
+
+
+
+
+// ESTO DEBE VENIR DE HOLYGRAIL
+
+.icon-check:before {
+    content: "\e905";
 }
-b {
-  color: $c-secondary;
+
+.form-input-mobile {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 40px);
+    max-width: 450px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-a {
-  &:hover {
-    cursor: pointer;
-  }
+
+.pickup-map-btns {
+    background-color: $c-white;
+    display: inline-block;
+    width: 100%;
+    margin-top: -8px;
 }
-.bg-dark {
-  background-color: $bg-dark;
-  color: $c-bg-dark;
+
+
+
+.shop-cart-item {
+    display: block;
+    border-bottom: 1px solid $c-middle-grey;
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
-.bg-light {
-  background-color: $bg-light;
-  color: $c-bg-light;
+
+.lines-child {
+    border-bottom: 1px solid $c-middle-grey;
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
+
+
+.pickup-selected {
+    padding: 16px;
+    border: 1px solid $c-middle-grey;
+
+    .ptr-24,
+    .pbr-24 {
+        padding: 0 !important;
+    }
+
+    .bg-line {
+        border: none !important;
+    }
+
+    .hg-location-item {
+        display: inline-flex;
+    }
+}
+
+.btn-noselected {
+    opacity: 0.4;
+    border: 1px solid $c-middle-grey;
+}
+
+.rat-3-4.slider-half {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+}
+
+.full-mobile {
+    width: 100vw;
+
+    @media (min-width: $break-sm) {
+        width: 100%;
+    }
+}
+
+.ma-product-dialog {
+    overflow: hidden;
+}
+
+
+
+// temporal para modales de producto
+.ma-product-wrapper {
+    &.swiper-container,
+    &.swiper {
+        div.swiper-button-next,
+        .swiper-container-rtl div.swiper-button-prev,
+        .swiper-rtl div.swiper-button-prev {
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 2L11 8L5 14' stroke='black'/%3E%3C/svg%3E%0A");
+            background-position: center;
+            background-repeat: no-repeat;
+            color: transparent;
+        }
+
+        div.swiper-button-prev,
+        .swiper-container-rtl div.swiper-button-next,
+        .swiper-rtl div.swiper-button-next {
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 2L5 8L11 14' stroke='black'/%3E%3C/svg%3E%0A");
+            background-position: center;
+            background-repeat: no-repeat;
+            color: transparent;
+        }
+    }
+}
+
+.phantom-white .category-container.isOpen li a.hg-bicolor {
+    color: $c-primary;
+}
+
+.phantom-white.open-menu .category-indicator,
+.phantom-white .category-container.isOpen .category-indicator {
+    background: $c-primary !important;
+}
+
+.has-ellipsis-2 {
+    max-height: 42px;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+
+    &:after {
+        content: "...";
+        position: absolute;
+        right: 0;
+        top: 10px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+    }
+}
+
+.card9-add {
+    @media (max-width: 1280px) {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .phantom-white {
+        .outline-white {
+            svg {
+                path,
+                line,
+                circle {
+                    stroke: $c-primary !important;
+                }
+
+                g {
+                    fill: $c-primary !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+#ItxShopCartPage {
+    .is-rtl {
+        .product-summary-row {
+            width: 100%;
+
+            .float-right,
+            .float-right.product-summary-price,
+            span.product-summary-price {
+                float: left;
+                text-align: left;
+            }
+        }
+
+        .btn.btn-shopcart {
+            margin-left: 0px;
+        }
+    }
+}
+
+// Carousel de productos de relacionados
+.related-carrousel-wrapper {
+    .swiper-carrousel-pagination {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 10;
+        margin-top: -62px;
+    }
+
+    .product-carrousel .swiper-carrousel-prev,
+    .product-carrousel .swiper-carrousel-next {
+        border-width: 0;
+        margin: 0;
+    }
+
+    .product-carrousel .inner-button {
+        margin-top: 0;
+    }
+}
+
+// category-grid
+.grid-product-view3 {
+    .card9 {
+        .card9-view-details {
+            display: none;
+        }
+
+        .js-card9-inner {
+            margin-bottom: 0;
+        }
+
+        .ma-product-slider {
+            display: none;
+        }
+    }
+
+    .card9-add {
+        display: none;
+    }
+}
+
+.grid-product-wrap--1A_mono .card9 .card9-wrap-details {
+    min-height: 0;
+    width: 100%;
+    display: contents;
+}
+
+.hg-bread .hg-bread-item {
+    text-transform: none;
+}
+
+// TODO Pendiente actualización HG
+.select {
+    &.select-flat {
+        width: max-content;
+
+        &::after {
+            right: 0;
+        }
+    }
+}
+
+div.card9-wrap .rat-content:hover .card9-add {
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+}
+
+
+// Estilos modal accesibilidad
+
+body #INDWrap {
+    z-index: 2000;
+}
+
+.INDSafari #INDpopup .INDpopupContent iframe {
+    height: 100% !important;
+}
+
+#INDmenu.INDmenu-loaded
+    .INDmenuBody
+    .INDmenuRow
+    .INDmenuPanel
+    #INDfontsize-radioGroup
+    .INDfontsize-radioWrap
+    label::before,
+#INDmenu.INDmenu-loaded
+    .INDmenuBody
+    .INDmenuRow
+    .INDmenuPanel
+    #INDmenuGroup-customcolor
+    #INDcustomcolor-radioGroup
+    label::before {
+    display: none !important;
+}
+
+// TODO crear archivo global para rtl que solo se muestre en paises rtl
 .has-light {
-  a {
-    color: white;
-  }
+    svg {
+        path {
+            stroke: white;
+        }
+    }
+
+    a {
+        color: $c-white;
+    }
+
+    a:focus,
+    a:hover,
+    a:active {
+        text-decoration: none;
+        color: $c-white;
+    }
+}
+
+
+.card9-contents {
+    .product-view-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .tag-wrapper {
+            width: 100%;
+        }
+    }
 }
 
 
 
 
-.header-img {
-  position: relative;
+
+.md-scroll-img:hover {
+    .md-scroll-btn {
+        opacity: 1;
+    }
+}
+
+.md-scroll-btn {
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+
+.gradient-end::after {
+    content: "";
+    width: 120px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(90deg, rgba(41, 41, 41, 0) 0%, #292929 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+[dir="rtl"].gradient-end::after {
+    background: linear-gradient(90deg, #292929 0%, rgba(41, 41, 41, 0) 100%);
+    left: 0;
+    right: auto;
+}
+
+
+// Es necesario para el cambio de color de fondo en las parrillas
+.background-color-grid {
+    margin: 0 -8px;
+
+    [class*="sk-"]:before,
+    .p-view {
+        background-color: transparent;
+    }
+}
+
+.body-lookbook {
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+
+.swiper-zoom-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+// TODO: esto habrá que sacarlo a HG (category-grid.component)
+.grid-wrap-custom {
+    .sk-load:before,
+    .sk-load1:before,
+    .sk-load2:before,
+    .sk-load3:before,
+    .sk-load5:before,
+    .sk-load6:before,
+    .p-view {
+        background-color: transparent;
+    }
+}
+
+//todo ratios
+.sk-load9 {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: calc(64.66667% + 126px);
+        background-color: $c-white;
+
+        .p-view {
+            background-color: transparent;
+        }
+
+        @media (min-width: #{$break-md}) {
+            padding-top: calc(62.9% + 144px);
+        }
+
+        @media (min-width: #{$break-lg}) {
+            padding-top: calc(64.7% + 144px);
+        }
+    }
+
+    &::marker {
+        display: none;
+        content: "";
+    }
+}
+
+/* Parseo de las fuentes antiguas duttiw, a fixear en el cms */
+.duttiw-bold {
+    font-family: "dutti-daily-bold", Helvetica, arial, sans-serif;
+    font-weight: 600;
+}
+
+.duttiw-light {
+    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+    font-weight: 100;
+}
+
+.duttiw-medium {
+    font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+    font-weight: 500;
+}
+
+.duttiw-regular {
+    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+    font-weight: 500;
+}
+
+.duttiw-semibold {
+    font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+    font-weight: 600;
+}
+
+.duttiw-extended-bold {
+    font-family: "dutti-extended-bold", Helvetica, arial, sans-serif;
+    font-weight: 900;
+}
+
+.duttiw-extended-extrabold {
+    font-family: "dutti-extended-extrabold", Helvetica, arial, sans-serif;
+    font-weight: 900;
+}
+
+.duttiw-extended-regular {
+    font-family: "dutti-extended-regular", Helvetica, arial, sans-serif;
+    font-weight: 500;
+}
+
+
+body.openshop .maxlook {
+    transition: all ease-in-out 0.4s;
+}
+
+
+.select.select-secondary-rd select:hover {
+    opacity: 0;
+}
+
+.add_fitanalytics_sizes_content.link-line {
+    display: initial;
+}
+
+.info-text-post {
+    color: $c-dark-grey;
+    width: auto;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+}
+
+
+.ma-product-care img {
+    width: 16px;
+    vertical-align: middle;
+    margin-right: 16px;
+    float: left;
+}
+.main-icon {
+    align-self: center;
+    padding: 0 24px 16px 24px;
+    display: flex;
+    justify-content: center;
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+.btn-clear.delete {
+    margin-right: -8px;
+}
+
+// clases que estaban en legacy.min.css y aún se utilizan en Angular
+.ma-wrapper-terms {
+    display: inline-block;
+    width: 100%;
+    max-width: 320px;
+    padding-top: 7px;
+}
+
+.product-percentage-bullet {
+    z-index: 90;
+    @include font-bold;
+    line-height: 14px;
+    padding: 3px 5px;
+    background: #FFFFFF;
+    border-radius: 1px;
+}
+
+.hg-coming-soon {
+    display: inline-block;
+    font-size: 9px;
+    margin-left: 8px;
+    position: relative;
+    vertical-align: middle;
+}
+
+// END TODO LEGACY
+.checkbox-item [type="radio"] {
+
+    //Base for label styling
+    &:not(:checked),
+    &:checked {
+        position: absolute;
+        left: -9999px;
+        +label {
+            position: relative;
+
+            cursor: pointer;
+            font-weight: normal;
+            font-size: 14px;
+            float: left;
+
+            &:before {
+                content: '';
+                  width: 25px;
+                    height: 25px;
+                border-radius: 50%;
+                border:1px solid #a3a0a0;
+                outline: 0;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 16px 0 0;
+                position: absolute;
+            }
+            .icon {
+                position: absolute;
+                top: 9px;
+                left: 9px;
+                color: $default-md;
+                transition: all .2s;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                line-height: 16px;
+                padding-left: 42px;
+                padding-top: 5px;
+
+                >a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    } //checked mark aspect changes
+    &:not(:checked) {
+        +label {
+            .icon {
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+    }
+    &:checked {
+        +label {
+            .icon {
+                opacity: 1;
+                transform: scale(1);
+                background: $default-md ;
+                border-radius: 50%;
+                vertical-align: middle;
+                display: block;
+                position: absolute;
+
+                width: 7px;
+                height: 7px;
+
+
+            }
+        }
+    } //disabled checkbox
+    &:disabled {
+        &:not(:checked),
+        &:checked {
+            +label {
+                &:before {
+                    box-shadow: none;
+                    background-color: $c-dark-grey;
+                }
+            }
+        }
+        &:checked {
+            +label {
+                &:after {
+                    color: $default-md;
+                }
+            }
+        }
+        +label {
+            color: $default-md;
+        }
+    }
+}
+.is-rtl  .checkbox-item [type="radio"] {
+    &:not(:checked), &:checked {
+        left: -9999px;
+        +label {
+            .icon {
+                left: 0;
+                right: 9px;
+            }
+            span {
+                padding-right: 42px;
+                padding-left: 0;
+            }
+        }
+    } 
+}
+
+// TODO Eliminar este fichero de aqui cuando legacy se elimine / cambie, más concretamente el archivo -> _bootstrap-rtl.scss
+.is-rtl-flt {
+    float: inherit !important;
+}
+.is-rtl {
+    // Cesta de la compra
+    // NO holygrail - en duttistatic
+    .texticon-prev {
+        .icon {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // NO holygrail - en duttistatic
+    .header-menu-brand {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    // NO holygrail - en duttistatic
+    .new-select {
+        .u-select {
+            .u-select-name {
+                padding: 0 0 0 8px;
+            }
+        }
+    }
+
+    // NO holygrail - en duttistatic
+    product-item-cart {
+        float: right;
+
+        .product-item-cart {
+            .product-item-info {
+                .name {
+                    padding: 0 0 0 8px;
+                }
+            }
+        }
+    }
+
+    // Mapa
+    // NO holygrail
+    .has-map-wrap {
+        .close-map-btn {
+            left: 0;
+            right: auto;
+        }
+
+        .has-map {
+            .wrapper {
+                right: 0;
+            }
+        }
+    }
+
+    // Modales
+    // NO holygrail
+    .wrapper {
+        .tooltip-info {
+            .tooltip-cross {
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}
+
+.is-rtl {
+    // zarastudio
+    .grid-product-wrap--minigrid-info {
+        .grid-product-list--minigrid-info {
+            &:nth-child(3n) {
+                margin-right: auto !important;
+            }
+
+            &:nth-child(3n + 1) {
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    .grid-product-wrap--2B {
+        .grid-product-list--2B {
+            margin-left: 16px;
+            margin-right: 0px;
+        }
+
+        .grid-product-list--2B:last-child {
+            margin-left: 0;
+        }
+    }
+
+    .pr-30 {
+        padding-right: 0px;
+        padding-left: 30px;
+    }
+
+    .mr-8 {
+        margin-right: 0px;
+        margin-left: 8px;
+    }
+
+    .mr-16 {
+        margin-right: 0px;
+        margin-left: 8px;
+    }
+
+    .ml-8 {
+        margin-left: 0px;
+        margin-right: 8px;
+    }
+
+    .ml-16 {
+        margin-left: 0px;
+        margin-right: 16px;
+    }
+
+    .pr-16 {
+        padding-right: 0px;
+        padding-left: 16px;
+    }
+
+    .pr-8 {
+        padding-right: 0px;
+        padding-left: 8px;
+    }
+}
+
+.is-rtl {
+    app-store-locator-detail-layout {
+        .hg-back-button {
+            svg-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.is-rtl {
+    .shop-the-look-swiper {
+        .swiper-nav-left,
+        .swiper-nav-right {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+//TODO HG
+.container-bleed {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+}
+
+.grid-swiper-wrap {
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+
+    @media (min-width: $break-sm) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @media (min-width: $break-lg) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    ::ng-deep .card9-wrap-details {
+        position: relative;
+    }
+
+    // .swiper-slide:first-child {
+    //     padding-left: 16px;
+    //     @media (min-width: $break-lg) {
+    //         padding-left: 40px;
+    //     }
+    // }
+}
+
+/*cambios genéricos de las parrillas*/
+//TODO HG
+.template-Carrusel {
+    .swiper-slide {
+        &:first-child {
+            .card9-contents {
+                padding-left: 16px;
+            }
+        }
+    }
+}
+
+.color-square.color-wrap button {
+    width: auto;
+    height: 12px;
+    margin-right: 4px;
+    overflow: hidden;
+    &:first-child {
+        width: 8px;
+        height: 8px;
+        margin-top: 2px;
+        @media (min-width: $break-sm) {
+            width: 12px;
+            height: 12px;
+            margin-top: 0;
+        }
+    }
+}
+
+.grid-product-list {
+    .card9 .card9-wrap-details {
+        min-height: 110px;
+    }
+
+    .sk-load2::before {
+        padding-top: calc(133.25% + 110px);
+    }
+    .tag-wrapper {
+        display: flex;
+        padding-top: 4px;
+        &:empty {
+        padding: 0;
+        }
+
+    }
+
+    .card9 .color-wrap {
+        position: relative;
+        padding: 0;
+    }
+
+    .product-tag {
+        @include font-regular;
+        font-size: 10px;
+        color: $c-dark-grey;
+        letter-spacing: 0;
+        line-height: 1;
+    }
+
+
+    &.grid-product-list--2DS:nth-child(odd) .card9 .card9-wrap-details,
+    &.grid-product-list--2FDoble:nth-child(even) .card9 .card9-wrap-details,
+    &.grid-product-list--2SD .card9 .card9-wrap-details,
+    &.grid-product-list--2FDoble:nth-child(2n - 1) .card9 .card9-wrap-details,
+    &.grid-product-list--2FV:nth-child(2n - 1) .card9 .card9-wrap-details,
+    &.grid-product-list--4A:nth-child(4n - 3) .card9 .card9-wrap-details {
+
+        padding-right: $separacion-details-mobile;
+
+        @media (min-width: $break-sm) {
+            padding-right: $separacion-details-desktop;
+        }
+
+    }
+
+    &.grid-product-list--2C:nth-child(even) .card9 .card9-wrap-details {
+        padding-left: 0;
+        padding-right:  $separacion-details-mobile;
+
+        @media (min-width: $break-sm) {
+            padding-right: 0;
+        }
+    }
+
+
+    &.grid-product-list--1A:last-child .card9 .card9-wrap-details{
+
+        padding-right:  $separacion-details-mobile;
+        
+        @media (min-width: $break-sm) {
+            padding-right: 0;
+        }
+    }
+
+
+
+    .card9-wrap .card9-add {
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+    }
+}
+.is-rtl {
+    .grid-product-list-1 {
+        .card9 .card9-wrap-details {
+            padding-right: $separacion-details-mobile;
+            @media (min-width: $break-sm) {
+                padding-right: $separacion-details-desktop;
+            }
+
+            @media (min-width: $break-md) {
+                padding-right: $separacion-details-desktop;
+            }
+        }
+    }
+}
+
+related-products-carrousel {
+    .color-square.color-wrap {
+        padding: 0;
+        button {
+            width: 12px;
+            height: 12px;
+            line-height: 1;
+        }
+    }
+
+}
+related-products{
+    .card9 .color-wrap {
+        position: relative;
+        padding: 0;
+    }
+
+}
+
+.h-40 {
+    height: 40px;
 }
 
 
 
-.ttc {
-  text-transform: capitalize;
-}
-.container-full {
-  max-width: 1600px;
-}
-.product-tag {
-  font-family: "dutti-daily-bold";
-  font-size: 14px;
-  color: #292929;
-  letter-spacing: 0;
-  line-height: 16px;
-}
-.template-name {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  padding: 0 8px;
-
-  background-color: #a1bfa0;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-
-}
-.grid-product, ul {
-  position: relative;
+/*Helpers*/
+.is-rtl{
+    .text-left {
+        text-align: right;
+      }
+      .text-right {
+        text-align: left;
+      }
 }
 
+.section-apollo.only-apollo {
+    .content-apollo-height{
+        min-height: calc(90vh - 50px);
+        @media screen and (min-width: $break-md) {
+                min-height: calc(90vh - 80px);
+        }
+    }
+}
 
+.form-input-label-2{
+    label{
+        font-size:$text-input-d;
+    }
+}
+
+a:hover.card9-link {
+    opacity: 1;
+}
+.btn.btn-secondary-rd {
+    font-size:$text-input-d;
+    @media screen and (min-width: $break-sm) {
+        font-size:$text-input-d;
+}
+}
+
+.pt-2{
+    padding-top: 2px;
+}
+
+.product-title {
+    a:hover{
+    opacity: 1;
+
+    } 
+}
+
+
+
+.ttu,.btn-primary, .btn--full, .btn-secondary, .btn-submit, .form-input-label-2 label {
+    text-transform: uppercase;
+}
+
+//Todos los idiomas que no tienen uppercase porque son Capital sensitive, lo dejamos en minúsculas
+
+[lang^="de"], //aleman
+[lang^="zh"], //chino
+[lang^="zo"],
+[lang^="eu"],//euskera
+[lang^="el"],//griego
+[lang^="tr"],// turco
+[lang^="ru"], //ruso
+[lang^="sr"], //serbio
+[lang^="uk"], //ukraniano
+[lang^="bg"], //bulgaro
+[lang^="ar"],//arab emirates, egipto ,jordania, israel ,qatar , bahrain ,arabia saudi
+[lang^="nl"] //holandes
+{
+    .ttu,.btn-primary, .btn--full, .btn-secondary, .btn-submit, .form-input-label-2 label  {
+        text-transform: none;
+    }
+}
