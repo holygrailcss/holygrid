@@ -4,46 +4,46 @@ $grid-cols-mobile--6S: 2;
 $grid-cols-first--6S: 2;
 $margin-grid-cols--6S: 25px;
 // .grid-product-wrap--6S {
-  //     margin-top: $sm-grid-top-margin;
-  //     margin-bottom: $sm-grid-bottom-margin;
-  //     @media (min-width: $break-sm) {
-  //         margin-top: $grid-top-margin;
-  //         margin-bottom: $grid-bottom-margin;
-  //     }
-  //     margin-left: 0;
-  //     display: flex;
-  //     align-items: baseline;
-  //     flex-direction: row;
-  //     flex-wrap: wrap;
-  //     width: 100%;
-  //     list-style: none;
-  //     .card9-wrap-details {
-  //         height: auto;
-  //         min-height: 126px;
-  //     }
-  // .grid-product-list--6S {
-    //         margin-right: #{$margin-grid-cols--6S};
-    //         margin-bottom: #{$sm-grid-view1-gutter};
-    //         width: calc(100% / #{$grid-cols--6S} - 19px);
-    // &.double-image {
-      //             width: calc(100% / #{$grid-cols-first--6S} - 12px);
-    //   .rat-3-2:before {
-    //     padding-top: 64.66667%;
-    //   }
-    // }
-    //         &:nth-child(4n-1) {
-    //             margin-right: 0;
-    //         }
-    //         @media (max-width: #{$break-sm} ) {
-    //             margin-right: #{$margin-grid-cols--6S};
-    //             width: calc((100% - #{$margin-grid-cols--6S}) / #{$grid-cols-mobile--6S});
-    //             &.double-image {
-    //                 width: 100%;
-    //             }
-    //             &:nth-child(2n-1) {
-    //                 margin-right: 0;
-    //             }
-    //         }
+//     margin-top: $sm-grid-top-margin;
+//     margin-bottom: $sm-grid-bottom-margin;
+//     @media (min-width: $break-sm) {
+//         margin-top: $grid-top-margin;
+//         margin-bottom: $grid-bottom-margin;
+//     }
+//     margin-left: 0;
+//     display: flex;
+//     align-items: baseline;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     width: 100%;
+//     list-style: none;
+//     .card9-wrap-details {
+//         height: auto;
+//         min-height: 126px;
+//     }
+// .grid-product-list--6S {
+//         margin-right: #{$margin-grid-cols--6S};
+//         margin-bottom: #{$sm-grid-view1-gutter};
+//         width: calc(100% / #{$grid-cols--6S} - 19px);
+// &.double-image {
+//             width: calc(100% / #{$grid-cols-first--6S} - 12px);
+//   .rat-3-2:before {
+//     padding-top: 64.66667%;
+//   }
+// }
+//         &:nth-child(4n-1) {
+//             margin-right: 0;
+//         }
+//         @media (max-width: #{$break-sm} ) {
+//             margin-right: #{$margin-grid-cols--6S};
+//             width: calc((100% - #{$margin-grid-cols--6S}) / #{$grid-cols-mobile--6S});
+//             &.double-image {
+//                 width: 100%;
+//             }
+//             &:nth-child(2n-1) {
+//                 margin-right: 0;
+//             }
+//         }
 //   }
 // }
 // .is-rtl {
@@ -93,31 +93,31 @@ $margin-grid-cols--6S: 25px;
 //     }
 // }
 .grid-product-wrap--6S {
-  display: grid;
-  gap: 16px;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
-  @include space-0-pdesktop;
-  @media (min-width: #{$break-sm} ) {
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .card9-wrap-details {
-    background-color: #fff;
-  }
-  .grid-product-list {
+    display: grid;
+    gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    @include space-0-pdesktop;
     @media (min-width: #{$break-sm} ) {
-      grid-column: span 3;
+        grid-template-columns: repeat(12, 1fr);
     }
-    &:first-child {
-      grid-column: span 2;
-      @media (min-width: #{$break-sm} ) {
-        grid-column: span 6;
-      }
+    .card9-wrap-details {
+        background-color: #fff;
     }
-    &.double-image {
-      .rat-3-2:before {
-        padding-top: 65%;
-      }
+    .grid-product-list {
+        @media (min-width: #{$break-sm} ) {
+            grid-column: span 3;
+        }
+        &:first-child {
+            grid-column: span 2;
+            @media (min-width: #{$break-sm} ) {
+                grid-column: span 6;
+            }
+        }
+        &.double-image {
+            .rat-3-2:before {
+                padding-top: 65%;
+            }
+        }
     }
-  }
 }

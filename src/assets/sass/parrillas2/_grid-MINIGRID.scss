@@ -58,12 +58,16 @@ $grid-cols--MINIGRID: 3;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 8px;
-    @include details-pmobile-pdesktop;
-    @media (min-width: $break-sm) {
-        gap: 16px;
-        grid-template-columns: repeat(12, 1fr);
-        .grid-product-list--MINIGRID {
-            grid-column: span 4;
+
+    @include details-pmobile-first;
+    .grid-product-list--MINIGRID-INFO:first-child {
+        .card9-wrap-details {
+            padding-left: 16px;
         }
     }
-  }
+
+    @media (min-width: $break-sm) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
