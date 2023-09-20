@@ -1,7 +1,8 @@
 $white: #ffffff !default;
 $black: #000000 !default;
 $gray-10: #e3e3e3 !default;
-$default-md: #292929;
+$default-md: #292929; // borrar //
+$c-primary: #292929;
 
 //padding Grid Catalog ////////////////////////////
 $xs-grid-wrap-pad: 8px;
@@ -51,6 +52,9 @@ $grid-view3-mbottom: 4px;
 $sm-grid-view3-cols: 12;
 $sm-grid-view3-gutter: 4px;
 $sm-grid-view3-mbottom: 4px;
+
+$separacion-details-mobile:8px;
+$separacion-details-desktop:16px;
 
 @keyframes fadein {
     from {

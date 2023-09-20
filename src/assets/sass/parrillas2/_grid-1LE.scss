@@ -1,5 +1,7 @@
-@import '../abstract/_all.scss';
+@import "../abstract/_all.scss";
 @import "../abstract/_categoryGrid.scss";
+
+
 
 
 .grid-product-wrap--1LE {
@@ -10,7 +12,6 @@
     @media (min-width: $break-sm) {
         gap: 50px;
         margin-bottom: 50px;
-  
     }
 }
 

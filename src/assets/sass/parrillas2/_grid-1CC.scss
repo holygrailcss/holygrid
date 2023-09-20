@@ -75,15 +75,30 @@ $grid-cols--1CC: 2;
 // }
 
 .grid-product-wrap--1CC {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	gap: 16px;
-	@include details-pmobile-pdesktop;
-	@media (min-width: $break-sm) {
-	  grid-template-columns: repeat(12, 1fr);
-	  .grid-product-list--1CC {
-		grid-column: span 6;
-	  }
-	}
-  }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    @include details-pmobile-pdesktop;
+
+    .grid-product-list--1CC .card9 .card9-wrap-details {
+        padding-left: $separacion-details-mobile;
+        padding-right: $separacion-details-mobile;
+    }
+
+    @media (min-width: $break-sm) {
+        grid-template-columns: repeat(12, 1fr);
+        .grid-product-list--1CC {
+            grid-column: span 6;
+        }
+        .grid-product-list--1CC:nth-child(odd) .card9 .card9-wrap-details {
+            padding-right: 0;
+            padding-left: $separacion-details-desktop;
+        }
+
+        .grid-product-list--1CC:nth-child(even) .card9 .card9-wrap-details {
+            padding-left: 0;
+            padding-right: $separacion-details-desktop;
+        }
+    }
+}
