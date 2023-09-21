@@ -1,28 +1,38 @@
 {% import "macros/_product.njk" as product %}
 
+<li class="grid-product grid-product-view template-5A">
 
+  <div class="template-name" id="5A">5A</div>
+  <studio-multi-product-template
+    >
+    <ul class="grid-product-wrap--5A">
+      <li class="grid-product-list grid-product-list--5A sk-load6">
 
-<ul class="grid-product-wrap--5A">
-<div class="template-name" id="5A">5A</div>
-  <li class="grid-product-list grid-product-list--5A sk-load6">
+        {% call product.ratio('3-4', '') %}
+        {% endcall %}
 
-    {% call product.ratio('3-4','') %} {% endcall %}
+      </li>
+      <li class="grid-product-list grid-product-list--5A">
+        <div class="otherProduct-5A">
+          {% call product.ratio('3-4', '') %}
+          {% endcall %}
+        </div>
+        <div class="otherProduct-5A">
+          {% call product.ratio('3-4', '') %}
+          {% endcall %}
+        </div>
+        <div class="otherProduct-5A">
+          {% call product.ratio('3-4', '') %}
+          {% endcall %}
+        </div>
+        <div class="otherProduct-5A">
+          {% call product.ratio('3-4', '') %}
+          {% endcall %}
+        </div>
+        <!---->
+      </li>
+    </ul>
 
-
-  </li>
-  <li class="grid-product-list grid-product-list--5A">
-    <div class="otherProduct-5A">
-        {% call product.ratio('3-4','') %} {% endcall %}
-    </div>
-    <div class="otherProduct-5A">
-        {% call product.ratio('3-4','') %} {% endcall %}
-    </div>
-    <div class="otherProduct-5A">
-        {% call product.ratio('3-4','') %} {% endcall %}
-    </div>
-    <div class="otherProduct-5A">
-        {% call product.ratio('3-4','') %} {% endcall %}
-    </div>
-    <!---->
-  </li>
-</ul>
+  </studio-multi-product-template
+  >
+</li>
