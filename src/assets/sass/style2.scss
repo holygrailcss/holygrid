@@ -18,7 +18,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./theme.scss";
 
 
-@import "parrillas/_all.scss";
+@import "parrillas2/_all.scss";
 
 
 body {
@@ -904,6 +904,7 @@ body.openshop .maxlook {
 .grid-product-list {
     .card9 .card9-wrap-details {
         min-height: 110px;
+        position: relative;
     }
 
     .sk-load2::before {
