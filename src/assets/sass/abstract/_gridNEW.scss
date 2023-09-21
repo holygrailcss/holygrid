@@ -29,7 +29,7 @@
 
 @mixin details-pmobile-0 {
   .card9-wrap-details {
-      padding-left: 0px;
+      padding-left: 16px;
 
       @media (min-width: $break-md) {
           padding-left: 0;
@@ -37,7 +37,7 @@
   }
   .is-rtl {
       .card9-wrap-details {
-          padding-right: 0px;
+          padding-right: 16px;
   
           @media (min-width: $break-md) {
               padding-right: 0;

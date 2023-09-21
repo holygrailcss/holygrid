@@ -13247,7 +13247,7 @@ header.interior svg path {
   gap: 0;
 }
 .grid-product-wrap--1A .card9-wrap-details {
-  padding-left: 0px;
+  padding-left: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--1A .card9-wrap-details {
@@ -13255,7 +13255,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--1A .is-rtl .card9-wrap-details {
-  padding-right: 0px;
+  padding-right: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--1A .is-rtl .card9-wrap-details {
@@ -13808,8 +13808,18 @@ header.interior svg path {
 .grid-product-wrap--2B .card9-wrap-details {
   padding-left: 16px;
 }
+@media (min-width: 992px) {
+  .grid-product-wrap--2B .card9-wrap-details {
+    padding-left: 0;
+  }
+}
 .grid-product-wrap--2B .is-rtl .card9-wrap-details {
   padding-right: 16px;
+}
+@media (min-width: 992px) {
+  .grid-product-wrap--2B .is-rtl .card9-wrap-details {
+    padding-right: 0;
+  }
 }
 @media (min-width: 768px) {
   .grid-product-wrap--2B {
@@ -13864,7 +13874,7 @@ header.interior svg path {
   gap: 8px;
 }
 .grid-product-wrap--2C .card9-wrap-details {
-  padding-left: 0px;
+  padding-left: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2C .card9-wrap-details {
@@ -13872,7 +13882,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--2C .is-rtl .card9-wrap-details {
-  padding-right: 0px;
+  padding-right: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2C .is-rtl .card9-wrap-details {
@@ -14127,7 +14137,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--2CBG2 .card9-wrap-details {
-  padding-left: 0px;
+  padding-left: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2CBG2 .card9-wrap-details {
@@ -14135,7 +14145,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--2CBG2 .is-rtl .card9-wrap-details {
-  padding-right: 0px;
+  padding-right: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2CBG2 .is-rtl .card9-wrap-details {
@@ -14208,7 +14218,7 @@ header.interior svg path {
   gap: 0;
 }
 .grid-product-wrap--2D .card9-wrap-details {
-  padding-left: 0px;
+  padding-left: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2D .card9-wrap-details {
@@ -14216,7 +14226,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--2D .is-rtl .card9-wrap-details {
-  padding-right: 0px;
+  padding-right: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2D .is-rtl .card9-wrap-details {
@@ -14354,7 +14364,7 @@ header.interior svg path {
   gap: 0;
 }
 .grid-product-wrap--2E .card9-wrap-details {
-  padding-left: 0px;
+  padding-left: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2E .card9-wrap-details {
@@ -14362,7 +14372,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--2E .is-rtl .card9-wrap-details {
-  padding-right: 0px;
+  padding-right: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2E .is-rtl .card9-wrap-details {
@@ -14621,7 +14631,7 @@ header.interior svg path {
   gap: 0;
 }
 .grid-product-wrap--2G .card9-wrap-details {
-  padding-left: 0px;
+  padding-left: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2G .card9-wrap-details {
@@ -14629,7 +14639,7 @@ header.interior svg path {
   }
 }
 .grid-product-wrap--2G .is-rtl .card9-wrap-details {
-  padding-right: 0px;
+  padding-right: 16px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--2G .is-rtl .card9-wrap-details {
