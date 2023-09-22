@@ -79,6 +79,9 @@ $sm-rtl-grid-view1-gutter-2G: 8px;
         &:first-child {
           grid-column: 3 / span 4;
         }
+        &:nth-child(2n) {
+          @include details-pmobile-pdesktop;
+        }
       }
     }
   }

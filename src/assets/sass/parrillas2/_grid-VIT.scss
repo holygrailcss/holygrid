@@ -4,17 +4,17 @@
 	margin: 0 48px;
 
 	@media (min-width: $break-md) {
-		width: calc(100% - 80px);
+		width: 100%;
 		margin: auto;
 	}
 
 	@media (min-width: $break-lg) {
-		width: calc(80%);
+		width: 80%;
 		margin: auto;
 	}
 
 	.grid-product-list--VIT {
-		width: calc(100% - 16px);
+		width: 100%;
 		margin: 0px auto 40px;
 
 		@media (min-width: $break-sm) {

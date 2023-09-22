@@ -1,31 +1,9 @@
 @import '../abstract/_all.scss';
 @import "../abstract/_categoryGrid.scss";
 
+
 .grid-product-wrap--FIV {
-	@include grid-product-view-bleed;
-
-	.sk-load7 {
-		position: relative;
-
-		&:before {
-			display: block;
-			content: "";
-			width: 100%;
-			padding-top: 66.66667%;
-			background-color: $c-white;
-		}
-
-		&::marker {
-			display: none;
-			content: "";
-		}
-	}
-
-	.rat-3-4:before {
-		padding-top: 66%;
-	}
-}
-
-.is-rtl .grid-product-wrap--FIV {
-	@include grid-product-view-bleed-rtl;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }

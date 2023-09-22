@@ -46,12 +46,15 @@ $grid-cols--3A: 4;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 8px;
-    @include details-pmobile-pdesktop;
+    @include details-pmobile-0;
     @media (min-width: $break-sm) {
         gap: 16px;
         grid-template-columns: repeat(12, 1fr);
         .grid-product-list--3A {
             grid-column: span 3;
+            &:first-child {
+                @include details-pmobile-pdesktop;
+            }
         }
     }
 }

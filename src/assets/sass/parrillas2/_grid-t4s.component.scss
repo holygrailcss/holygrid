@@ -16,25 +16,3 @@ $margin-grid-cols-mobile--4S: 10px;
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-.grid-product-list {
-    &.grid-product-list--4S:nth-child(even) .card9 .card9-wrap-details {
-        padding-right: $separacion-details-mobile;
-    }
-    &.grid-product-list--4S:first-child .card9 .card9-wrap-details {
-        @media (min-width: $break-sm) {
-            padding-left: $separacion-details-desktop;
-        }
-    }
-    &.grid-product-list--4S:nth-child(4n) .card9 .card9-wrap-details {
-        @media (min-width: $break-sm) {
-            padding-right: $separacion-details-desktop;
-        }
-    }
-    &.grid-product-list--4S .card9 .card9-wrap-details {
-        @media (max-width: #{$break-md - 1} ) {
-            padding-right: $separacion-details-mobile;
-            padding-left: $separacion-details-mobile;
-        }
-    }
-}

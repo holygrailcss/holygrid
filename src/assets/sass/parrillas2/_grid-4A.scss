@@ -70,34 +70,15 @@ $grid-cols--4A: 4;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 8px;
-    @include details-pmobile-pdesktop;
+    @include details-pmobile-0;
     @media (min-width: $break-sm) {
         gap: 16px;
         grid-template-columns: repeat(12, 1fr);
         .grid-product-list--4A {
             grid-column: span 3;
-        }
-    }
-}
-
-.grid-product-list {
-    &.grid-product-list--4A:nth-child(even) .card9 .card9-wrap-details {
-        padding-right: $separacion-details-mobile;
-    }
-    &.grid-product-list--4A:first-child .card9 .card9-wrap-details {
-        @media (min-width: $break-sm) {
-            padding-left: $separacion-details-desktop;
-        }
-    }
-    &.grid-product-list--4A:nth-child(4n) .card9 .card9-wrap-details {
-        @media (min-width: $break-sm) {
-            padding-right: $separacion-details-desktop;
-        }
-    }
-    &.grid-product-list--4A .card9 .card9-wrap-details {
-        @media (max-width: #{$break-md - 1} ) {
-            padding-right: $separacion-details-mobile;
-            padding-left: $separacion-details-mobile;
+            &:nth-child(4n-3) {
+                @include details-pmobile-pdesktop;
+            }
         }
     }
 }

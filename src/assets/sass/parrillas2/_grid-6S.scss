@@ -98,6 +98,7 @@ $margin-grid-cols--6S: 25px;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     @include space-0-pdesktop;
+    @include details-pmobile-0;
     @media (min-width: #{$break-sm} ) {
         grid-template-columns: repeat(12, 1fr);
     }
