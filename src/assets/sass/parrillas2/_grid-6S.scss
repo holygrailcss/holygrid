@@ -115,6 +115,16 @@ $margin-grid-cols--6S: 25px;
                 grid-column: span 6;
             }
         }
+        &:nth-child(2n + 3) {
+            .card9-wrap-details {
+                padding-left: 0;
+            }
+            .is-rtl {
+                .card9-wrap-details {
+                    padding-right: 0;
+                }
+            }
+        }
         &.double-image {
             .rat-3-2:before {
                 padding-top: 65%;

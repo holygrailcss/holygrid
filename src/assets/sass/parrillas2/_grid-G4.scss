@@ -10,7 +10,7 @@
         gap: 64px;
         grid-template-columns: repeat(4, 1fr);
     }
-    .grid-product-list--G4:nth-child(4n-3) {
+    .grid-product-list--G4:nth-child(4n+1) {
         @include details-pmobile-pdesktop;
     }
 }
