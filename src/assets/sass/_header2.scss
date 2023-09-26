@@ -13,7 +13,7 @@ header {
   align-items: center;
   font-size: 12px;
   letter-spacing: 2px;
-  @media (min-width: $break-md) {
+  @media (min-width: $break-sm) {
     padding-bottom: 0;
     height: 60px;
   }
@@ -38,7 +38,7 @@ header.interior {
   svg {
     width: 100%;
   }
-  @media (min-width: $break-md) {
+  @media (min-width: $break-sm) {
     width: 100%;
     max-width: 180px;
   }

@@ -32,7 +32,7 @@ $margin-grid-cols--3S: 20px;
 //         margin-bottom: #{$margin-grid-cols--3S};
 //         width: calc(100% + 14px);
 
-//         @media (min-width: $break-md) {
+//         @media (min-width: $break-sm) {
 //             margin-right: #{$margin-grid-cols--3S};
 //             margin-left: 0;
 //             width: calc(100% / #{$grid-cols--3S} - 14px);
@@ -73,7 +73,7 @@ $margin-grid-cols--3S: 20px;
 //             margin-bottom: #{$margin-grid-cols--3S};
 //             width: calc(100% + 14px);
 
-//             @media (min-width: $break-md) {
+//             @media (min-width: $break-sm) {
 //                 margin-left: #{$margin-grid-cols--3S};
 //                 margin-right: 0;
 //                 width: calc(100% / #{$grid-cols--3S} - 14px);

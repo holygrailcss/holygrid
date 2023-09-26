@@ -447,7 +447,7 @@ body #INDWrap {
             background-color: transparent;
         }
 
-        @media (min-width: #{$break-md}) {
+        @media (min-width: #{$break-sm}) {
             padding-top: calc(62.9% + 144px);
         }
 
@@ -982,7 +982,7 @@ body.openshop .maxlook {
                 padding-right: $separacion-details-desktop;
             }
 
-            @media (min-width: $break-md) {
+            @media (min-width: $break-sm) {
                 padding-right: $separacion-details-desktop;
             }
         }
@@ -1027,7 +1027,7 @@ related-products{
 .section-apollo.only-apollo {
     .content-apollo-height{
         min-height: calc(90vh - 50px);
-        @media screen and (min-width: $break-md) {
+        @media screen and (min-width: $break-sm) {
                 min-height: calc(90vh - 80px);
         }
     }

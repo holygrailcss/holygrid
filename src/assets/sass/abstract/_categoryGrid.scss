@@ -3,7 +3,7 @@
 @mixin grid-product-view-bleed {
     width: calc(100% + #{$xs-grid-wrap-pad-double});
     margin-left: -$xs-grid-wrap-pad;
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
         width: calc(100% + #{$md-grid-wrap-pad-double});
         margin-left: -$md-grid-wrap-pad;
     }
@@ -13,7 +13,7 @@
     margin-left: 0;
     margin-right: -$xs-grid-wrap-pad;
     width: calc(100% + #{$xs-grid-wrap-pad-double});
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
         margin-left: 0;
         margin-right: -$md-grid-wrap-pad;
         width: calc(100% + #{$md-grid-wrap-pad-double});
@@ -23,7 +23,7 @@
 @mixin grid-product-view-full-bleed {
     width: calc(100% + #{$xs-grid-wrap-pad-double-bleed});
     margin-left: -$xs-grid-wrap-pad-bleed;
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
         width: calc(100% + #{$md-grid-wrap-pad-double-bleed});
         margin-left: -$md-grid-wrap-pad-bleed;
     }
@@ -33,7 +33,7 @@
     margin-left: 0;
     margin-right: -$xs-grid-wrap-pad-bleed;
     width: calc(100% + #{$xs-grid-wrap-pad-double-bleed});
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
         margin-left: 0;
         margin-right: -$md-grid-wrap-pad-bleed;
         width: calc(100% + #{$md-grid-wrap-pad-double-bleed});

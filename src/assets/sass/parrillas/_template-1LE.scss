@@ -14,7 +14,7 @@ $grid-cols-mobile--1LE: 2;
     flex-wrap: wrap;
     list-style: none;
 
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
  
     }
 
@@ -42,7 +42,7 @@ $grid-cols-mobile--1LE: 2;
             width: calc(100% / #{$grid-cols--1LE} - 34px);
         }
 
-        @media (min-width: $break-md) {
+        @media (min-width: $break-sm) {
             margin-bottom: 72px;
         }
     }

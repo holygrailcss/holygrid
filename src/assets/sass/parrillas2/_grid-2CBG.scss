@@ -17,7 +17,7 @@ $xl-grid-2CBG-margin: 50px;
 $xl-grid-2CBG-padding: 160px;
 
 .grid-product-wrap--2CBG {
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
         padding-top: $grid-2CBG-padding;
         padding-bottom: $grid-2CBG-padding;
         margin: $grid-2CBG-margin auto;
