@@ -92,6 +92,7 @@ $margin-grid-cols--3S: 20px;
     grid-template-rows: auto;
     gap: 8px;
     @include details-pmobile-pdesktop;
+    @include colors-pmobile-pdesktop;
     @media (min-width: $break-sm) {
         gap: 16px;
         grid-template-columns: repeat(12, 1fr);

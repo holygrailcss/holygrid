@@ -7,6 +7,7 @@
   grid-template-columns: 0 1fr 0;
   gap: 0;
   @include details-pmobile-0;
+  @include colors-pmobile-0;
 
   @media (min-width: $break-sm) {
     gap: 16px;

@@ -151,6 +151,7 @@ $xl-grid-2CBG2-padding: 260px;
   gap: 0;
   @include space-pmobile-pdesktop;
   @include details-pmobile-0;
+  @include colors-pmobile-0;
 
   @media (min-width: $break-sm) {
       gap: 16px;

@@ -10,6 +10,7 @@ $product-details-padding-2C: 8px;
   grid-template-rows: auto;
   gap: 8px;
   @include details-pmobile-0;
+  @include colors-pmobile-0;
   @media (min-width: $break-sm) {
     gap: 16px;
     grid-template-columns: repeat(12, 1fr);

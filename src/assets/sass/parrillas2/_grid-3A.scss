@@ -2,45 +2,6 @@
 
 $grid-cols--3A: 4;
 
-// .grid-product-wrap--3A {
-//     margin-top: $sm-grid-top-margin;
-//     margin-bottom: $sm-grid-bottom-margin;
-
-//     @media (min-width: $break-sm) {
-//         margin-top: $grid-top-margin;
-//         margin-bottom: $grid-bottom-margin;
-//     }
-//     margin-left: 0;
-//     display: flex;
-//     align-items: baseline;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     width: 100%;
-//     list-style: none;
-
-// 	.grid-product-list--3A {
-// 		@media (max-width: #{$break-sm - 1}) {
-// 			margin-right: #{$grid-view1-gutter};
-// 			margin-bottom: #{$grid-view1-gutter};
-// 			width: calc(((100% / 2) - (#{$grid-view1-gutter})));
-
-//             &:nth-child(2n) {
-//                 margin-right: 0;
-//             }
-//         }
-
-// 		@media (min-width: $break-sm) {
-// 			&:nth-child(4n) {
-// 				margin-right: 0;
-// 			}
-
-// 			margin-right: #{$sm-grid-view1-gutter};
-// 			margin-bottom: #{$sm-grid-view1-gutter};
-// 			width: calc(100% / #{$grid-cols--3A} - 6px);
-// 		}
-// 	}
-// }
-
 .grid-product-wrap--3A {
     display: grid;
     grid-template-columns: 1fr;

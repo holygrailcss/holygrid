@@ -71,6 +71,7 @@ $grid-cols--4A: 4;
     grid-template-rows: auto;
     gap: 8px;
     @include details-pmobile-0;
+    @include colors-pmobile-0;
     @media (min-width: $break-sm) {
         gap: 16px;
         grid-template-columns: repeat(12, 1fr);
@@ -78,6 +79,9 @@ $grid-cols--4A: 4;
             grid-column: span 3;
             &:nth-child(4n-3) {
                 @include details-pmobile-pdesktop;
+            }
+            &:nth-child(4n-4) {
+                @include colors-pmobile-pdesktop;
             }
         }
     }

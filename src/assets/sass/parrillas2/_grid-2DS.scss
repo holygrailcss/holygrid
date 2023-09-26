@@ -65,6 +65,7 @@ $product-details-padding-mobile--2DS: 24px;
   grid-template-rows: auto;
   gap: 0;
   @include details-pmobile-pdesktop;
+  @include colors-pmobile-pdesktop;
   @media (min-width: $break-sm) {
     grid-template-columns: repeat(12, 1fr);
     .grid-product-list--2DS {
@@ -73,9 +74,14 @@ $product-details-padding-mobile--2DS: 24px;
     }
   }
 
-  .grid-product-list--2DS:first-child() {
-    &::before {
-      padding-top: calc(66.6667% + 136px);
+  .grid-product-list--2DS{
+    &:nth-child(odd) {
+      &::before {
+        padding-top: calc(66.6667% + 136px);
+      }
+    }
+    &:nth-child(even) {
+      @include details-pmobile-0;
     }
   }
 

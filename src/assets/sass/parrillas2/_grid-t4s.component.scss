@@ -10,6 +10,7 @@ $margin-grid-cols-mobile--4S: 10px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     @include details-pmobile-0;
+  @include colors-pmobile-0;
     @media (min-width: $break-sm) {
         gap: 64px;
         padding: 0 64px;

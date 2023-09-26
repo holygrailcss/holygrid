@@ -6,11 +6,15 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     @include details-pmobile-0;
+    @include colors-pmobile-0;
     @media (min-width: $break-sm) {
         gap: 64px;
         grid-template-columns: repeat(4, 1fr);
     }
     .grid-product-list--G4:nth-child(4n+1) {
         @include details-pmobile-pdesktop;
+    }
+    .grid-product-list--G4:nth-child(4n) {
+        @include colors-pmobile-pdesktop;
     }
 }
