@@ -1,141 +1,152 @@
-{% macro ratio(ratio='',text='') %}
+{% macro ratio(ratio = '', text = '') %}
   <product-view class="p-view">
     <div class="charged">
       <div class="card9-wrap" id="19854077">
         <div class="card9">
-                {% if ratio == '3-2' %}
-                      <div class="js-card9-inner rat-3-2">
-                {% elif ratio == '3-4' %}
-                     <div class="js-card9-inner rat-3-4">
-        	{% else %}
-                      <div class="js-card9-inner rat-3-4">
+          {% if ratio == '3-2' %}
+            <div class="js-card9-inner rat-3-2">
+            {% elif ratio == '3-4' %}
+              <div class="js-card9-inner rat-3-4">
+              {% else %}
+                <div class="js-card9-inner rat-3-4">
                 {% endif %}
-            <div class="rat-content">
-              <div class="relative" style="height: 100%">
-                <product-view-media 4="">
-                  <div class="product-view-wrap">
-                    <picture><a class="card9-link" href="/es/camiseta-manga-corta-cuello-contraste-l01419289">
-                        <div product-img="" imgfallback="" class="img-poster">
-                          <img height="auto" rel="preload" class="card9-image" id=""
+                <div class="rat-content">
+                  <div class="relative" style="height: 100%">
+                    <product-view-media 4="">
+                      <div class="product-view-wrap">
+                        <picture>
+                          <a class="card9-link" href="/es/camiseta-manga-corta-cuello-contraste-l01419289">
+                            <div product-img="" imgfallback="" class="img-poster">
+                              <img height="auto" rel="preload" class="card9-image" id=""
                             src="https://static.massimodutti.net/3/photos/2023/V/0/2/p/1419/289/251/1419289251_2_6_16.jpg"
-                            alt="Camiseta manga corta cuello contraste"  />
-                        </div>
-                      </a></picture>
+                            alt="Camiseta manga corta cuello contraste"/>
+                            </div>
+                          </a>
+                        </picture>
+                      </div>
+                    </product-view-media>
+                    {% if text == 'no-text' %}
+                    {% else %}
+                      <product-view-addtocart class="card9-add text-center" 6="">
+                        <div class="tit-xs mb-8 quickly-add-cart">AÑADIR TALLA</div>
+                        <product-size-selector class="is-flex content-center"="">
+                          <ul class="btn-group product-size-selector">
+                            <li class="product-size-selector__li w-100">
+                              <button class="product-size-selector__button p-s">
+                                <span>S</span></button>
+                              <button class="product-size-selector__button p-s">
+                                <span>M</span></button>
+                              <button class="product-size-selector__button p-s">
+                                <span>L</span></button>
+                              <button class="product-size-selector__button p-s">
+                                <span>XL</span></button>
+                              <button class="product-size-selector__button p-s">
+                                <span>XXL</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </product-size-selector>
+                      </product-view-addtocart>
+                    {% endif %}
                   </div>
-                </product-view-media>
-                          {% if text == 'no-text' %}
-        	{% else %}
-                <product-view-addtocart class="card9-add text-center" 6="">
-                  <div class="tit-xs mb-8 quickly-add-cart">AÑADIR TALLA</div>
-                  <product-size-selector class="is-flex content-center"="">
-                    <ul class="btn-group product-size-selector">
-                      <li class="product-size-selector__li w-100">
-                        <button class="product-size-selector__button p-s">
-                          <span>S</span></button><button class="product-size-selector__button p-s">
-                          <span>M</span></button><button class="product-size-selector__button p-s">
-                          <span>L</span></button><button class="product-size-selector__button p-s">
-                          <span>XL</span></button><button class="product-size-selector__button p-s">
-                          <span>XXL</span>
-                        </button>
-                      </li>
-                    </ul>
-                  </product-size-selector>
-                </product-view-addtocart>
-    {% endif %}
+                </div>
               </div>
-            </div>
-          </div>
-             {% if text == 'no-text' %}
+              {% if text == 'no-text' %}
 
-                        {% elif text == 'limited-text' %}
-           <product-view-details class="card9-view-details"><div class="card9-wrap-details">
+              {% elif text == 'limited-text' %}
+                <product-view-details class="card9-view-details">
+                  <div class="card9-wrap-details">
                     <div class="card9-contents pt-16">
                       <div class="p-s ttu pb-1">
                         <a class="pointer" href="/es/vestido-corto-negro-mini-escote-l06626769">
                           Vestido corto negro mini escote
                         </a>
                       </div>
-                     <product-prices class="p-s"><div class="product-price mb-8 py-1">
-                          <formatted-price><div class="is-flex flex-wrap text-nowrap">
-                             
+                      <product-prices class="p-s">
+                        <div class="product-price mb-8 py-1">
+                          <formatted-price>
+                            <div class="is-flex flex-wrap text-nowrap">
+
                               <div>
                                 <span class="c-dark-grey c-gray is-through p-s">
                                   59,95&nbsp;€ </span>
                               </div>
-                             
+
                               <div>
-                                <span class="c-sale p-s-b"><label class="p-s">
-                                    -35% <label>*</label></label>
+                                <span class="c-sale p-s-b">
+                                  <label class="p-s">
+                                    -35% <label>*</label>
+                                  </label>
                                   39,95&nbsp;€ </span>
                               </div>
-                             
+
                             </div>
-                           </formatted-price>
+                          </formatted-price>
                         </div>
-                       </product-prices>
+                      </product-prices>
                       <div class="product-view-info"></div>
-                     
+
                       <div class="tag-wrapper"></div>
-                     
+
                     </div>
-                   
-                  </div></product-view-details>
 
-
-        	{% else %}
-<product-view-details class="card9-view-details">
-  <div class="card9-wrap-details">
-    <div class="card9-contents pt-16">
-      <div class="is-flex content-sp-between">
-        <div class="p-m ttu product-title name-width-product has-ellipsis mb-4 product-with-colors">
-          <a class="pointer" href="/es/top-halter-canale-l06885917"> Top halter canalé </a>
-        </div>
-        <div class="product-view-info">
-          <product-view-color-selector class="color-wrap color-square mb-" _nghost-mdfrontw-c3257173963="">
-            <div class="product-color-selector">
-              <div class="product-color-buttons is-flex flex-vcenter">
-                <button title="MARRÓN">
-                  <div class="is-flex">
-                    <img loading="lazy" src="https://static.massimodutti.net/3/photos//2023/I/0/1/p/6885/917/700/6885917700_3_1_7.jpg?t=1689606893097&amp;impolicy=massimodutti-itxmediumhigh&amp;imwidth=100&amp;imformat=chrome" alt="MARRÓN">
                   </div>
-                </button>
-                <button aria-label="More colors" class="color-selector p-s"> +10 </button>
-              </div>
+                </product-view-details>
+
+              {% else %}
+                <product-view-details class="card9-view-details">
+                  <div class="card9-wrap-details">
+                    <div class="card9-contents pt-16">
+                      <div class="is-flex content-sp-between">
+                        <div class="p-m ttu product-title name-width-product has-ellipsis mb-4 product-with-colors">
+                          <a class="pointer" href="/es/top-halter-canale-l06885917"> Top halter canalé </a>
+                        </div>
+                        <div class="product-view-info">
+                          <product-view-color-selector class="color-wrap color-square mb-" _nghost-mdfrontw-c3257173963="">
+                            <div class="product-color-selector">
+                              <div class="product-color-buttons is-flex flex-vcenter">
+                                <button title="MARRÓN">
+                                  <div class="is-flex">
+                                    <img loading="lazy" src="https://static.massimodutti.net/3/photos//2023/I/0/1/p/6885/917/700/6885917700_3_1_7.jpg?t=1689606893097&amp;impolicy=massimodutti-itxmediumhigh&amp;imwidth=100&amp;imformat=chrome" alt="MARRÓN">
+                                  </div>
+                                </button>
+                                <button aria-label="More colors" class="color-selector p-s"> +10 </button>
+                              </div>
+                            </div>
+                          </product-view-color-selector>
+                        </div>
+                      </div>
+                      <product-prices class="p-s">
+                        <div class="product-price">
+                          <formatted-price>
+                            <div class="is-flex flex-wrap text-nowrap">
+                              <div class="prices-two-columns">
+                                <span class="p-m c-dark-grey c-gray is-through"> 49,95 € </span>
+                              </div>
+                              <div class="prices-two-columns">
+                                <span class="is-through p-m"> 39,95 € </span>
+                              </div>
+                              <div class="w-100 prices-two-columns">
+                                <span class="c-sale p-m">
+                                  <label class="p-s"> -40% <label>*</label>
+                                  </label> 29,95 € </span>
+                              </div>
+                              <div class="tag-wrapper grid-product-list">
+                                <span class="product-tag p-tag pr-8"> BEST SELLER </span>
+                              </div>
+                            </div>
+                          </formatted-price>
+                        </div>
+                      </product-prices>
+                      <div class="product-view-info"></div>
+                      <div class="tag-wrapper grid-product-list"></div>
+                      <div class="is-flex"></div>
+                    </div>
+                  </div>
+                </product-view-details>
+              {% endif %}
             </div>
-          </product-view-color-selector>
+          </div>
         </div>
-      </div>
-      <product-prices class="p-s">
-        <div class="product-price">
-          <formatted-price>
-            <div class="is-flex flex-wrap text-nowrap">
-              <div class="prices-two-columns">
-                <span class="p-m c-dark-grey c-gray is-through"> 49,95 € </span>
-              </div>
-              <div class="prices-two-columns">
-                <span class="is-through p-m"> 39,95 € </span>
-              </div>
-              <div class="w-100 prices-two-columns">
-                <span class="c-sale p-m">
-                  <label class="p-s"> -40% <label>*</label>
-                  </label> 29,95 € </span>
-              </div>
-              <div class="tag-wrapper grid-product-list">
-                <span class="product-tag p-tag pr-8"> BEST SELLER </span>
-              </div>
-            </div>
-          </formatted-price>
-        </div>
-      </product-prices>
-      <div class="product-view-info"></div>
-      <div class="tag-wrapper grid-product-list"></div>
-      <div class="is-flex"></div>
-    </div>
-  </div>
-</product-view-details>
-                {% endif %}
-        </div>
-      </div>
-    </div>
-  </product-view>
-{% endmacro %}
+      </product-view>
+    {% endmacro %}
