@@ -28,14 +28,14 @@
 
 @mixin details-pmobile-0 {
     .card9-wrap-details {
-        padding-left: 16px;
+        padding-left: 8px;
         @media (min-width: $break-sm) {
             padding-left: 0;
         }
     }
     .is-rtl {
         .card9-wrap-details {
-            padding-right: 16px;
+            padding-right: 8px;
             @media (min-width: $break-sm) {
                 padding-right: 0;
             }
@@ -45,14 +45,14 @@
 
 @mixin details-pmobile-first {
     .card9-wrap-details {
-        padding-left: 16px;
+        padding-left: 8px;
         @media (min-width: $break-sm) {
             padding-left: 0;
         }
     }
     .is-rtl {
         .card9-wrap-details {
-            padding-right: 16px;
+            padding-right: 8px;
             @media (min-width: $break-sm) {
                 padding-right: 0;
             }
@@ -62,31 +62,31 @@
 
 @mixin details-pmobile-pdesktop {
     .card9-wrap-details {
-        padding-left: 16px;
-        // @media (min-width: $break-sm) {
-        //   padding-left: 40px;
-        // }
+        padding-left: 8px;
+        @media (min-width: $break-sm) {
+            padding-left: 16px;
+        }
     }
     .is-rtl {
         .card9-wrap-details {
-            padding-right: 16px;
-            // @media (min-width: $break-sm) {
-            //   padding-right: 40px;
-            // }
+            padding-right: 8px;
+            @media (min-width: $break-sm) {
+                padding-right: 16px;
+            }
         }
     }
 }
 
 @mixin colors-pmobile-0 {
     .card9-wrap-details {
-        padding-right: 16px;
+        padding-right: 8px;
         @media (min-width: $break-sm) {
             padding-right: 0;
         }
     }
     .is-rtl {
         .card9-wrap-details {
-            padding-left: 16px;
+            padding-left: 8px;
             @media (min-width: $break-sm) {
                 padding-left: 0;
             }
@@ -96,11 +96,17 @@
 
 @mixin colors-pmobile-pdesktop {
     .card9-wrap-details {
-        padding-right: 16px;
+        padding-right: 8px;
+        @media (min-width: $break-sm) {
+            padding-right: 16px;
+        }
     }
     .is-rtl {
         .card9-wrap-details {
-            padding-left: 16px;
+            padding-left: 8px;
+            @media (min-width: $break-sm) {
+                padding-left: 16px;
+            }
         }
     }
 }
