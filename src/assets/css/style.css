@@ -17710,3 +17710,17 @@ a:hover {
   max-width: 250px;
   height: 1px;
 }
+
+.active-menu {
+  position: relative;
+}
+.active-menu::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  bottom: -8px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
