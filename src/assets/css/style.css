@@ -17669,6 +17669,7 @@ a:hover {
   transition: 0.2s ease all;
   position: absolute;
   top: 20px;
+  white-space: nowrap;
 }
 
 .section1 .fixed-section1 {
