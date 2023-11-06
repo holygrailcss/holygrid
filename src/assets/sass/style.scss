@@ -161,7 +161,7 @@ overflow: hidden;
 .fixed-section1,
 .fixed-section2,
 .fixed-section3{
-transition: .2s ease all;
+transition: ease .2s all;
   position: absolute;
   top: 20px;
   white-space: nowrap;
@@ -172,7 +172,8 @@ transition: .2s ease all;
 .section1{
 
   .fixed-section1{
-    top: 0px;
+		animation: entra 0.3s ease forwards;
+
   }
   .fixed-section2{
 		animation: seva 0.3s ease forwards;
@@ -185,7 +186,8 @@ transition: .2s ease all;
 		animation: seva 0.3s ease forwards;
   }
   .fixed-section2{
-    top: 0px;
+		animation: entra 0.3s ease forwards;
+
   }
 
 }
@@ -196,13 +198,24 @@ transition: .2s ease all;
 	0% {
 top:0;
 	}
-	100% {
-top:-30px;
-	}
-
   99% {
     top:-30px;
       }
+	100% {
+top:20px;
+	}
+
+
+}
+
+@keyframes entra {
+	0% {
+top:20px;
+	}
+  100% {
+    top:0px;
+      }
+
 }
 
 

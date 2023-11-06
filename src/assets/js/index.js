@@ -446,7 +446,7 @@ $(".to-top").on("click", function() {
 const observedElements = document.querySelectorAll('.inview');
 
 const options = {
-  threshold: 0.5
+  threshold: 0.4
 };
 
 const inViewCallback = entries => {
