@@ -17616,23 +17616,13 @@ a:hover {
   font-weight: bold;
 }
 
-.grid-product, ul {
+.grid-product,
+ul {
   position: relative;
 }
 
 .fixed-section {
   position: fixed;
-}
-
-.fixed-section-logo {
-  position: fixed;
-  top: 0;
-  mix-blend-mode: difference;
-  background-blend-mode: difference;
-  height: 100vh;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .container-total {
@@ -17653,6 +17643,21 @@ a:hover {
   }
 }
 
+.fixed-section-logo {
+  position: fixed;
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
+  height: 100vh;
+  display: inline-flex;
+  transition: 0.2s ease all;
+  top: 0;
+}
+
+.section3 .fixed-section-logo {
+  padding-top: 120px;
+  justify-content: start;
+}
+
 .fixed-section-text {
   width: 300px;
   height: 24px;
@@ -17665,7 +17670,9 @@ a:hover {
 
 .fixed-section1,
 .fixed-section2,
-.fixed-section3 {
+.fixed-section3,
+.fixed-section4,
+.fixed-section5 {
   transition: ease 0.2s all;
   position: absolute;
   top: 20px;
@@ -17678,11 +17685,77 @@ a:hover {
 .section1 .fixed-section2 {
   animation: seva 0.3s ease forwards;
 }
+.section1 .fixed-section3 {
+  animation: seva 0.3s ease forwards;
+}
+.section1 .fixed-section4 {
+  animation: seva 0.3s ease forwards;
+}
+.section1 .fixed-section5 {
+  animation: seva 0.3s ease forwards;
+}
 
 .section2 .fixed-section1 {
   animation: seva 0.3s ease forwards;
 }
 .section2 .fixed-section2 {
+  animation: entra 0.3s ease forwards;
+}
+.section2 .fixed-section3 {
+  animation: seva 0.3s ease forwards;
+}
+.section2 .fixed-section4 {
+  animation: seva 0.3s ease forwards;
+}
+.section2 .fixed-section5 {
+  animation: seva 0.3s ease forwards;
+}
+
+.section3 .fixed-section1 {
+  animation: seva 0.3s ease forwards;
+}
+.section3 .fixed-section2 {
+  animation: seva 0.3s ease forwards;
+}
+.section3 .fixed-section3 {
+  animation: entra 0.3s ease forwards;
+}
+.section3 .fixed-section4 {
+  animation: seva 0.3s ease forwards;
+}
+.section3 .fixed-section5 {
+  animation: seva 0.3s ease forwards;
+}
+
+.section4 .fixed-section1 {
+  animation: seva 0.3s ease forwards;
+}
+.section4 .fixed-section2 {
+  animation: seva 0.3s ease forwards;
+}
+.section4 .fixed-section3 {
+  animation: seva 0.3s ease forwards;
+}
+.section4 .fixed-section4 {
+  animation: entra 0.3s ease forwards;
+}
+.section4 .fixed-section5 {
+  animation: seva 0.3s ease forwards;
+}
+
+.section5 .fixed-section1 {
+  animation: seva 0.3s ease forwards;
+}
+.section5 .fixed-section2 {
+  animation: seva 0.3s ease forwards;
+}
+.section5 .fixed-section3 {
+  animation: seva 0.3s ease forwards;
+}
+.section5 .fixed-section4 {
+  animation: seva 0.3s ease forwards;
+}
+.section5 .fixed-section5 {
   animation: entra 0.3s ease forwards;
 }
 
@@ -17705,6 +17778,18 @@ a:hover {
     top: 0px;
   }
 }
+@keyframes entra {
+  0% {
+    top: 200px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.logo-footer {
+  transition: ease 0.2s all;
+}
+
 .search-bar {
   position: relative;
 }
@@ -17732,4 +17817,21 @@ a:hover {
   bottom: -8px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.fixed-section-logo-item {
+  transition: ease 0.2s all;
+  position: absolute;
+  display: inline-flex;
+  top: 50%;
+  transform: translate(0, -50%);
+  align-items: flex-end;
+}
+
+.logo-footer {
+  animation: seva 0.3s ease forwards;
+}
+
+.filter-g {
+  filter: grayscale(1);
 }

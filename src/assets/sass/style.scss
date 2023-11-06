@@ -1,11 +1,9 @@
 @import "base/_fonts.scss";
 @import "abstract/_setup.scss";
-
 $space-left: calc(((100vw - 1280px) / 2));
 $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "../../../node_modules/holygrailcss/scss/style.scss";
 // -FASE 4 : OVERRIDE YOUR HOLYGRAIL
-
 @import "./header2.scss";
 @import "./_menu.scss";
 @import "./_swiper.scss";
@@ -14,13 +12,8 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./_brands.scss";
 @import "./_resize.scss";
 @import "./_dummyproduct.scss";
-
 @import "./theme.scss";
-
-
 @import "parrillas/_all.scss";
-
-
 //@import "parrillas/*";
 $primary-color: var(--primary-color);
 $c-primary: var(--c-primary);
@@ -29,9 +22,6 @@ $bg-dark: var(--bg-dark);
 $c-bg-dark: var(--c-bg-dark);
 $bg-light: var(--bg-light);
 $c-bg-light: var(--c-bg-light);
-
-
-
 body {
   overflow-x: hidden;
   color: $primary-color;
@@ -67,16 +57,9 @@ a {
     color: white;
   }
 }
-
-
-
-
 .header-img {
   position: relative;
 }
-
-
-
 .ttc {
   text-transform: capitalize;
 }
@@ -96,36 +79,18 @@ a {
   left: 0;
   z-index: 10;
   padding: 0 8px;
-
   background-color: #a1bfa0;
   color: white;
   font-size: 12px;
   font-weight: bold;
-
 }
-.grid-product, ul {
+.grid-product,
+ul {
   position: relative;
 }
-
-.fixed-section{
+.fixed-section {
   position: fixed;
-
 }
-
-
-.fixed-section-logo{
-  position: fixed;
-  top: 0;
-  mix-blend-mode: difference;
-  background-blend-mode: difference;
-  height: 100vh;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-
 .container-total {
   padding-right: $padding-mobile;
   padding-left: $padding-mobile;
@@ -140,109 +105,209 @@ a {
     width: 100%;
     max-width: 100%;
   }
-
 }
-
-.fixed-section-text{
-width: 300px;
-height: 24px;
-position: relative;
-overflow: hidden;
-
+.fixed-section-logo {
+  position: fixed;
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
+  height: 100vh;
+  display: inline-flex;
+  transition: 0.2s ease all;
+  top: 0;
+}
+.section3 {
+  .fixed-section-logo {
+    padding-top: 120px;
+    justify-content: start;
+  }
+}
+.fixed-section-text {
+  width: 300px;
+  height: 24px;
+  position: relative;
+  overflow: hidden;
   padding-left: 20px;
-
   color: white;
   line-height: 2.3;
-
-
 }
-
-
 .fixed-section1,
 .fixed-section2,
-.fixed-section3{
-transition: ease .2s all;
+.fixed-section3,
+.fixed-section4,
+.fixed-section5
+
+{
+  transition: ease 0.2s all;
   position: absolute;
   top: 20px;
   white-space: nowrap;
+}
+.section1 {
+  .fixed-section1 {
+    animation: entra 0.3s ease forwards;
+  }
+  .fixed-section2 {
+    animation: seva 0.3s ease forwards;
+  }
+  .fixed-section3 {
+    animation: seva 0.3s ease forwards;
+  }
+
+  .fixed-section4 {
+    animation: seva 0.3s ease forwards;
+  }
+  .fixed-section5 {
+    animation: seva 0.3s ease forwards;
+  }
+}
+.section2 {
+  .fixed-section1 {
+    animation: seva 0.3s ease forwards;
+  }
+  .fixed-section2 {
+    animation: entra 0.3s ease forwards;
+  }
+
+  .fixed-section3 {
+    animation: seva 0.3s ease forwards;
+  }
+
+  .fixed-section4 {
+    animation: seva 0.3s ease forwards;
+  }
+  .fixed-section5 {
+    animation: seva 0.3s ease forwards;
+  }
   
+}
+.section3 {
+  .fixed-section1 {
+    animation: seva 0.3s ease forwards;
+  }
+  .fixed-section2 {
+    animation: seva 0.3s ease forwards;
+  }
 
+  .fixed-section3 {
+    animation: entra 0.3s ease forwards;
+  }
+
+  .fixed-section4 {
+    animation: seva 0.3s ease forwards;
+  }
+  .fixed-section5 {
+    animation: seva 0.3s ease forwards;
+  }
+  
 }
 
-.section1{
 
-  .fixed-section1{
-		animation: entra 0.3s ease forwards;
-
+.section4 {
+  .fixed-section1 {
+    animation: seva 0.3s ease forwards;
   }
-  .fixed-section2{
-		animation: seva 0.3s ease forwards;
+  .fixed-section2 {
+    animation: seva 0.3s ease forwards;
   }
 
+  .fixed-section3 {
+    animation: seva 0.3s ease forwards;
+  }
+
+  .fixed-section4 {
+    animation: entra 0.3s ease forwards;
+  }
+  .fixed-section5 {
+    animation: seva 0.3s ease forwards;
+  }
+
+  
 }
-.section2{
 
-  .fixed-section1{
-		animation: seva 0.3s ease forwards;
+.section5 {
+  .fixed-section1 {
+    animation: seva 0.3s ease forwards;
   }
-  .fixed-section2{
-		animation: entra 0.3s ease forwards;
-
+  .fixed-section2 {
+    animation: seva 0.3s ease forwards;
   }
 
+  .fixed-section3 {
+    animation: seva 0.3s ease forwards;
+  }
+
+  .fixed-section4 {
+    animation: seva 0.3s ease forwards;
+  }
+  .fixed-section5 {
+    animation: entra 0.3s ease forwards;
+  }
+
+  
 }
+
+
+
 
 
 
 @keyframes seva {
-	0% {
-top:0;
-	}
+  0% {
+    top: 0;
+  }
   99% {
-    top:-30px;
-      }
-	100% {
-top:20px;
-	}
-
-
+    top: -30px;
+  }
+  100% {
+    top: 20px;
+  }
 }
+@keyframes entra {
+  0% {
+    top: 20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
 
 @keyframes entra {
-	0% {
-top:20px;
-	}
+  0% {
+    top: 200px;
+  }
   100% {
-    top:0px;
-      }
+    top: 0px;
+  }
+}
+.fixed-section-logo{
 
 }
 
+.logo-footer {
+  transition: ease 0.2s all;
 
-.search-bar{
-position: relative;
+}
 
-
-&:after{
+.search-bar {
+  position: relative;
+  &:after {
     position: absolute;
     bottom: -4px;
     left: 50%;
-     transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     content: "";
     background-color: #fff;
     width: 100%;
     max-width: 250px;
     height: 1px;
   }
-
 }
-
-.active-menu{
+.active-menu {
   position: relative;
-  &::after{
-
+  &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 5px;
     height: 5px;
     background-color: white;
@@ -250,7 +315,22 @@ position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+.fixed-section-logo-item {
+  transition: ease 0.2s all;
+  position: absolute;
+  display: inline-flex;
+  top: 50%;
+  transform: translate(0, -50%);
+  align-items: flex-end;
+
+}
+.logo-footer {
+  animation: seva 0.3s ease forwards;
+}
 
 
 
+.filter-g{
+  filter: grayscale(1);
 }

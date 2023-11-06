@@ -442,30 +442,30 @@ $(".to-top").on("click", function() {
   $(window).scrollTop(0);
 });
 
-
 const observedElements = document.querySelectorAll('.inview');
 
 const options = {
   threshold: 0.4
 };
 
+const classMapping = {
+  'inview1': 'section1',
+  'inview2': 'section2',
+  'inview3': 'section3',
+  'inview4': 'section4',
+  'inview5': 'section5',
+};
+
 const inViewCallback = entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const target = entry.target;
-
-      if (target.classList.contains('inview1')) {
-        document.body.classList.add('section1');
-      } else if (target.classList.contains('inview2')) {
-        document.body.classList.add('section2');
-      }
-    } else {
-      const target = entry.target;
-
-      if (target.classList.contains('inview1')) {
-        document.body.classList.remove('section1');
-      } else if (target.classList.contains('inview2')) {
-        document.body.classList.remove('section2');
+    for (const className in classMapping) {
+      if (entry.target.classList.contains(className)) {
+        const bodyClass = classMapping[className];
+        if (entry.isIntersecting) {
+          document.body.classList.add(bodyClass);
+        } else {
+          document.body.classList.remove(bodyClass);
+        }
       }
     }
   });
@@ -474,5 +474,5 @@ const inViewCallback = entries => {
 const observer = new IntersectionObserver(inViewCallback, options);
 
 observedElements.forEach(element => {
-  observer.observe(element); // Ejecutar el observador
+  observer.observe(element);
 });
