@@ -441,3 +441,38 @@ $(".over3").on("click", function (e) {
 $(".to-top").on("click", function() {
   $(window).scrollTop(0);
 });
+
+
+const observedElements = document.querySelectorAll('.inview');
+
+const options = {
+  threshold: 0.5
+};
+
+const inViewCallback = entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const target = entry.target;
+
+      if (target.classList.contains('inview1')) {
+        document.body.classList.add('section1');
+      } else if (target.classList.contains('inview2')) {
+        document.body.classList.add('section2');
+      }
+    } else {
+      const target = entry.target;
+
+      if (target.classList.contains('inview1')) {
+        document.body.classList.remove('section1');
+      } else if (target.classList.contains('inview2')) {
+        document.body.classList.remove('section2');
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(inViewCallback, options);
+
+observedElements.forEach(element => {
+  observer.observe(element); // Ejecutar el observador
+});

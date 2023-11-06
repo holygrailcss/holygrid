@@ -24,7 +24,6 @@
   src: url("/assets/fonts/dutti/dutti-extended-regular.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-extended-regular.woff") format("woff");
 }
 /* TYPES FIJOS */
-/* @import "abstract/0debug";  si queremos debugar la maqueta */
 *,
 *::before,
 *::after {
@@ -330,8 +329,9 @@ img {
   text-align: center;
 }
 
-.d-inline {
-  display: inline-block;
+.align-items-center {
+  display: flex;
+  align-items: center;
 }
 
 .align-center {
@@ -354,6 +354,11 @@ img {
 .is-tooltip {
   position: relative;
   width: 100%;
+}
+
+.has-tooltip {
+  position: relative;
+  width: fit-content;
 }
 
 @media (max-width: 767px) {
@@ -479,6 +484,12 @@ img {
 @media (min-width: 1280px) {
   .lg\:min-text-right {
     text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .sm\:min-content-end {
+    justify-content: flex-end;
   }
 }
 
@@ -1425,6 +1436,7 @@ svg-icon.ico-success path {
   justify-content: center;
   align-items: center;
   background-color: #E3E3E3;
+  flex: 0 0 40px;
 }
 .ico-ball .ico-count {
   width: 16px;
@@ -4136,7 +4148,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-14-l {
     font-size: calc(
-                14px + -2 *
+                14px + 0 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4144,7 +4156,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-14-l {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4160,7 +4172,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-14-r {
     font-size: calc(
-                14px + -2 *
+                14px + 0 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4168,7 +4180,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-14-r {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4184,7 +4196,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-14-m {
     font-size: calc(
-                14px + -2 *
+                14px + 0 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4192,7 +4204,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-14-m {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4208,7 +4220,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-14-b {
     font-size: calc(
-                14px + -2 *
+                14px + 0 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4216,103 +4228,103 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-14-b {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
 
-.fluid-16-l {
+.fluid-6-l {
   font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
-.fluid-16-l {
+.fluid-6-l {
   font-size: 16px;
   line-height: 0.9;
 }
 @media screen and (min-width: 319px) {
-  .fluid-16-l {
+  .fluid-6-l {
     font-size: calc(
-                16px + -4 *
+                16px + -2 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
   }
 }
 @media screen and (min-width: 1500px) {
-  .fluid-16-l {
-    font-size: 12px;
+  .fluid-6-l {
+    font-size: 14px;
     line-height: 0.9;
   }
 }
 
-.fluid-16-r {
+.fluid-6-r {
   font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
-.fluid-16-r {
+.fluid-6-r {
   font-size: 16px;
   line-height: 0.9;
 }
 @media screen and (min-width: 319px) {
-  .fluid-16-r {
+  .fluid-6-r {
     font-size: calc(
-                16px + -4 *
+                16px + -2 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
   }
 }
 @media screen and (min-width: 1500px) {
-  .fluid-16-r {
-    font-size: 12px;
+  .fluid-6-r {
+    font-size: 14px;
     line-height: 0.9;
   }
 }
 
-.fluid-16-m {
+.fluid-6-m {
   font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
-.fluid-16-m {
+.fluid-6-m {
   font-size: 16px;
   line-height: 0.9;
 }
 @media screen and (min-width: 319px) {
-  .fluid-16-m {
+  .fluid-6-m {
     font-size: calc(
-                16px + -4 *
+                16px + -2 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
   }
 }
 @media screen and (min-width: 1500px) {
-  .fluid-16-m {
-    font-size: 12px;
+  .fluid-6-m {
+    font-size: 14px;
     line-height: 0.9;
   }
 }
 
-.fluid-16-b {
+.fluid-6-b {
   font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
-.fluid-16-b {
+.fluid-6-b {
   font-size: 16px;
   line-height: 0.9;
 }
 @media screen and (min-width: 319px) {
-  .fluid-16-b {
+  .fluid-6-b {
     font-size: calc(
-                16px + -4 *
+                16px + -2 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
   }
 }
 @media screen and (min-width: 1500px) {
-  .fluid-16-b {
-    font-size: 12px;
+  .fluid-6-b {
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4328,7 +4340,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-18-l {
     font-size: calc(
-                18px + -6 *
+                18px + -4 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4336,7 +4348,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-18-l {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4352,7 +4364,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-18-r {
     font-size: calc(
-                18px + -6 *
+                18px + -4 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4360,7 +4372,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-18-r {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4376,7 +4388,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-18-m {
     font-size: calc(
-                18px + -6 *
+                18px + -4 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4384,7 +4396,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-18-m {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4400,7 +4412,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-18-b {
     font-size: calc(
-                18px + -6 *
+                18px + -4 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4408,7 +4420,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-18-b {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4424,7 +4436,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-20-l {
     font-size: calc(
-                20px + -8 *
+                20px + -6 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4432,7 +4444,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-20-l {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4448,7 +4460,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-20-r {
     font-size: calc(
-                20px + -8 *
+                20px + -6 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4456,7 +4468,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-20-r {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4472,7 +4484,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-20-m {
     font-size: calc(
-                20px + -8 *
+                20px + -6 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4480,7 +4492,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-20-m {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4496,7 +4508,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-20-b {
     font-size: calc(
-                20px + -8 *
+                20px + -6 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4504,7 +4516,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-20-b {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 0.9;
   }
 }
@@ -4520,7 +4532,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-50-l {
     font-size: calc(
-                30px + 50 *
+                30px + 20 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4528,7 +4540,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-50-l {
-    font-size: 80px;
+    font-size: 50px;
     line-height: 0.9;
   }
 }
@@ -4544,7 +4556,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-50-r {
     font-size: calc(
-                30px + 50 *
+                30px + 20 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4552,7 +4564,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-50-r {
-    font-size: 80px;
+    font-size: 50px;
     line-height: 0.9;
   }
 }
@@ -4568,7 +4580,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-50-m {
     font-size: calc(
-                30px + 50 *
+                30px + 20 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4576,7 +4588,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-50-m {
-    font-size: 80px;
+    font-size: 50px;
     line-height: 0.9;
   }
 }
@@ -4592,7 +4604,7 @@ mark {
 @media screen and (min-width: 319px) {
   .fluid-50-b {
     font-size: calc(
-                30px + 50 *
+                30px + 20 *
                   ((100vw - 319px) / 1181)
               );
     line-height: 0.9;
@@ -4600,7 +4612,7 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-50-b {
-    font-size: 80px;
+    font-size: 50px;
     line-height: 0.9;
   }
 }
@@ -5176,6 +5188,12 @@ hr {
 }
 
 @media (max-width: 767px) {
+  .smmax\:mb-24 {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
   .smmax\:mb-42 {
     margin-bottom: 42px;
   }
@@ -5484,6 +5502,26 @@ strong {
   flex-grow: 0;
 }
 
+.d-inline {
+  display: inline-block;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-initial {
+  flex: 0 1 auto;
+}
+
+.flex-none {
+  flex: none;
+}
+
 @keyframes underline {
   0% {
     width: 0;
@@ -5784,7 +5822,6 @@ strong {
   background-color: transparent;
 }
 .btn[disabled], .btn:disabled, .btn.disabled {
-  cursor: default;
   pointer-events: none;
   filter: grayscale(1);
   background-color: #E3E3E3;
@@ -6248,11 +6285,6 @@ strong {
   color: #FFFFFF;
 }
 
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
 .btn-blue {
   background-color: #1A32A4;
   color: #FFFFFF;
@@ -6324,12 +6356,20 @@ strong {
   align-items: center;
   border-radius: 0;
   margin-top: -3px;
-  margin-right: 16px;
+  margin-right: 12px;
   top: 0;
   left: 1px;
 }
 .btn-social svg-icon div {
   display: flex;
+}
+.btn-social:disabled, .btn-social[disabled], .btn-social.disabled {
+  background-color: #F0F0F0;
+  border-color: transparent;
+  opacity: 1;
+}
+.btn-social:disabled svg path, .btn-social[disabled] svg path, .btn-social.disabled svg path {
+  fill: #8E8E8E;
 }
 
 .btn-google, .has-light .btn-google {
@@ -6378,6 +6418,17 @@ strong {
   border: 1px solid #8E8E8E;
 }
 
+.btn-apple-secondary, .has-light .btn-apple-secondary {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+}
+.btn-apple-secondary:focus, .btn-apple-secondary.focus, .btn-apple-secondary:hover, .btn-apple-secondary.hover, .btn-apple-secondary:visited, .btn-apple-secondary:active, .btn-apple-secondary.active, .has-light .btn-apple-secondary:focus, .has-light .btn-apple-secondary.focus, .has-light .btn-apple-secondary:hover, .has-light .btn-apple-secondary.hover, .has-light .btn-apple-secondary:visited, .has-light .btn-apple-secondary:active, .has-light .btn-apple-secondary.active {
+  opacity: 1;
+  background-color: #FFFFFF;
+  border: 1px solid #8E8E8E;
+}
+
 .btn-naver, .has-light .btn-naver {
   background-color: #03cf5d;
   color: #FFFFFF;
@@ -6402,6 +6453,11 @@ strong {
   border: 1px solid #2dc100;
 }
 
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
 .btns {
   align-items: center;
   display: flex;
@@ -6420,7 +6476,7 @@ strong {
   position: relative;
   display: flex;
 }
-.btn-group > :not(:first-child):not(:last-child) {
+.btn-group > :not(:first-child, :last-child) {
   border-radius: 0;
   margin-left: -1px;
 }
@@ -6662,16 +6718,6 @@ strong {
   background-color: #F0F0F0;
   color: #8E8E8E;
   cursor: default;
-}
-.has-light .btn-underline {
-  color: #FFFFFF;
-}
-.has-light .btn-underline::after {
-  background-color: #FFFFFF;
-}
-.has-light .btn-underline:hover, .has-light .btn-underline.hover, .has-light .btn-underline:focus, .has-light .btn-underline.focus {
-  background-color: transparent;
-  color: #FFFFFF;
 }
 .has-light .btn-google svg path {
   fill: initial;
@@ -7111,16 +7157,16 @@ strong {
 
 .is-error .checkbox-item [type=checkbox]:checked + label::before,
 .is-error .checkbox-item [type=checkbox]:not(:checked) + label::before {
-  border: 1px solid #B40016;
+  border: 1px solid #B40016 !important;
 }
 .is-error .checkbox-item a {
-  color: #B40016;
+  color: #B40016 !important;
 }
 .is-error .checkbox-item svg g {
-  fill: #B40016;
+  fill: #B40016 !important;
 }
 .is-error .checkbox-item svg g polyline {
-  stroke: #B40016;
+  stroke: #B40016 !important;
 }
 
 .has-light .checkbox-item .ico-check::after {
@@ -7327,7 +7373,7 @@ label {
 .input-gray {
   padding-left: 40px;
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
+  border-radius: 0;
   border: none;
 }
 
@@ -7426,12 +7472,14 @@ label {
 
 .is-error .input,
 .is-error label,
-.is-error textarea::placeholder,
 .is-error .help {
   color: #B40016 !important;
 }
 .is-error .input {
   border: 1px solid #B40016;
+}
+.is-error .input-prefix :nth-child(1)::placeholder {
+  color: #B40016;
 }
 .is-error svg g {
   stroke: #B40016 !important;
@@ -7440,11 +7488,16 @@ label {
   fill: #B40016 !important;
 }
 
-.ok-input label {
-  color: #76AE4A;
+.ok-input .input,
+.ok-input label,
+.ok-input .help {
+  color: #76AE4A !important;
 }
 .ok-input .input {
   border: 1px solid #76AE4A;
+  color: #76AE4A;
+}
+.ok-input .input-prefix :nth-child(1)::placeholder {
   color: #76AE4A;
 }
 .ok-input .input-line {
@@ -7617,7 +7670,7 @@ input::input-placeholder {
 .select:not(.is-multiple) {
   height: 48px;
 }
-.select:not(.is-multiple):not(.is-loading)::after {
+.select:not(.is-multiple, .is-loading)::after {
   border-color: #292929;
 }
 .select select::-ms-expand {
@@ -7637,7 +7690,7 @@ input::input-placeholder {
 .select select[multiple] option {
   padding: 0 40px;
 }
-.select:not(.is-multiple):not(.is-loading):hover::after {
+.select:not(.is-multiple, .is-loading):hover::after {
   border-color: #292929;
 }
 .select.select-label select {
@@ -7664,21 +7717,27 @@ input::input-placeholder {
   height: 5px;
   margin-top: -3px;
 }
-.select.select-flat {
+.select.select-flat, .select.select-flat-no-icon {
   width: max-content;
 }
-.select.select-flat label {
+.select.select-flat label, .select.select-flat-no-icon label {
   z-index: 0;
   left: 0;
 }
-.select.select-flat select {
+.select.select-flat select, .select.select-flat-no-icon select {
   border: none;
   padding-left: 0;
   background: none;
   padding-right: 40px;
 }
-.select.select-flat::after {
+.select.select-flat::after, .select.select-flat-no-icon::after {
   right: 0;
+}
+.select.select-flat-no-icon {
+  padding-right: 8px;
+}
+.select.select-flat-no-icon::after {
+  content: none;
 }
 .select.select-secondary-rd {
   width: max-content;
@@ -7694,7 +7753,7 @@ input::input-placeholder {
   display: none;
 }
 .select.select-secondary-rd select {
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid #292929;
   padding: 6px 2px 4px;
   min-width: 100px;
@@ -7747,7 +7806,7 @@ input::input-placeholder {
   left: 0;
 }
 .select.select-size select {
-  border-radius: 8px;
+  border-radius: 0;
   padding-left: 16px;
   background: none;
   padding-right: 40px;
@@ -7818,6 +7877,21 @@ input::input-placeholder {
 .form-input-prefix .form-input-label-2 {
   display: inline-block;
   width: calc(100% - 60px);
+}
+
+.form-prefix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.form-prefix > :not(.select):nth-child(1) {
+  flex: 0 0 75px;
+}
+.form-prefix > :nth-child(2) {
+  flex: 5 0 130px;
+}
+.form-prefix > .btn {
+  flex: 1 0 auto;
 }
 
 .select-line {
@@ -7930,7 +8004,7 @@ input::input-placeholder {
   margin-bottom: 0;
   line-height: 1.1;
   color: #8E8E8E;
-  border-radius: 8px;
+  border-radius: 0;
   transition: all 0.1s ease-in-out;
   pointer-events: none;
 }
@@ -8457,6 +8531,9 @@ button.link-line {
 .link-line.c-feel {
   background-image: linear-gradient(transparent calc(100% - 1px), #fb9962 10px);
 }
+.link-line.is-error, .link-line.c-error {
+  background-image: linear-gradient(transparent calc(100% - 1px), #B40016 10px);
+}
 
 .is-error .link-line {
   background-image: linear-gradient(transparent calc(100% - 1px), #B40016 10px);
@@ -8483,26 +8560,17 @@ button.link-line {
   border: 0;
   transform: none;
   cursor: pointer;
-  background: initial;
+  background-position-x: 20px;
 }
 .link-svg-pre svg-icon {
   position: absolute;
   left: 0;
-  bottom: 4px;
+  top: 2px;
   width: 16px;
   height: 16px;
 }
 .link-svg-pre:hover {
   opacity: 0.6;
-}
-.link-svg-pre::after {
-  content: "";
-  background-color: #292929;
-  position: absolute;
-  bottom: 0;
-  width: calc(100% - 20px);
-  left: 20px;
-  height: 1px;
 }
 
 .link-svg-post {
@@ -8514,26 +8582,17 @@ button.link-line {
   border: 0;
   transform: none;
   cursor: pointer;
-  background: initial;
+  background-position: calc(100% - 20px);
 }
 .link-svg-post svg-icon {
   position: absolute;
   right: 0;
-  bottom: 4px;
+  top: 2px;
   width: 16px;
   height: 16px;
 }
 .link-svg-post:hover {
   opacity: 0.6;
-}
-.link-svg-post::after {
-  content: "";
-  background-color: #292929;
-  position: absolute;
-  bottom: 0;
-  width: calc(100% - 20px);
-  left: 0;
-  height: 1px;
 }
 
 button.link-line.link-svg-pre {
@@ -8608,17 +8667,9 @@ button.link-line.link-svg-post {
 }
 .has-light .link-svg-post {
   color: white;
-  background-image: none;
-}
-.has-light .link-svg-post::after {
-  background-color: #fff;
 }
 .has-light .link-svg-pre {
   color: white;
-  background-image: none;
-}
-.has-light .link-svg-pre::after {
-  background-color: #fff;
 }
 
 @keyframes underline {
@@ -8861,6 +8912,13 @@ ul.list-mini > li::after {
   background: #F0F0F0;
 }
 
+ul.list-disc.has-light > li.is-missing::after, ul.list-mini.has-light > li.is-missing::after {
+  background-color: #FFFFFF;
+}
+ul.list-disc.has-light > li::after, ul.list-mini.has-light > li::after {
+  background-color: #FFFFFF;
+}
+
 @keyframes underline {
   0% {
     width: 0;
@@ -8898,7 +8956,7 @@ ul.list-mini > li::after {
 .progressbar {
   width: 100%;
   height: 8px;
-  border-radius: 8px;
+  border-radius: 0;
   background-color: #E3E3E3;
   display: flex;
   align-items: flex-start;
@@ -8906,10 +8964,11 @@ ul.list-mini > li::after {
   overflow: hidden;
 }
 .progressbar .progressbar-status {
-  width: 8px;
+  min-width: 8px;
   height: 8px;
-  border-radius: 8px;
+  border-radius: 0;
   background-color: #292929;
+  transition: all 0.2s ease;
 }
 
 @keyframes underline {
@@ -9251,18 +9310,23 @@ ul.list-mini > li::after {
   }
 }
 .tooltip-sm {
-  right: 8px;
+  bottom: 0;
+  transform: translateY(100%) translateY(10px);
+  right: calc(50% - 16px);
   background-color: #FFFFFF;
   border: 1px solid #e3e3e3;
   position: absolute;
-  width: 100%;
-  max-width: 327px;
+  width: max-content;
+  max-width: 240px;
   z-index: 10;
+  padding: 8px;
+  padding-right: 24px;
+  color: #292929;
 }
 .tooltip-sm::after {
-  top: -6px;
-  right: 18px;
   content: "";
+  top: -6px;
+  right: 10px;
   position: absolute;
   border-top: 1px solid #e3e3e3;
   border-left: 1px solid #e3e3e3;
@@ -9270,6 +9334,29 @@ ul.list-mini > li::after {
   height: 10px;
   background: #FFFFFF;
   transform: rotate(45deg);
+}
+.tooltip-sm.tooltip-br, .tooltip-sm.tooltip-tr {
+  left: calc(50% - 16px);
+  right: auto;
+}
+.tooltip-sm.tooltip-br::after, .tooltip-sm.tooltip-tr::after {
+  right: auto;
+  left: 10px;
+}
+.tooltip-sm.tooltip-tl, .tooltip-sm.tooltip-tr {
+  top: 0;
+  bottom: auto;
+  transform: translateY(-100%) translateY(-10px);
+}
+.tooltip-sm.tooltip-tl::after, .tooltip-sm.tooltip-tr::after {
+  top: auto;
+  bottom: -6px;
+  transform: rotate(225deg);
+}
+.tooltip-sm .close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
 }
 
 .store-state {
@@ -9285,6 +9372,29 @@ ul.list-mini > li::after {
   left: 0;
   width: 8px;
   height: 8px;
+}
+
+.is-rtl .tooltip-sm {
+  left: calc(50% - 16px);
+  right: auto;
+  padding-left: 24px;
+  padding-right: 16px;
+}
+.is-rtl .tooltip-sm::after {
+  right: auto;
+  left: 10px;
+}
+.is-rtl .tooltip-sm.tooltip-tr, .is-rtl .tooltip-sm.tooltip-br {
+  right: calc(50% - 16px);
+  left: auto;
+}
+.is-rtl .tooltip-sm.tooltip-tr::after, .is-rtl .tooltip-sm.tooltip-br::after {
+  left: auto;
+  right: 10px;
+}
+.is-rtl .tooltip-sm .close {
+  right: auto;
+  left: 8px;
 }
 
 @keyframes underline {
@@ -9712,8 +9822,8 @@ ul.list-clear li.list-box:last-child {
   transform: translateY(-50%);
   width: 12px;
 }
-.color-wrap button .color-selector:hover::before,
-.color-wrap button .color-selector .is-active {
+.color-wrap button:hover::before,
+.color-wrap button .is-active {
   transform: scale(1);
 }
 .color-wrap button .color-square {
@@ -11258,7 +11368,7 @@ ul.list-clear li.list-box:last-child {
   padding-right: 16px;
   padding-left: 16px;
 }
-.is-rtl .select:not(.is-multiple):not(.is-loading)::after {
+.is-rtl .select:not(.is-multiple, .is-loading)::after {
   right: inherit;
   left: 20px;
 }
@@ -11269,7 +11379,7 @@ ul.list-clear li.list-box:last-child {
   left: inherit;
   right: 16px;
 }
-.is-rtl .select:not(.is-multiple):not(.is-loading).select-box::after {
+.is-rtl .select:not(.is-multiple, .is-loading).select-box::after {
   left: 8px;
 }
 .is-rtl .pr-8 {
@@ -11398,6 +11508,8 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .btn-social svg-icon {
   right: 1px;
   left: auto;
+  margin-right: 0;
+  margin-left: 16px;
 }
 .is-rtl .btn-social.btn-google {
   padding-right: 60px;
@@ -11411,6 +11523,7 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .checkbox-item [type=checkbox]:checked {
   left: 0;
   right: -9999px;
+  position: absolute;
 }
 .is-rtl .checkbox-item [type=checkbox]:not(:checked) + label::before,
 .is-rtl .checkbox-item [type=checkbox]:checked + label::before {
@@ -11439,14 +11552,6 @@ ul.list-clear li.list-box:last-child {
   padding-right: 0;
   padding-left: 0;
 }
-.is-rtl .checkbox-item [type=checkbox]:not(:checked),
-.is-rtl .checkbox-item [type=checkbox]:checked {
-  position: absolute;
-}
-.is-rtl .checkbox-radio [type=radio]:not(:checked),
-.is-rtl .checkbox-radio [type=radio]:checked {
-  position: absolute;
-}
 .is-rtl .check-bleed.checkbox-radio [type=radio]:checked + label .ico-radio, .is-rtl .check-bleed.checkbox-radio [type=radio]:not(:checked) + label .ico-radio {
   left: 0;
   right: 17px;
@@ -11472,6 +11577,7 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .checkbox-radio [type=radio]:checked {
   left: 0;
   right: -9999px;
+  position: absolute;
 }
 .is-rtl .checkbox-item-text span {
   margin-left: 0;
@@ -11530,10 +11636,6 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .form-input-label.has-ico-post .validation-error-messages svg-icon {
   position: relative;
 }
-.is-rtl .form-input-label-2 .info-text {
-  left: 0;
-  right: initial;
-}
 .is-rtl .form-input-prefix .input-prefix {
   margin-right: 0;
   margin-left: 8px;
@@ -11556,6 +11658,10 @@ ul.list-clear li.list-box:last-child {
 }
 .is-rtl .form-input-label-2.has-ico-pre .validation-error-messages svg-icon {
   position: relative;
+}
+.is-rtl .form-input-label-2 .info-text {
+  left: 0;
+  right: initial;
 }
 .is-rtl .has-ico-post.btn, .is-rtl .has-ico-post > input, .is-rtl .has-ico-post > label {
   padding-right: 13px;
@@ -11623,14 +11729,21 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  color: rgba(255, 255, 255, 0.2784313725);
+  color: #ffffff;
   z-index: 100;
   height: 60px;
   transition: all ease 0.3s;
   display: flex;
   align-items: center;
   font-size: 12px;
-  letter-spacing: 2px;
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
+}
+header ul.list-clear li {
+  margin: 0;
+}
+header a {
+  color: white;
 }
 @media (min-width: 768px) {
   header {
@@ -11658,28 +11771,6 @@ header.interior svg path {
     width: 100%;
     max-width: 180px;
   }
-}
-
-.scrolled header {
-  background-color: rgba(255, 255, 255, 0.2784313725);
-  height: 90px;
-}
-.scrolled header a {
-  color: #000000;
-}
-.scrolled header svg path {
-  fill: #000000;
-}
-.scrolled header .height-md {
-  min-height: 150px;
-}
-.scrolled .header-top {
-  height: 200px;
-}
-.scrolled .menu .btn-secondary {
-  color: #292929;
-  background-color: transparent;
-  border: 2px solid #292929;
 }
 
 .menu-mobile {
@@ -11737,9 +11828,6 @@ header.interior svg path {
 
 .scrolled .menu-mobile {
   color: #292929;
-}
-.scrolled .menu-mobile span {
-  background-color: #292929;
 }
 .scrolled.menu-open .menu-mobile {
   color: #FFFFFF;

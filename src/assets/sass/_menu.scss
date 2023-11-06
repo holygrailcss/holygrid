@@ -51,9 +51,7 @@
 .scrolled {
   .menu-mobile {
     color: $c-primary;
-    span {
-      background-color: $c-primary;
-    }
+
   }
   &.menu-open {
     .menu-mobile {

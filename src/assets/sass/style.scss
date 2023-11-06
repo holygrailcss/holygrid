@@ -107,6 +107,118 @@ a {
   position: relative;
 }
 
+.fixed-section{
+  position: fixed;
+
+}
+
+
+.fixed-section-logo{
+  position: fixed;
+  top: 0;
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
+  height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 
 
+.container-total {
+  padding-right: $padding-mobile;
+  padding-left: $padding-mobile;
+  margin-right: 0;
+  margin-left: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  @media (min-width: $break-sm) {
+    padding-right: $padding-desktop;
+    padding-left: $padding-desktop;
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+.fixed-section-text{
+width: 300px;
+height: 24px;
+position: relative;
+overflow: hidden;
+
+  padding-left: 20px;
+
+  color: white;
+  line-height: 2.3;
+
+
+}
+
+
+.fixed-section1,
+.fixed-section2,
+.fixed-section3{
+transition: .2s ease all;
+  position: absolute;
+  top: 20px;
+  
+
+}
+
+.section1{
+
+  .fixed-section1{
+    top: 0px;
+  }
+  .fixed-section2{
+		animation: seva 0.3s ease forwards;
+  }
+
+}
+.section2{
+
+  .fixed-section1{
+		animation: seva 0.3s ease forwards;
+  }
+  .fixed-section2{
+    top: 0px;
+  }
+
+}
+
+
+
+@keyframes seva {
+	0% {
+top:0;
+	}
+	100% {
+top:-30px;
+	}
+
+  99% {
+    top:-30px;
+      }
+}
+
+
+.search-bar{
+position: relative;
+
+
+&:after{
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+     transform: translate(-50%, -50%);
+    content: "";
+    background-color: #fff;
+    width: 100%;
+    max-width: 250px;
+    height: 1px;
+  }
+
+}

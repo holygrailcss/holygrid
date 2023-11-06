@@ -5,14 +5,26 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  color: #ffffff47;
+  color: #ffffff;
   z-index: 100;
   height: $header-mobile;
   transition: all ease 0.3s;
   display: flex;
   align-items: center;
   font-size: 12px;
-  letter-spacing: 2px;
+
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
+
+  ul.list-clear li{
+    margin: 0;
+  }
+
+
+a{
+  color: white;
+}
+  
   @media (min-width: $break-sm) {
     padding-bottom: 0;
     height: 60px;
@@ -46,30 +58,4 @@ header.interior {
 
 
 
-.scrolled {
-  header {
-    background-color:  #ffffff47;
-    height: 90px;
 
-    a {
-      color: $c-black;
-    }
-    svg path {
-      fill: $c-black;
-    }
-    .height-md {
-      min-height: 150px;
-    }
-  }
-
-  .header-top {
-    height: 200px;
-  }
-  .menu {
-    .btn-secondary {
-      color: #292929;
-      background-color: transparent;
-      border: 2px solid #292929;
-    }
-  }
-}
