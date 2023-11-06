@@ -1,59 +1,8 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_categoryGrid.scss";
-//@import '../../../../../../../../../../app/shared/product/components/product-skeleton/product-skeleton.component.scss';
 
 $product-details-padding-mobile--2FV: 24px;
 $product-details-padding--2FV: 16px;
-
-// .grid-product-wrap--2FV {
-//     @include grid-product-view-full-bleed;
-
-// 	.grid-product-list--2FV {
-// 		width: 50%;
-
-//         @media (max-width: #{$break-sm} ) {
-// 			width: 100%;
-// 			.card9-contents {
-// 				padding-left: $product-details-padding-mobile--2FV;
-// 			}
-// 		}
-// 	}
-
-// 	.product-without-description.sk-load2{
-// 		position: relative;
-
-// 		&:before{
-// 			display: block;
-// 			content: "";
-// 			width: 100%;
-// 			padding-top: calc(133.25%);
-// 		    background-color: $c-white;
-
-// 		   @media (min-width: $break-md) {
-// 			padding-top: calc(133.25%);
-
-// 		   }
-// 		}
-// 	}
-
-// 	.card9-contents {
-// 		padding-left: $product-details-padding--2FV;
-// 	}
-// }
-
-// .is-rtl{
-// 	.grid-product-wrap--2FV {
-// 		@include grid-product-view-full-bleed-rtl;
-// 	}
-// 	.card9-contents {
-// 		padding-right: $product-details-padding--2FV;
-// 	}
-// 	@media (max-width: #{$break-sm} ) {
-// 		.card9-contents {
-// 			padding-right: $product-details-padding-mobile--2FV;
-// 		}
-// 	}
-// }
 
 .grid-product-wrap--2FV {
   display: grid;
@@ -61,6 +10,7 @@ $product-details-padding--2FV: 16px;
   grid-template-rows: auto;
   gap: 0;
   @include details-pmobile-pdesktop;
+  @include colors-pmobile-pdesktop;
   @media (min-width: $break-sm) {
     grid-template-columns: repeat(12, 1fr);
     .grid-product-list--2FV {

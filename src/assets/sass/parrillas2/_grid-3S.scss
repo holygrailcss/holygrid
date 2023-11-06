@@ -32,7 +32,7 @@ $margin-grid-cols--3S: 20px;
 //         margin-bottom: #{$margin-grid-cols--3S};
 //         width: calc(100% + 14px);
 
-//         @media (min-width: $break-md) {
+//         @media (min-width: $break-sm) {
 //             margin-right: #{$margin-grid-cols--3S};
 //             margin-left: 0;
 //             width: calc(100% / #{$grid-cols--3S} - 14px);
@@ -73,7 +73,7 @@ $margin-grid-cols--3S: 20px;
 //             margin-bottom: #{$margin-grid-cols--3S};
 //             width: calc(100% + 14px);
 
-//             @media (min-width: $break-md) {
+//             @media (min-width: $break-sm) {
 //                 margin-left: #{$margin-grid-cols--3S};
 //                 margin-right: 0;
 //                 width: calc(100% / #{$grid-cols--3S} - 14px);
@@ -92,6 +92,7 @@ $margin-grid-cols--3S: 20px;
     grid-template-rows: auto;
     gap: 8px;
     @include details-pmobile-pdesktop;
+    @include colors-pmobile-pdesktop;
     @media (min-width: $break-sm) {
         gap: 16px;
         grid-template-columns: repeat(12, 1fr);

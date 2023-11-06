@@ -1,66 +1,18 @@
-@import '../abstract/_all.scss';
-@import '../abstract/_categoryGrid.scss';
+@import "../abstract/_all.scss";
+@import "../abstract/_categoryGrid.scss";
 
 .grid-product-wrap--1G {
-    @include grid-product-view-bleed;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
 
-    margin-top: $sm-grid-top-margin;
-    margin-bottom: $sm-grid-bottom-margin;
-
-    .card9-wrap-details {
-        padding: 0 24px;
-        height: auto;
-        min-height: 126px;
-    }
-
+    @include details-pmobile-0;
+    @include colors-pmobile-0;
     @media (min-width: $break-sm) {
-        margin-top: $grid-top-margin;
-        margin-bottom: $grid-bottom-margin;
-
-        .card9-wrap-details {
-            padding: 0;
-            min-height: 144px;
-        }
-    }
-
-    .grid-product-list--1G {
-        @media (min-width: $break-sm) {
-            margin-left: calc((100% / 12) * 2 + 2px);
-            width: calc((100% / 12) * 8 - 4px);
-        }
-    }
-
-    .rat-3-4:before {
-        padding-top: 60%;
-    }
-}
-
-::ng-deep.grid-product-wrap--1G {
-    .rat-3-4:before {
-        padding-top: 66%;
-    }
-
-    .sk-text-zone {
-        padding: 0 16px;
-
-        @media (min-width: $break-sm) {
-            padding: 0;
-        }
-    }
-}
-
-.is-rtl {
-    .grid-product-wrap--1G {
-        @include grid-product-view-bleed-rtl;
-
+        gap: 16px;
+        grid-template-columns: repeat(12, 1fr);
         .grid-product-list--1G {
-            margin-right: -($sm-grid-view1-gutter);
-            margin-left: 0;
-
-            @media (min-width: $break-sm) {
-                margin-right: calc((100% / 12) * 2 + 2px);
-                margin-left: 0;
-            }
+            grid-column: 3 / span 8;
         }
     }
 }

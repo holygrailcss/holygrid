@@ -21,7 +21,7 @@ $margin-grid-cols-mobile--4S: 10px;
         margin-bottom: $grid-bottom-margin;
     }
 
-    @media (max-width: $break-md) {
+    @media (max-width: $break-sm) {
         width: calc(100% + 24px);
         margin-left: -12px;
         margin-right: -12px;

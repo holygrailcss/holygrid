@@ -24,12 +24,14 @@ $MINIGRID-INFO-GUTTER-SM: 8px;
   grid-template-rows: auto;
   gap: 8px;
 
-  @include details-pmobile-first;
-  .grid-product-list--MINIGRID-INFO:first-child {
-      .card9-wrap-details {
-          padding-left: 16px;
-      }
-  }
+  @include details-pmobile-0;
+  @include colors-pmobile-0;
+  .grid-product-list--MINIGRID-INFO:nth-child(3n+1) {
+    @include details-pmobile-pdesktop;
+}
+.grid-product-list--MINIGRID-INFO:nth-child(3n) {
+  @include colors-pmobile-pdesktop;
+}
 
   @media (min-width: $break-sm) {
       grid-template-columns: repeat(3, 1fr);

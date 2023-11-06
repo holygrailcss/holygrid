@@ -1,86 +1,20 @@
 @import '../abstract/_all.scss';
 @import '../abstract/_categoryGrid.scss';
 
-$grid-cols--G4: 4;
-$grid-cols-mobile--G4: 2;
-$grid-view1-gutter--G4: 24px;
-$grid-view1-gutter-md--G4: 48px;
-
-.is-rtl .grid-product-wrap--G4 {
-    @include grid-product-view-bleed-rtl;
-}
-
 .grid-product-wrap--G4 {
-    @include grid-product-view-bleed;
-
-    margin-top: $sm-grid-top-margin;
-    margin-bottom: $sm-grid-bottom-margin;
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    @include details-pmobile-0;
+    @include colors-pmobile-0;
     @media (min-width: $break-sm) {
-        margin-top: $grid-top-margin;
-        margin-bottom: $grid-bottom-margin;
+        gap: 64px;
+        grid-template-columns: repeat(4, 1fr);
     }
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
-    flex-wrap: wrap;
-    list-style: none;
-
-    .sk-load2:before {
-        padding-top: calc(133.25% + 126px);
-
-        @media (min-width: $break-sm) {
-            padding-top: calc(133.25% + 144px);
-        }
+    .grid-product-list--G4:nth-child(4n+1) {
+        @include details-pmobile-pdesktop;
     }
-
-    .grid-product-list--G4 {
-        &:nth-child(2n) {
-            margin-right: 0;
-        }
-
-        margin-right: $grid-view1-gutter--G4;
-        margin-bottom: 8px;
-        width: calc((100% / #{$grid-cols-mobile--G4}) - ((#{$grid-view1-gutter--G4}) / #{$grid-cols-mobile--G4}));
-
-		@media (min-width: $break-sm) {
-			&:nth-child(2n) {
-				margin-right: $grid-view1-gutter-md--G4;
-			}
-
-			&:nth-child(4n) {
-				margin-right: 0;
-			}
-
-			margin-bottom: 16px;
-			margin-right: $grid-view1-gutter-md--G4;
-			width: calc((100% / #{$grid-cols--G4}) - ((#{$grid-view1-gutter-md--G4} * 3) / #{$grid-cols--G4}));
-		}
-	}
-
-    .card9-contents {
-        padding-right: 16px;
-        padding-left: 16px;
+    .grid-product-list--G4:nth-child(4n) {
+        @include colors-pmobile-pdesktop;
     }
-}
-
-.is-rtl {
-    .grid-product-list--G4 {
-        &:nth-child(2n) {
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-		@media (min-width: $break-sm) {
-			&:nth-child(2n) {
-				margin-left: $grid-view1-gutter-md--G4;
-			}
-
-			&:nth-child(4n) {
-				margin-left: 0;
-			}
-
-			margin-bottom: 16px;
-		}
-	}
 }

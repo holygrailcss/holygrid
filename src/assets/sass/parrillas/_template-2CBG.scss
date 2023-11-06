@@ -47,7 +47,7 @@ $xl-grid-2CBG-top-padding: 260px;
         flex-wrap: nowrap;
     }
 
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
         padding-top: $grid-2CBG-top-padding;
         padding-bottom: $grid-2CBG-top-padding;
     }
@@ -60,7 +60,7 @@ $xl-grid-2CBG-top-padding: 260px;
     }
 
     .grid-product-list--2CBG {
-        @media (max-width: #{$break-md - 1}) {
+        @media (max-width: #{$break-sm - 1}) {
             margin-right: #{$sm-grid-2CGB-view5-gutter};
             width: calc((100% + #{$sm-grid-2CGB-view5-gutter} * 3) / 2 - (#{$sm-grid-2CGB-view5-gutter} * 2));
 
@@ -69,7 +69,7 @@ $xl-grid-2CBG-top-padding: 260px;
             }
         }
 
-        @media (min-width: $break-md) {
+        @media (min-width: $break-sm) {
             margin-right: 0;
             margin-left: #{$grid-cols--2CBG-gutter};
 
@@ -112,13 +112,13 @@ $xl-grid-2CBG-top-padding: 260px;
 .is-rtl {
     .grid-product-wrap--2CBG {
         .grid-product-list--2CBG {
-            @media (max-width: #{$break-md - 1}) {
+            @media (max-width: #{$break-sm - 1}) {
                 &:nth-child(2n) {
                     margin-left: 0;
                 }
             }
 
-            @media (min-width: $break-md) {
+            @media (min-width: $break-sm) {
                 &:nth-child(#{$grid-cols--2CBG}n) {
                     margin-left: 0;
                 }

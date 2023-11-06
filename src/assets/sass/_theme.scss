@@ -51,7 +51,7 @@
     }
   
   
-    @media (min-width: $break-md) {
+    @media (min-width: $break-sm) {
       .grid3{
         position: absolute;
         width: 1px;
@@ -232,7 +232,6 @@
   }
   
   .grid-product__section {
-    align-items: baseline;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

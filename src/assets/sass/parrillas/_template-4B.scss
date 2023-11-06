@@ -47,7 +47,7 @@ $grid-cols--4B: 4;
             padding-top: calc(133.25% + 126px);
             background-color: $c-white;
 
-            @media (min-width: $break-md) {
+            @media (min-width: $break-sm) {
                 padding-top: calc(133.25% + 144px);
             }
         }

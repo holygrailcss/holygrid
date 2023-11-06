@@ -1,84 +1,5 @@
 @import "../abstract/_all.scss";
 
-// .grid-product-wrap--2E {
-//     margin-top: $sm-grid-top-margin;
-//     margin-bottom: $sm-grid-bottom-margin;
-
-//     margin-left: -$grid-view1-gutter;
-//     margin-right: -$grid-view1-gutter;
-//     display: flex;
-//     flex-flow: row wrap;
-//     justify-content: flex-start;
-
-//     .card9-wrap-details {
-//         padding: 0 16px;
-//         height: auto;
-//         min-height: 126px;
-//     }
-
-//     @media (min-width: $break-sm) {
-//         margin-left: 0;
-//         margin-right: 0;
-//         margin-top: $grid-top-margin;
-//         margin-bottom: $grid-bottom-margin;
-//         .card9-wrap-details {
-//             padding: 0;
-//             min-height: 144px;
-//         }
-//     }
-
-//     .grid-product-list--2E {
-//         width: 100%;
-//         margin-bottom: 0;
-
-//         @media (min-width: $break-sm) {
-//             width: calc(50% - (#{$sm-grid-view1-gutter}));
-//             margin-bottom: $grid-view1-gutter;
-//             margin-right: $grid-view1-gutter;
-//         }
-
-//         &:nth-child(even) {
-//             margin-right: 0;
-//         }
-//     }
-
-//     .sk-load2 {
-//         position: relative;
-
-//         &:before {
-//             display: block;
-//             content: "";
-//             width: 100%;
-//             padding-top: calc(133.25%);
-//             background-color: $c-white;
-
-//             @media (min-width: $break-md) {
-//                 padding-top: calc(133.25%);
-//             }
-//         }
-
-//         &::marker {
-//             display: none;
-//             content: "";
-//         }
-//     }
-// }
-
-// .is-rtl {
-//     .grid-product-wrap--2E {
-//         .grid-product-list--2E {
-//             margin-left: $sm-grid-view1-gutter;
-
-//             @media (min-width: $break-sm) {
-//                 margin-left: $grid-view1-gutter;
-//             }
-//         }
-
-//         .grid-product-list--2E:last-child {
-//             margin-left: 0;
-//         }
-//     }
-// }
 
 .grid-product-wrap--2E {
   display: grid;
@@ -86,6 +7,7 @@
   grid-template-rows: auto;
   gap: 0;
   @include details-pmobile-0;
+  @include colors-pmobile-0;
   @media (min-width: $break-sm) {
     gap: 16px;
     grid-template-columns: repeat(12, 1fr);

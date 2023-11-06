@@ -3,18 +3,18 @@
 .grid-product-wrap--VIT {
 	margin: 0 48px;
 
-	@media (min-width: $break-md) {
-		width: calc(100% - 80px);
+	@media (min-width: $break-sm) {
+		width: 100%;
 		margin: auto;
 	}
 
 	@media (min-width: $break-lg) {
-		width: calc(80%);
+		width: 80%;
 		margin: auto;
 	}
 
 	.grid-product-list--VIT {
-		width: calc(100% - 16px);
+		width: 100%;
 		margin: 0px auto 40px;
 
 		@media (min-width: $break-sm) {
@@ -55,7 +55,7 @@
 		gap: 16px;
 		flex-direction: column;
 
-		@media (min-width: $break-md) {
+		@media (min-width: $break-sm) {
 			gap: 50px;
 		}
 
@@ -109,7 +109,7 @@
 			}
 		}
 
-		@media (min-width: $break-md) {
+		@media (min-width: $break-sm) {
 			flex-direction: row;
 
 			.limited-before-card9,
@@ -124,7 +124,7 @@
 
 .is-rtl {
 	.grid-product-wrap--VIT .limited-card-wrap {
-		@media (min-width: $break-md) {
+		@media (min-width: $break-sm) {
 			.limited-before-card9,
 			.limited-after-card9 {
 				text-align: right;
