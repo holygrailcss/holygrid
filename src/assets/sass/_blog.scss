@@ -55,17 +55,15 @@
   h2 {
     margin-top: 24px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 24px, 60px, 1);
     width: 100%;
-    line-height: 1;
     @include font-bold();
+    @include fluid-text($min_width, $break-lg, 24px, 60px, 1);
   }
   h3 {
     margin-top: 24px;
     padding-bottom: 20px;
-    @include fluid-text($min_width, $break-lg, 20px, 35px, 1);
-    line-height: 1;
     @include font-bold();
+    @include fluid-text($min_width, $break-lg, 20px, 35px, 1);
   }
   h4 {
     margin-top: 24px;

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="{{ global.search_console }}"
+    />
+    <title>{{ title }}</title>
+    <meta name="robots" content="{{ metaRobots }}" />
+    <meta name="description" content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}" />
+    <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
+    <link rel="icon" type="image/webp" href="{{ global.url }}/assets/static/images/1.jpg" />
+
+    <style>
+        :root {
+      --c-primary: {{global.c_primary}};
+      --c-secondary: {{global.c_secondary}};
+      --bg-dark: {{global.bg_dark}};
+      --c-bg-dark: {{global.c_bg_dark}};
+      --bg-light: {{global.bg_light}};
+      --c-bg-light: {{global.c_bg_light}};
+      --btn-radius: {{global.btn_radius}};
+      --padding-global: {{global.padding_global}};
+      --btn-radius: {{global.btn_radius}};
+      }
+    </style>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="canonical" href="{{ global.url }}/{{ page.url | url }}" />
+
+    <meta property="og:site_name" content="{{ global.empresa }}" />
+    <meta
+      property="og:image"
+      content="{{ global.url }}/assets/static/images/2.jpg"
+    />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ global.url }}" />
+    <meta
+      property="og:description"
+      content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}"
+    />
+
+
+
+
+
+  </head>
+<body class="contain {% if page.url == '/' or page.url == '/about/' %}home{% endif %}" >
+
+{% set breadcrumbs = [] %}
+
+
+
+    <main class=" ">
+      {{ content | safe }}
+    </main>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <script type="module" src="/assets/js/slide/gsap.min.js"></script>
+   <script type="module" src="/assets/js/slide/imagesloaded.pkgd.min.js"></script>
+
+     <script type="module" src="/assets/js/slide/Observer.min.js"></script>
+    <script type="module" src="/assets/js/slide/slideshow.js "></script>
+    <script type="module" src="/assets/js/slide/utils.js"></script>
+
+    <script type="module" src="/assets/js/slide/index.js "></script>
+
+
+  </body>
+</html>
