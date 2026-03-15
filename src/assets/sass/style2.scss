@@ -3,6 +3,26 @@
 
 $space-left: calc(((100vw - 1280px) / 2));
 $width-left: calc((1280px + (100vw - 1280px) / 2));
+@mixin fluid-text($min-vw, $max-vw, $min-font-size, $max-font-size, $fluid-line-height) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+    & {
+      font-size: $min-font-size;
+      line-height: $fluid-line-height;
+      @media (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{unity($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{unity($max-vw - $min-vw)}));
+        line-height: $fluid-line-height;
+      }
+      @media (min-width: $max-vw) {
+        font-size: $max-font-size;
+        line-height: $fluid-line-height;
+      }
+    }
+  }
+}
 @import "../../../node_modules/holygrailcss/scss/style.scss";
 // -FASE 4 : OVERRIDE YOUR HOLYGRAIL
 
